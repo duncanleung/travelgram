@@ -5,20 +5,52 @@ html(lang="en")
     meta(name="viewport" content="width=device-width, initial-scale=1")
     //- BOOTSTRAP CDN
     link(rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" integrity="sha512-dTfge/zgoMYpP7QbHy4gWMEGsbsdZeCXz7irItjcC3sPUFtf0kuFbDz/ixG7ArTxmDjLXDmezHubeNikyKGVyQ==" crossorigin="anonymous")
+    link(href='https://fonts.googleapis.com/css?family=Open+Sans:400,700,600,300' rel='stylesheet' type='text/css')
     link(rel="stylesheet" href="css/default.css")
-    title TravelGram Style Guide
+    title travelGram Style Guide
   body
     header
+      h2.logo travelGram
     .container
       section.row.intro
         .col-sm-12
           h1 TravelGram Style Guide
+          hr
           h2 What is TravelGram?
-          p TravelGram is an Instagram photo browsing website for travelers who want to explore a location before going there
+          p TravelGram is an Instagram photo browsing website for travelers who want to explore a location before going there.
       section.row.colors
-        .col-sm-12
-          h2 Official TravelGram Colors
+          .col-sm-12
+            h2 Official TravelGram Colors
+            .row
+              .col-sm-2
+               p Primary Green
+               .color-block#primary-green
+              .col-sm-2
+                p Secondary Green
+                .color-block#secondary-green
+              .col-sm-2
+                p Primary Black
+                .color-block#primary-black
+              .col-sm-2
+                p Primary Gray
+                .color-block#primary-gray
+              .col-sm-2
+                p Secondary Gray
+                .color-block#secondary-gray
+              .col-sm-2
+                p White
+                .color-block#white
+
 
       section.row.fonts
         .col-sm-12
-          h2 Typography
+          h2 Typography - Open Sans
+          .row.description
+            p.col-sm-6
+              | TravelGram uses the Open Sans font family to convey trust and elegance.
+            .characters.col-sm-6
+              span.bold A a
+              span.book A a
+              p Open Sans, in bold and book weights
+
+

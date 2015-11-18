@@ -1,18 +1,138 @@
-/* Colors
-Primary Green: #4BBFBB
-Primary Pink: #FE6468
-Primary Yellow: #FFCA64
-
-======================== */
-
-
 
 /* Reusable Styles
 ======================== */
+$primary-black: #323433;
+$primary-gray: #777979;
+$secondary-gray: #dedede;
+$primary-green: #4BBFBB;
+$secondary-green: #0F948F;
+$primary-pink: #FE6468;
+$primary-yellow: #FFCA64;
 
-
-
-
-html {
-
+html,
+body {
+  font-family: 'Open Sans', sans-serif;
+  color: $primary-black;
 }
+
+.logo {
+    margin: 0;
+    font-weight: 600;
+    font-size: 24px;
+}
+
+.intro,
+.colors,
+.fonts {
+  margin: 0 10% 80px 10%;
+}
+
+  h2 {
+    font-weight: 300;
+    margin: 0 0 20px 0;
+  }
+
+/* Header Styles
+======================== */
+
+header {
+  height: 45px;
+  padding: 10px 0 0 0;
+  background-color: $primary-green;
+  text-align: center;
+}
+
+
+/* Intro Section Styles
+======================== */
+
+.intro {
+  
+  margin-bottom: 60px;
+
+  h1 {
+    margin: 40px 0 20px 0;
+  }
+
+  h2 {
+    margin-top: 40px;
+  }
+
+  p {
+    font-size: 1.3em;
+    font-weight: 300;
+  }
+}
+
+/* Colors Section Styles
+======================== */
+
+.color-block {
+  height: 90px;
+  border: 1px solid $secondary-gray;
+}
+
+#primary-green {
+  background-color: $primary-green;
+}
+#secondary-green {
+  background-color: $secondary-green;
+}
+#primary-black {
+  background-color: $primary-black;
+}
+#primary-gray {
+  background-color: $primary-gray;
+}
+#secondary-gray {
+  background-color: $secondary-gray;
+}
+#white {
+  background-color: white;
+}
+
+
+/* Typography Section Styles
+======================== */
+
+.fonts {
+
+  p {
+    font-size: 1.3em;
+    font-weight: 300;
+  }
+
+  .description {
+    display: flex;
+    align-items: center;
+
+    p {
+      margin-top: -20px;
+    }
+  }
+}
+
+.characters {
+  .bold {
+    font-size: 110px;
+    font-weight: 700;
+    letter-spacing: -15px;
+    margin-right: 50px;
+  }
+
+  .book {
+    font-size: 110px;
+    font-weight: 300;
+    letter-spacing: -15px;
+  }
+}
+
+
+
+
+
+
+
+
+
+
