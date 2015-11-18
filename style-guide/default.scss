@@ -72,6 +72,11 @@ header {
   border: 1px solid $secondary-gray;
 }
 
+.subtext {
+  margin-top: -10px;
+  color: $primary-gray;
+}
+
 #primary-green {
   background-color: $primary-green;
 }
@@ -107,7 +112,7 @@ header {
     align-items: center;
 
     p {
-      margin-top: -20px;
+      margin-top: -25px;
     }
   }
 }

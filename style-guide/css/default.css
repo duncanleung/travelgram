@@ -66,43 +66,49 @@ header {
 }
 
 /* line 75, ../default.scss */
+.subtext {
+  margin-top: -10px;
+  color: #777979;
+}
+
+/* line 80, ../default.scss */
 #primary-green {
   background-color: #4BBFBB;
 }
 
-/* line 78, ../default.scss */
+/* line 83, ../default.scss */
 #secondary-green {
   background-color: #0F948F;
 }
 
-/* line 81, ../default.scss */
+/* line 86, ../default.scss */
 #primary-black {
   background-color: #323433;
 }
 
-/* line 84, ../default.scss */
+/* line 89, ../default.scss */
 #primary-gray {
   background-color: #777979;
 }
 
-/* line 87, ../default.scss */
+/* line 92, ../default.scss */
 #secondary-gray {
   background-color: #dedede;
 }
 
-/* line 90, ../default.scss */
+/* line 95, ../default.scss */
 #white {
   background-color: white;
 }
 
 /* Typography Section Styles
 ======================== */
-/* line 100, ../default.scss */
+/* line 105, ../default.scss */
 .fonts p {
   font-size: 1.3em;
   font-weight: 300;
 }
-/* line 105, ../default.scss */
+/* line 110, ../default.scss */
 .fonts .description {
   display: -webkit-box;
   display: -webkit-flex;
@@ -113,19 +119,19 @@ header {
       -ms-flex-align: center;
           align-items: center;
 }
-/* line 109, ../default.scss */
+/* line 114, ../default.scss */
 .fonts .description p {
-  margin-top: -20px;
+  margin-top: -25px;
 }
 
-/* line 116, ../default.scss */
+/* line 121, ../default.scss */
 .characters .bold {
   font-size: 110px;
   font-weight: 700;
   letter-spacing: -15px;
   margin-right: 50px;
 }
-/* line 123, ../default.scss */
+/* line 128, ../default.scss */
 .characters .book {
   font-size: 110px;
   font-weight: 300;
