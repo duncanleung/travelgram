@@ -2,8 +2,9 @@
 /* Reusable Styles
 ======================== */
 $primary-black: #323433;
-$primary-gray: #777979;
-$secondary-gray: #DEDEDE;
+$primary-gray: #565A5C;
+$secondary-gray: #82888A;
+$tertiary-gray: #F5F5F5;
 $primary-green: #4BBFBB;
 $secondary-green: #0F948F;
 $primary-pink: #FE6367;
@@ -110,6 +111,9 @@ header {
 #secondary-gray {
   background-color: $secondary-gray;
 }
+#tertiary-gray {
+  background-color: $tertiary-gray;
+}
 #white {
   background-color: white;
 }
@@ -152,16 +156,6 @@ header {
     font-weight: 300;
     letter-spacing: -15px;
   }
-}
-
-
-/* Footer Section Styles
-======================== */
-footer {
-  height: 10vh;
-  padding: 10px 0 0 0;
-  background-color: $primary-green;
-  text-align: center;
 }
 
 
