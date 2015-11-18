@@ -8,20 +8,13 @@ body {
 }
 
 /* line 18, ../default.scss */
-.logo {
-  margin: 0;
-  font-weight: 600;
-  font-size: 24px;
-}
-
-/* line 24, ../default.scss */
 .intro,
 .colors,
 .fonts {
   margin: 0 10% 80px 10%;
 }
 
-/* line 30, ../default.scss */
+/* line 24, ../default.scss */
 h2 {
   font-weight: 300;
   margin: 0 0 20px 0;
@@ -29,7 +22,7 @@ h2 {
 
 /* Header Styles
 ======================== */
-/* line 38, ../default.scss */
+/* line 32, ../default.scss */
 header {
   height: 45px;
   padding: 10px 0 0 0;
@@ -37,21 +30,36 @@ header {
   text-align: center;
 }
 
+/* line 39, ../default.scss */
+.text-logo {
+  margin: 0;
+  font-weight: 600;
+  font-size: 24px;
+  display: inline-block;
+}
+
+/* line 46, ../default.scss */
+.img-logo {
+  height: 30px;
+  margin: -15px 0 0 0;
+  display: inline-block;
+}
+
 /* Intro Section Styles
 ======================== */
-/* line 49, ../default.scss */
+/* line 56, ../default.scss */
 .intro {
   margin-bottom: 60px;
 }
-/* line 53, ../default.scss */
+/* line 60, ../default.scss */
 .intro h1 {
   margin: 40px 0 20px 0;
 }
-/* line 57, ../default.scss */
+/* line 64, ../default.scss */
 .intro h2 {
   margin-top: 40px;
 }
-/* line 61, ../default.scss */
+/* line 68, ../default.scss */
 .intro p {
   font-size: 1.3em;
   font-weight: 300;
@@ -59,56 +67,56 @@ header {
 
 /* Colors Section Styles
 ======================== */
-/* line 70, ../default.scss */
+/* line 77, ../default.scss */
 .color-block {
   height: 90px;
-  border: 1px solid #dedede;
+  border: 1px solid #DEDEDE;
 }
 
-/* line 75, ../default.scss */
+/* line 82, ../default.scss */
 .subtext {
   margin-top: -10px;
   color: #777979;
 }
 
-/* line 80, ../default.scss */
+/* line 87, ../default.scss */
 #primary-green {
   background-color: #4BBFBB;
 }
 
-/* line 83, ../default.scss */
+/* line 90, ../default.scss */
 #secondary-green {
   background-color: #0F948F;
 }
 
-/* line 86, ../default.scss */
+/* line 93, ../default.scss */
 #primary-black {
   background-color: #323433;
 }
 
-/* line 89, ../default.scss */
+/* line 96, ../default.scss */
 #primary-gray {
   background-color: #777979;
 }
 
-/* line 92, ../default.scss */
+/* line 99, ../default.scss */
 #secondary-gray {
-  background-color: #dedede;
+  background-color: #DEDEDE;
 }
 
-/* line 95, ../default.scss */
+/* line 102, ../default.scss */
 #white {
   background-color: white;
 }
 
 /* Typography Section Styles
 ======================== */
-/* line 105, ../default.scss */
+/* line 112, ../default.scss */
 .fonts p {
   font-size: 1.3em;
   font-weight: 300;
 }
-/* line 110, ../default.scss */
+/* line 117, ../default.scss */
 .fonts .description {
   display: -webkit-box;
   display: -webkit-flex;
@@ -118,21 +126,23 @@ header {
   -webkit-align-items: center;
       -ms-flex-align: center;
           align-items: center;
+  margin-top: -30px;
 }
-/* line 114, ../default.scss */
+/* line 122, ../default.scss */
 .fonts .description p {
   margin-top: -25px;
 }
 
-/* line 121, ../default.scss */
+/* line 129, ../default.scss */
 .characters .bold {
   font-size: 110px;
   font-weight: 700;
   letter-spacing: -15px;
   margin-right: 50px;
 }
-/* line 128, ../default.scss */
+/* line 136, ../default.scss */
 .characters .book {
+  margin-top: 0;
   font-size: 110px;
   font-weight: 300;
   letter-spacing: -15px;

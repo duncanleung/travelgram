@@ -3,7 +3,7 @@
 ======================== */
 $primary-black: #323433;
 $primary-gray: #777979;
-$secondary-gray: #dedede;
+$secondary-gray: #DEDEDE;
 $primary-green: #4BBFBB;
 $secondary-green: #0F948F;
 $primary-pink: #FE6468;
@@ -13,12 +13,6 @@ html,
 body {
   font-family: 'Open Sans', sans-serif;
   color: $primary-black;
-}
-
-.logo {
-    margin: 0;
-    font-weight: 600;
-    font-size: 24px;
 }
 
 .intro,
@@ -40,6 +34,19 @@ header {
   padding: 10px 0 0 0;
   background-color: $primary-green;
   text-align: center;
+}
+
+.text-logo {
+    margin: 0;
+    font-weight: 600;
+    font-size: 24px;
+    display: inline-block;
+}
+
+.img-logo {
+  height: 30px;
+  margin: -15px 0 0 0;
+  display: inline-block;
 }
 
 
@@ -110,6 +117,7 @@ header {
   .description {
     display: flex;
     align-items: center;
+    margin-top: -30px;
 
     p {
       margin-top: -25px;
@@ -126,6 +134,7 @@ header {
   }
 
   .book {
+    margin-top: 0;
     font-size: 110px;
     font-weight: 300;
     letter-spacing: -15px;
