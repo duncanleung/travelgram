@@ -57,7 +57,7 @@ header {
 }
 /* line 64, ../default.scss */
 .intro h2 {
-  margin-top: 40px;
+  margin-top: 20px;
 }
 /* line 68, ../default.scss */
 .intro p {
@@ -68,55 +68,75 @@ header {
 /* Colors Section Styles
 ======================== */
 /* line 77, ../default.scss */
+.colors {
+  margin-top: -20px;
+}
+
+/* line 81, ../default.scss */
 .color-block {
   height: 90px;
+  margin-bottom: 20px;
   border: 1px solid #DEDEDE;
 }
 
-/* line 82, ../default.scss */
+/* line 87, ../default.scss */
 .subtext {
   margin-top: -10px;
   color: #777979;
 }
 
-/* line 87, ../default.scss */
+/* line 92, ../default.scss */
 #primary-green {
   background-color: #4BBFBB;
 }
 
-/* line 90, ../default.scss */
+/* line 95, ../default.scss */
 #secondary-green {
   background-color: #0F948F;
 }
 
-/* line 93, ../default.scss */
+/* line 98, ../default.scss */
+#primary-pink {
+  background-color: #FE6367;
+}
+
+/* line 101, ../default.scss */
+#primary-yellow {
+  background-color: #FFCA64;
+}
+
+/* line 104, ../default.scss */
 #primary-black {
   background-color: #323433;
 }
 
-/* line 96, ../default.scss */
+/* line 107, ../default.scss */
 #primary-gray {
   background-color: #777979;
 }
 
-/* line 99, ../default.scss */
+/* line 110, ../default.scss */
 #secondary-gray {
   background-color: #DEDEDE;
 }
 
-/* line 102, ../default.scss */
+/* line 113, ../default.scss */
 #white {
   background-color: white;
 }
 
 /* Typography Section Styles
 ======================== */
-/* line 112, ../default.scss */
+/* line 121, ../default.scss */
+.fonts {
+  margin-top: -40px;
+}
+/* line 125, ../default.scss */
 .fonts p {
   font-size: 1.3em;
   font-weight: 300;
 }
-/* line 117, ../default.scss */
+/* line 130, ../default.scss */
 .fonts .description {
   display: -webkit-box;
   display: -webkit-flex;
@@ -128,24 +148,34 @@ header {
           align-items: center;
   margin-top: -30px;
 }
-/* line 122, ../default.scss */
+/* line 135, ../default.scss */
 .fonts .description p {
   margin-top: -25px;
 }
 
-/* line 129, ../default.scss */
+/* line 142, ../default.scss */
 .characters .bold {
   font-size: 110px;
   font-weight: 700;
   letter-spacing: -15px;
   margin-right: 50px;
 }
-/* line 136, ../default.scss */
+/* line 149, ../default.scss */
 .characters .book {
   margin-top: 0;
   font-size: 110px;
   font-weight: 300;
   letter-spacing: -15px;
+}
+
+/* Footer Section Styles
+======================== */
+/* line 160, ../default.scss */
+footer {
+  height: 10vh;
+  padding: 10px 0 0 0;
+  background-color: #4BBFBB;
+  text-align: center;
 }
 
 /*# sourceMappingURL=default.css.map */

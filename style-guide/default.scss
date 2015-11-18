@@ -6,7 +6,7 @@ $primary-gray: #777979;
 $secondary-gray: #DEDEDE;
 $primary-green: #4BBFBB;
 $secondary-green: #0F948F;
-$primary-pink: #FE6468;
+$primary-pink: #FE6367;
 $primary-yellow: #FFCA64;
 
 html,
@@ -62,7 +62,7 @@ header {
   }
 
   h2 {
-    margin-top: 40px;
+    margin-top: 20px;
   }
 
   p {
@@ -74,8 +74,13 @@ header {
 /* Colors Section Styles
 ======================== */
 
+.colors {
+  margin-top: -20px;
+}
+
 .color-block {
   height: 90px;
+  margin-bottom: 20px;
   border: 1px solid $secondary-gray;
 }
 
@@ -89,6 +94,12 @@ header {
 }
 #secondary-green {
   background-color: $secondary-green;
+}
+#primary-pink {
+  background-color: $primary-pink;
+}
+#primary-yellow {
+  background-color: $primary-yellow;
 }
 #primary-black {
   background-color: $primary-black;
@@ -108,6 +119,8 @@ header {
 ======================== */
 
 .fonts {
+
+  margin-top: -40px;
 
   p {
     font-size: 1.3em;
@@ -142,8 +155,14 @@ header {
 }
 
 
-
-
+/* Footer Section Styles
+======================== */
+footer {
+  height: 10vh;
+  padding: 10px 0 0 0;
+  background-color: $primary-green;
+  text-align: center;
+}
 
 
 
