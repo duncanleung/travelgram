@@ -19,11 +19,28 @@ body {
   background-color: $tertiary-gray;
 }
 
-  .col-centered {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.col-centered {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+  .intro-text {
+  margin-top: 100px;
+  margin-bottom:40px;
+  text-align: center;
+  color: $primary-gray;
+
+  h2 {
+    font-size: 35px;
+    font-weight: 700;
   }
+
+  p {
+    font-weight: 400;
+    font-size: 16px;
+  }
+}
 
 /* Header and Search Bar Styles
 ======================== */
@@ -85,26 +102,6 @@ header {
 /* Discovery Section Styles
 ======================== */
 
-.discovery {
-  
-  .intro-text {
-    margin-top: 100px;
-    margin-bottom:40px;
-    text-align: center;
-    color: $primary-gray;
-
-    h2 {
-      font-size: 35px;
-      font-weight: 700;
-    }
-
-    p {
-      font-weight: 400;
-      font-size: 16px;
-    }
-  }
-}
-
 .discovery-tiles {
   a {
     text-decoration: none;
@@ -140,8 +137,54 @@ header {
   }
 }
 
+/* Listings Section Styles
+======================== */
+
+.results {
+  a {
+    text-decoration: none;
+  }
+
+  .tile-header {
+    height: 65px;
+    width: 350px;
+    border: 1px solid #b7babb;
+    border-radius: 10px 10px 0 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: $secondary-gray;
+    padding: 10px;
+
+    img {
+      display: inline-block;
+      border-radius: 50%;
+      width: 40px;
+    }
+
+    p {
+      display: inline-block;
+    }
+  }
 
 
+
+
+  .tile {
+
+    img {
+      width: 350px;
+    }
+  }
+
+  .tile-footer {
+    height: 90px;
+    width: 350px;
+    border: 1px solid #b7babb;
+    border-radius: 0 0 10px 10px;
+    margin-bottom: 40px;
+  }
+}
 
 
 
