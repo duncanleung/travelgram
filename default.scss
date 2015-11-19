@@ -1,0 +1,105 @@
+
+/* Reusable Styles
+======================== */
+$primary-black: #323433;
+$primary-gray: #565A5C;
+$secondary-gray: #82888A;
+$tertiary-gray: #F5F5F5;
+$primary-green: #4BBFBB;
+$secondary-green: #0F948F;
+$primary-pink: #FE6367;
+$primary-yellow: #FFCA64;
+
+$font-family: 'Open Sans', sans-serif;
+
+html,
+body {
+  font-family: $font-family;
+  color: $primary-black;
+}
+
+/* Header Styles
+======================== */
+
+header {
+  height: 600px;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.7)), url(../img/hero-istanbul.jpg);
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  h1,
+  h2 {
+    color: white;
+    text-align: center;
+  }
+
+  h1 {
+    font-size: 20px;
+    font-weight: 300;
+  }
+
+  h2 {
+    font-size: 40px;
+    font-weight: 600;
+    letter-spacing: 1px;
+  }
+}
+
+.search-container {
+  position: relative;
+  margin: -80px;
+  z-index: 1;
+  height: 80px;
+  background-color: rgba(0, 0, 0, 0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .btn-default {
+    background-color: $primary-green;
+    border-color: $primary-green;
+    font-family: $font-family;
+    font-weight: 300;
+    color: white;
+    transition: all 0.2s ease-in-out;
+  }
+
+  .btn-default:hover {
+    background-color: $secondary-green;
+    border-color: $secondary-green;
+  }
+
+  .input-group, .form-control {
+    display: flex;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
