@@ -5,11 +5,12 @@ html,
 body {
   font-family: "Open Sans", sans-serif;
   color: #323433;
+  background-color: #F5F5F5;
 }
 
 /* Header Styles
 ======================== */
-/* line 24, ../default.scss */
+/* line 25, ../default.scss */
 header {
   height: 600px;
   background-image: -webkit-linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.7)), url(../img/hero-istanbul.jpg);
@@ -35,31 +36,43 @@ header {
       -ms-flex-pack: center;
           justify-content: center;
 }
-/* line 35, ../default.scss */
+/* line 36, ../default.scss */
 header h1,
 header h2 {
   color: white;
   text-align: center;
 }
-/* line 41, ../default.scss */
+/* line 42, ../default.scss */
 header h1 {
   font-size: 20px;
   font-weight: 300;
 }
-/* line 46, ../default.scss */
+/* line 47, ../default.scss */
 header h2 {
   font-size: 40px;
   font-weight: 600;
   letter-spacing: 1px;
 }
 
-/* line 53, ../default.scss */
+/* line 54, ../default.scss */
 .search-container {
   position: relative;
-  margin: -80px;
+  margin-top: -80px;
+  padding: 20px;
   z-index: 1;
   height: 80px;
   background-color: rgba(0, 0, 0, 0.7);
+  /*   .search {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    } */
+  /* .input-group, .form-control {
+    display: flex;
+  } */
+}
+/* line 63, ../default.scss */
+.search-container .col-centered {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -73,7 +86,7 @@ header h2 {
       -ms-flex-align: center;
           align-items: center;
 }
-/* line 63, ../default.scss */
+/* line 74, ../default.scss */
 .search-container .btn-default {
   background-color: #4BBFBB;
   border-color: #4BBFBB;
@@ -83,17 +96,10 @@ header h2 {
   -webkit-transition: all 0.2s ease-in-out;
           transition: all 0.2s ease-in-out;
 }
-/* line 72, ../default.scss */
+/* line 83, ../default.scss */
 .search-container .btn-default:hover {
   background-color: #0F948F;
   border-color: #0F948F;
-}
-/* line 77, ../default.scss */
-.search-container .input-group, .search-container .form-control {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
 }
 
 /*# sourceMappingURL=default.css.map */

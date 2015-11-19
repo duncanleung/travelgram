@@ -16,6 +16,7 @@ html,
 body {
   font-family: $font-family;
   color: $primary-black;
+  background-color: $tertiary-gray;
 }
 
 /* Header Styles
@@ -52,13 +53,23 @@ header {
 
 .search-container {
   position: relative;
-  margin: -80px;
+  margin-top: -80px;
+  padding: 20px;
   z-index: 1;
   height: 80px;
   background-color: rgba(0, 0, 0, 0.7);
-  display: flex;
-  justify-content: center;
-  align-items: center;
+
+
+  .col-centered {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+/*   .search {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  } */
 
   .btn-default {
     background-color: $primary-green;
@@ -74,9 +85,9 @@ header {
     border-color: $secondary-green;
   }
 
-  .input-group, .form-control {
+  /* .input-group, .form-control {
     display: flex;
-  }
+  } */
 }
 
 
