@@ -141,9 +141,9 @@ header {
 ======================== */
 
 .results {
-  a {
-    text-decoration: none;
-  }
+  overflow-y: scroll;
+  height: 90vh;
+
 
   .tile-header {
     height: 65px;
@@ -168,9 +168,6 @@ header {
       display: inline-block;
     }
   }
-
-
-
 
   .tile {
 
@@ -201,8 +198,9 @@ header {
   }
 }
 
-
-
+#map {
+  height: 90vh;
+}
 
 
 

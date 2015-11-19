@@ -87,14 +87,14 @@ html
                   span Indonesia
     
 
-    //- Browse Section
-    section.listings.container
+    //- Listings Section
+    section.listings.container-fluid
       .row
         .col-sm-12
           .intro-text
             h2 Discover London, United Kingdom
-      .results.row
-        .col-sm-8
+      .row
+        .results.col-sm-6.col-sm-offset-1
           .row
             .col-md-6
               .tile-header
@@ -118,10 +118,65 @@ html
               .tile-footer
                 .likes 48 likes
                 .description Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore
+            .col-md-6
+              .tile-header
+                .profile
+                  img(src="../img/profile/graceful.jpg" alt="")
+                  p.username gracefuls
+                .time 38m ago
+              .tile
+                img(src="../img/results/london.jpg" alt="")
+              .tile-footer
+                .likes 48 likes
+                .description Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore
+            .col-md-6
+              .tile-header
+                .profile
+                  img(src="../img/profile/graceful.jpg" alt="")
+                  p.username gracefuls
+                .time 38m ago
+              .tile
+                img(src="../img/results/london.jpg" alt="")
+              .tile-footer
+                .likes 48 likes
+                .description Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore
+        #map.col-sm-5
 
 
 
 
+    script(type="text/javascript").
+      var myLatLang = {lat: 51.507351, lng: -0.127758};
+      var map;
+      function initMap() {
+        map = new google.maps.Map(document.getElementById('map'), {
+          center: myLatLang,
+          zoom: 13
+        });
+
+      var marker = new google.maps.Marker({
+        animation: google.maps.Animation.BOUNCE,
+        position: {lat: 51.507351, lng: -0.127758},
+        map: map,
+        title: "gracefuls"
+      });
+      
+      var marker2 = new google.maps.Marker({
+        animation: google.maps.Animation.BOUNCE,
+        position: {lat: 51.504787, lng: -0.113469},
+        map: map,
+        title: "gracefuls"
+      });
+
+      var marker3 = new google.maps.Marker({
+        animation: google.maps.Animation.BOUNCE,
+        position: {lat: 51.524112, lng: -0.118147},
+        map: map,
+        title: "gracefuls"
+      });
+
+      }
+    script(async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAErIbE5HGwX-I3j8QnZAnVAdDJb7qcHUc&callback=initMap")
 
 
 

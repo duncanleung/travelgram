@@ -166,9 +166,10 @@ header h2 {
 
 /* Listings Section Styles
 ======================== */
-/* line 144, ../default.scss */
-.results a {
-  text-decoration: none;
+/* line 143, ../default.scss */
+.results {
+  overflow-y: scroll;
+  height: 90vh;
 }
 /* line 148, ../default.scss */
 .results .tile-header {
@@ -202,11 +203,11 @@ header h2 {
 .results .tile-header p {
   display: inline-block;
 }
-/* line 177, ../default.scss */
+/* line 174, ../default.scss */
 .results .tile img {
   width: 350px;
 }
-/* line 182, ../default.scss */
+/* line 179, ../default.scss */
 .results .tile-footer {
   height: 90px;
   width: 350px;
@@ -216,16 +217,21 @@ header h2 {
   background-color: white;
   padding: 10px;
 }
-/* line 191, ../default.scss */
+/* line 188, ../default.scss */
 .results .tile-footer .likes {
   font-weight: 700;
   color: #565A5C;
   margin-bottom: 2px;
 }
-/* line 197, ../default.scss */
+/* line 194, ../default.scss */
 .results .tile-footer .description {
   color: #565A5C;
   font-size: 13px;
+}
+
+/* line 201, ../default.scss */
+#map {
+  height: 90vh;
 }
 
 /*# sourceMappingURL=default.css.map */
