@@ -89,8 +89,9 @@ header {
   
   .intro-text {
     margin-top: 100px;
-    margin-bottom:60px;
+    margin-bottom:40px;
     text-align: center;
+    color: $primary-gray;
 
     h2 {
       font-size: 35px;
@@ -98,13 +99,16 @@ header {
     }
 
     p {
-      font-weight: 300;
+      font-weight: 400;
       font-size: 16px;
     }
   }
 }
 
 .discovery-tiles {
+  a {
+    text-decoration: none;
+  }
 
   .discovery-card {
     height: 350px;
@@ -133,7 +137,6 @@ header {
 
   .discovery-card:hover {
     opacity: 1;
-    cursor: pointer;
   }
 }
 

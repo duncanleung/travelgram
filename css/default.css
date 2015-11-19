@@ -101,21 +101,26 @@ header h2 {
 /* line 90, ../default.scss */
 .discovery .intro-text {
   margin-top: 100px;
-  margin-bottom: 60px;
+  margin-bottom: 40px;
   text-align: center;
+  color: #565A5C;
 }
-/* line 95, ../default.scss */
+/* line 96, ../default.scss */
 .discovery .intro-text h2 {
   font-size: 35px;
   font-weight: 700;
 }
-/* line 100, ../default.scss */
+/* line 101, ../default.scss */
 .discovery .intro-text p {
-  font-weight: 300;
+  font-weight: 400;
   font-size: 16px;
 }
 
 /* line 109, ../default.scss */
+.discovery-tiles a {
+  text-decoration: none;
+}
+/* line 113, ../default.scss */
 .discovery-tiles .discovery-card {
   height: 350px;
   margin-bottom: 30px;
@@ -143,7 +148,7 @@ header h2 {
       -ms-flex-direction: column;
           flex-direction: column;
 }
-/* line 122, ../default.scss */
+/* line 126, ../default.scss */
 .discovery-tiles .discovery-card span {
   display: inline-block;
   margin-bottom: 5px;
@@ -154,10 +159,9 @@ header h2 {
   text-align: center;
   background-color: rgba(0, 0, 0, 0.4);
 }
-/* line 134, ../default.scss */
+/* line 138, ../default.scss */
 .discovery-tiles .discovery-card:hover {
   opacity: 1;
-  cursor: pointer;
 }
 
 /*# sourceMappingURL=default.css.map */
