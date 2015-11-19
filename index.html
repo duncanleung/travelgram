@@ -2,10 +2,11 @@
 <html>
   <head>
     <meta charset="UTF-8">
-    <metca name="viewport" content="width=device-width, initial-scale=1"></metca>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" integrity="sha512-dTfge/zgoMYpP7QbHy4gWMEGsbsdZeCXz7irItjcC3sPUFtf0kuFbDz/ixG7ArTxmDjLXDmezHubeNikyKGVyQ==" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,600,300" rel="stylesheet" type="text/css">
     <link rel="stylesheet" href="css/default.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
     <title>travelGram</title>
   </head>
   <body>
@@ -70,9 +71,9 @@
         </div>
       </div>
       <div class="row">
-        <div class="results col-sm-6 col-sm-offset-1">
+        <div class="results col-sm-7">
           <div class="row">
-            <div class="col-md-6">
+            <div class="col-md-12 col-lg-6">
               <div class="tile-header">
                 <div class="profile"><img src="../img/profile/graceful.jpg" alt="">
                   <p class="username">gracefuls</p>
@@ -85,7 +86,7 @@
                 <div class="description">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore</div>
               </div>
             </div>
-            <div class="col-md-6">
+            <div class="col-md-12 col-lg-6">
               <div class="tile-header">
                 <div class="profile"><img src="../img/profile/vintagedaughter.jpg" alt="">
                   <p class="username">vintagedaughter</p>
@@ -98,7 +99,7 @@
                 <div class="description">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore</div>
               </div>
             </div>
-            <div class="col-md-6">
+            <div class="col-md-12 col-lg-6">
               <div class="tile-header">
                 <div class="profile"><img src="../img/profile/beijingdou.jpg" alt="">
                   <p class="username">beijingdou</p>
@@ -132,6 +133,7 @@
     <script type="text/javascript">
       var myLatLang = {lat: 51.507351, lng: -0.127758};
       var map;
+      
       function initMap() {
         map = new google.maps.Map(document.getElementById('map'), {
           center: myLatLang,

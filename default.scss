@@ -147,7 +147,7 @@ header {
 
   .tile-header {
     height: 65px;
-    width: 350px;
+    width: 100%;
     padding: 10px;
     border: 1px solid #d3d3d3;
     border-radius: 10px 10px 0 0;
@@ -172,13 +172,13 @@ header {
   .tile {
 
     img {
-      width: 350px;
+      width: 100%;
     }
   }
 
   .tile-footer {
     height: 90px;
-    width: 350px;
+    width: 100%;
     border: 1px solid #d3d3d3;
     border-radius: 0 0 10px 10px;
     margin-bottom: 40px;

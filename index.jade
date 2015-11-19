@@ -2,12 +2,14 @@ doctype html
 html
   head
     meta(charset="UTF-8")
-    metca(name="viewport" content="width=device-width, initial-scale=1")
+    meta(name="viewport" content="width=device-width, initial-scale=1")
     //- BOOTSTRAP CSS CDN
     link(rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" integrity="sha512-dTfge/zgoMYpP7QbHy4gWMEGsbsdZeCXz7irItjcC3sPUFtf0kuFbDz/ixG7ArTxmDjLXDmezHubeNikyKGVyQ==" crossorigin="anonymous")
     //- OPEN SANS FONT GOOGLE CDN
     link(href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,600,300" rel="stylesheet" type="text/css")
     link(rel="stylesheet" href="css/default.css")
+    //- JQUERY CDN
+    script(src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js")
     title travelGram
   body
     //- Hero Section
@@ -94,9 +96,10 @@ html
           .intro-text
             h2 Discover London, United Kingdom
       .row
-        .results.col-sm-6.col-sm-offset-1
+        .results.col-sm-7
           .row
-            .col-md-6
+            //- Profile
+            .col-md-12.col-lg-6
               .tile-header
                 .profile
                   img(src="../img/profile/graceful.jpg" alt="")
@@ -107,7 +110,8 @@ html
               .tile-footer
                 .likes 48 likes
                 .description Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore
-            .col-md-6
+            //- Profile
+            .col-md-12.col-lg-6
               .tile-header
                 .profile
                   img(src="../img/profile/vintagedaughter.jpg" alt="")
@@ -118,7 +122,8 @@ html
               .tile-footer
                 .likes 23 likes
                 .description Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore
-            .col-md-6
+            //- Profile
+            .col-md-12.col-lg-6
               .tile-header
                 .profile
                   img(src="../img/profile/beijingdou.jpg" alt="")
@@ -129,6 +134,7 @@ html
               .tile-footer
                 .likes 13 likes
                 .description Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore
+            //- Profile
             .col-md-6
               .tile-header
                 .profile
@@ -148,6 +154,7 @@ html
     script(type="text/javascript").
       var myLatLang = {lat: 51.507351, lng: -0.127758};
       var map;
+
       function initMap() {
         map = new google.maps.Map(document.getElementById('map'), {
           center: myLatLang,
