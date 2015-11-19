@@ -48,12 +48,13 @@ header {
   h1 {
     font-size: 20px;
     font-weight: 300;
+    letter-spacing: 1px;
   }
 
   h2 {
     font-size: 40px;
-    font-weight: 600;
-    letter-spacing: 1px;
+    font-weight: 700;
+    /* letter-spacing: 1px; */
   }
 }
 
@@ -63,7 +64,7 @@ header {
   padding: 20px;
   z-index: 1;
   height: 80px;
-  background-color: rgba(0, 0, 0, 0.7);
+  background-color: rgba(0, 0, 0, 0.4);
 
   .btn-default {
     background-color: $primary-green;
@@ -87,22 +88,54 @@ header {
 .discovery {
   
   .intro-text {
+    margin-top: 100px;
+    margin-bottom:60px;
     text-align: center;
+
+    h2 {
+      font-size: 35px;
+      font-weight: 700;
+    }
+
+    p {
+      font-weight: 300;
+      font-size: 16px;
+    }
   }
 }
 
-.discovery-card {
-  height: 350px;
-  margin-bottom: 30px;
-  background-size: 100%;
-  background-position: center;
-  background-repeat: no-repeat;
+.discovery-tiles {
+
+  .discovery-card {
+    height: 350px;
+    margin-bottom: 30px;
+    opacity: .7;
+    background-size: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    transition: all 0.2s ease-in;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+      span {
+        display: inline-block;
+        margin-bottom: 5px;
+        padding: 0 10px 0 10px;
+        color: white;
+        font-size: 40px;
+        font-weight: 700;
+        text-align: center;
+        background-color: rgba(0, 0, 0, 0.4);
+      }
+  }
+
+  .discovery-card:hover {
+    opacity: 1;
+    cursor: pointer;
+  }
 }
-
-
-
-
-
 
 
 
