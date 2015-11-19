@@ -62,24 +62,25 @@ header h2 {
 header h1 {
   font-size: 20px;
   font-weight: 300;
-}
-/* line 53, ../default.scss */
-header h2 {
-  font-size: 40px;
-  font-weight: 600;
   letter-spacing: 1px;
 }
+/* line 54, ../default.scss */
+header h2 {
+  font-size: 40px;
+  font-weight: 700;
+  /* letter-spacing: 1px; */
+}
 
-/* line 60, ../default.scss */
+/* line 61, ../default.scss */
 .search-container {
   position: relative;
   margin-top: -80px;
   padding: 20px;
   z-index: 1;
   height: 80px;
-  background-color: rgba(0, 0, 0, 0.7);
+  background-color: rgba(0, 0, 0, 0.4);
 }
-/* line 68, ../default.scss */
+/* line 69, ../default.scss */
 .search-container .btn-default {
   background-color: #4BBFBB;
   border-color: #4BBFBB;
@@ -89,7 +90,7 @@ header h2 {
   -webkit-transition: all 0.2s ease-in-out;
           transition: all 0.2s ease-in-out;
 }
-/* line 77, ../default.scss */
+/* line 78, ../default.scss */
 .search-container .btn-default:hover {
   background-color: #0F948F;
   border-color: #0F948F;
@@ -97,18 +98,38 @@ header h2 {
 
 /* Discovery Section Styles
 ======================== */
-/* line 89, ../default.scss */
+/* line 90, ../default.scss */
 .discovery .intro-text {
+  margin-top: 100px;
+  margin-bottom: 60px;
   text-align: center;
 }
+/* line 95, ../default.scss */
+.discovery .intro-text h2 {
+  font-weight: 700;
+}
+/* line 99, ../default.scss */
+.discovery .intro-text p {
+  font-weight: 300;
+  font-size: 16px;
+}
 
-/* line 94, ../default.scss */
+/* line 106, ../default.scss */
 .discovery-card {
   height: 350px;
   margin-bottom: 30px;
+  opacity: .7;
   background-size: 100%;
   background-position: center;
   background-repeat: no-repeat;
+  -webkit-transition: all 0.2s ease-in;
+          transition: all 0.2s ease-in;
+}
+
+/* line 116, ../default.scss */
+.discovery-card:hover {
+  opacity: 1;
+  cursor: pointer;
 }
 
 /*# sourceMappingURL=default.css.map */
