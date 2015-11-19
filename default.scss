@@ -148,13 +148,15 @@ header {
   .tile-header {
     height: 65px;
     width: 350px;
-    border: 1px solid #b7babb;
+    padding: 10px;
+    border: 1px solid #d3d3d3;
     border-radius: 10px 10px 0 0;
     display: flex;
     align-items: center;
     justify-content: space-between;
     color: $secondary-gray;
-    padding: 10px;
+    background-color: white;
+
 
     img {
       display: inline-block;
@@ -180,9 +182,22 @@ header {
   .tile-footer {
     height: 90px;
     width: 350px;
-    border: 1px solid #b7babb;
+    border: 1px solid #d3d3d3;
     border-radius: 0 0 10px 10px;
     margin-bottom: 40px;
+    background-color: white;
+    padding: 10px;
+
+    .likes {
+      font-weight: 700;
+      color: $primary-gray;
+      margin-bottom: 2px;
+    }
+
+    .description {
+      color: $primary-gray;
+      font-size: 13px;
+    }
   }
 }
 

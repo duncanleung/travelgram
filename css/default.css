@@ -174,7 +174,8 @@ header h2 {
 .results .tile-header {
   height: 65px;
   width: 350px;
-  border: 1px solid #b7babb;
+  padding: 10px;
+  border: 1px solid #d3d3d3;
   border-radius: 10px 10px 0 0;
   display: -webkit-box;
   display: -webkit-flex;
@@ -189,29 +190,42 @@ header h2 {
       -ms-flex-pack: justify;
           justify-content: space-between;
   color: #82888A;
-  padding: 10px;
+  background-color: white;
 }
-/* line 159, ../default.scss */
+/* line 161, ../default.scss */
 .results .tile-header img {
   display: inline-block;
   border-radius: 50%;
   width: 40px;
 }
-/* line 165, ../default.scss */
+/* line 167, ../default.scss */
 .results .tile-header p {
   display: inline-block;
 }
-/* line 175, ../default.scss */
+/* line 177, ../default.scss */
 .results .tile img {
   width: 350px;
 }
-/* line 180, ../default.scss */
+/* line 182, ../default.scss */
 .results .tile-footer {
   height: 90px;
   width: 350px;
-  border: 1px solid #b7babb;
+  border: 1px solid #d3d3d3;
   border-radius: 0 0 10px 10px;
   margin-bottom: 40px;
+  background-color: white;
+  padding: 10px;
+}
+/* line 191, ../default.scss */
+.results .tile-footer .likes {
+  font-weight: 700;
+  color: #565A5C;
+  margin-bottom: 2px;
+}
+/* line 197, ../default.scss */
+.results .tile-footer .description {
+  color: #565A5C;
+  font-size: 13px;
 }
 
 /*# sourceMappingURL=default.css.map */
