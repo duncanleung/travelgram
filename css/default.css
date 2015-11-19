@@ -8,9 +8,25 @@ body {
   background-color: #F5F5F5;
 }
 
-/* Header Styles
+/* line 22, ../default.scss */
+.col-centered {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+/* Header and Search Bar Styles
 ======================== */
-/* line 25, ../default.scss */
+/* line 31, ../default.scss */
 header {
   height: 600px;
   background-image: -webkit-linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.7)), url(../img/hero-istanbul.jpg);
@@ -36,25 +52,25 @@ header {
       -ms-flex-pack: center;
           justify-content: center;
 }
-/* line 36, ../default.scss */
+/* line 42, ../default.scss */
 header h1,
 header h2 {
   color: white;
   text-align: center;
 }
-/* line 42, ../default.scss */
+/* line 48, ../default.scss */
 header h1 {
   font-size: 20px;
   font-weight: 300;
 }
-/* line 47, ../default.scss */
+/* line 53, ../default.scss */
 header h2 {
   font-size: 40px;
   font-weight: 600;
   letter-spacing: 1px;
 }
 
-/* line 54, ../default.scss */
+/* line 60, ../default.scss */
 .search-container {
   position: relative;
   margin-top: -80px;
@@ -62,31 +78,8 @@ header h2 {
   z-index: 1;
   height: 80px;
   background-color: rgba(0, 0, 0, 0.7);
-  /*   .search {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-    } */
-  /* .input-group, .form-control {
-    display: flex;
-  } */
 }
-/* line 63, ../default.scss */
-.search-container .col-centered {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-  -webkit-align-items: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-/* line 74, ../default.scss */
+/* line 68, ../default.scss */
 .search-container .btn-default {
   background-color: #4BBFBB;
   border-color: #4BBFBB;
@@ -96,10 +89,26 @@ header h2 {
   -webkit-transition: all 0.2s ease-in-out;
           transition: all 0.2s ease-in-out;
 }
-/* line 83, ../default.scss */
+/* line 77, ../default.scss */
 .search-container .btn-default:hover {
   background-color: #0F948F;
   border-color: #0F948F;
+}
+
+/* Discovery Section Styles
+======================== */
+/* line 89, ../default.scss */
+.discovery .intro-text {
+  text-align: center;
+}
+
+/* line 94, ../default.scss */
+.discovery-card {
+  height: 350px;
+  margin-bottom: 30px;
+  background-size: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
 /*# sourceMappingURL=default.css.map */

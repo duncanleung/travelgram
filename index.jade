@@ -10,11 +10,14 @@ html
     link(rel="stylesheet" href="css/default.css")
     title travelGram
   body
+    //- Hero Section
     header.container-fluid
       .row
         .col-sm-12
           h2 Where do you want to explore today?
           h1 Explore the world via instagram
+
+    //- Search Bar Section
     section.search-container.container-fluid
       .row
         .col-centered
@@ -23,3 +26,43 @@ html
               input(type="search" class="form-control" placeholder="Istanbul, Turkey" autofocus="autofocus")
               span.input-group-btn
                 button(class="btn btn-default" type="button") Search
+
+    //- Discovery Section
+    section.discovery.container
+      .row
+        .col-sm-12
+          .intro-text
+            h2 Explore The World
+            p See what's happening on Instagram, anywhere in the world
+          .discovery-tiles
+            .row 
+              .col-lg-8
+                .discovery-card(style="background-image:url(../img/discovery/spain.jpg)")
+              .col-lg-4
+                .discovery-card(style="background-image:url(../img/discovery/paris.jpg)")
+            .row
+              .col-lg-4
+                .discovery-card(style="background-image:url(../img/discovery/deli.jpg)")
+              .col-lg-4
+                .discovery-card(style="background-image:url(../img/discovery/canada.jpg)")
+              .col-lg-4
+                .discovery-card(style="background-image:url(../img/discovery/hong-kong.jpg)")
+            .row
+              .col-lg-4
+                .discovery-card(style="background-image:url(../img/discovery/san-francisco.jpg)")
+              .col-lg-8
+                .discovery-card(style="background-image:url(../img/discovery/australia.jpg)")
+            .row
+              .col-lg-4
+                .discovery-card(style="background-image:url(../img/discovery/chicago.jpg)")
+              .col-lg-4
+                .discovery-card(style="background-image:url(../img/discovery/tokyo.jpg)")
+              .col-lg-4
+                .discovery-card(style="background-image:url(../img/discovery/bali.jpg)")
+
+
+
+
+
+
+
