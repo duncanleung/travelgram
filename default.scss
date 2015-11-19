@@ -19,7 +19,13 @@ body {
   background-color: $tertiary-gray;
 }
 
-/* Header Styles
+  .col-centered {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+/* Header and Search Bar Styles
 ======================== */
 
 header {
@@ -59,18 +65,6 @@ header {
   height: 80px;
   background-color: rgba(0, 0, 0, 0.7);
 
-
-  .col-centered {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-/*   .search {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  } */
-
   .btn-default {
     background-color: $primary-green;
     border-color: $primary-green;
@@ -85,13 +79,25 @@ header {
     border-color: $secondary-green;
   }
 
-  /* .input-group, .form-control {
-    display: flex;
-  } */
 }
 
+/* Discovery Section Styles
+======================== */
 
+.discovery {
+  
+  .intro-text {
+    text-align: center;
+  }
+}
 
+.discovery-card {
+  height: 350px;
+  margin-bottom: 30px;
+  background-size: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+}
 
 
 
