@@ -1,0 +1,27 @@
+List of Nouns For Project
+
+Search Location
+- City
+- Country
+- Lat
+- Long
+
+Photo
+- URL
+- GeoLocat
+    - Lat
+    - Long
+    - Name
+- User
+    - Username
+    - Picture
+- Comments
+- Likes
+- Hashtags
+
+Map
+- Lat
+- Long
+- Markers
+    - Lat
+    - Long
