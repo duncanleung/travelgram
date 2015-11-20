@@ -194,7 +194,7 @@ header h2 {
   background-color: white;
 }
 /* line 161, ../default.scss */
-.results .tile-header img {
+.results .tile-header .profile img {
   display: inline-block;
   border-radius: 50%;
   width: 40px;

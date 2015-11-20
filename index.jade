@@ -10,6 +10,9 @@ html
     link(rel="stylesheet" href="css/default.css")
     //- JQUERY CDN
     script(src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js")
+    //- script(type="text/javascript" src="http://maps.googleapis.com/maps/api/js?v=3&amp;sensor=false")
+    script(async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAErIbE5HGwX-I3j8QnZAnVAdDJb7qcHUc&callback=initMap")
+    script(src="../js/map.js" type="text/javascript")
     title travelGram
   body
     //- Hero Section
@@ -99,19 +102,19 @@ html
         .results.col-sm-7
           .row
             //- Profile
-            .col-md-12.col-lg-6
+            div(class="tile col-md-12 col-lg-6" onmouseover="hover(1)" onmouseout="out(1)")
               .tile-header
                 .profile
                   img(src="../img/profile/graceful.jpg" alt="")
                   p.username gracefuls
                 .time 38m ago
-              .tile
+              .tile-photo
                 img(src="../img/results/london.jpg" alt="")
               .tile-footer
                 .likes 48 likes
                 .description Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore
             //- Profile
-            .col-md-12.col-lg-6
+            div(class="tile col-md-12 col-lg-6" onmouseover="hover(2)" onmouseout="out(2)")
               .tile-header
                 .profile
                   img(src="../img/profile/vintagedaughter.jpg" alt="")
@@ -123,7 +126,7 @@ html
                 .likes 23 likes
                 .description Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore
             //- Profile
-            .col-md-12.col-lg-6
+            div(class="tile col-md-12 col-lg-6" onmouseover="hover(3)" onmouseout="out(3)")
               .tile-header
                 .profile
                   img(src="../img/profile/beijingdou.jpg" alt="")
@@ -135,7 +138,7 @@ html
                 .likes 13 likes
                 .description Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore
             //- Profile
-            .col-md-6
+            div(class="tile col-md-12 col-lg-6" onmouseover="hover(4)" onmouseout="out(4)")
               .tile-header
                 .profile
                   img(src="../img/profile/nomorekaren.jpg" alt="")
@@ -147,43 +150,6 @@ html
                 .likes 53 likes
                 .description Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore
         #map.col-sm-5
-
-
-
-
-    script(type="text/javascript").
-      var myLatLang = {lat: 51.507351, lng: -0.127758};
-      var map;
-
-      function initMap() {
-        map = new google.maps.Map(document.getElementById('map'), {
-          center: myLatLang,
-          zoom: 13
-        });
-
-      var marker = new google.maps.Marker({
-        animation: google.maps.Animation.DROP,
-        position: {lat: 51.507351, lng: -0.127758},
-        map: map,
-        title: "gracefuls"
-      });
-      
-      var marker2 = new google.maps.Marker({
-        animation: google.maps.Animation.DROP,
-        position: {lat: 51.504787, lng: -0.113469},
-        map: map,
-        title: "gracefuls"
-      });
-
-      var marker3 = new google.maps.Marker({
-        animation: google.maps.Animation.DROP,
-        position: {lat: 51.524112, lng: -0.118147},
-        map: map,
-        title: "gracefuls"
-      });
-
-      }
-    script(async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAErIbE5HGwX-I3j8QnZAnVAdDJb7qcHUc&callback=initMap")
 
 
 
