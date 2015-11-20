@@ -1,8 +1,8 @@
 
 var londonLatLang = {lat: 51.507351, lng: -0.127758};
 var map;
-var icon = '../img/logo.png';
-var iconLight = '../img/pin-green.png';
+var icon = 'img/logo.png';
+var iconLight = 'img/pin-green.png';
 var allMarkers = [];
 
 //- CREATE MAP
