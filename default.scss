@@ -144,6 +144,10 @@ header {
   overflow-y: scroll;
   height: 90vh;
 
+  .highlight {
+    height: 20px !important;
+    box-shadow: 3px 3px 4px #000 !important;
+  }
 
   .tile-header {
     height: 65px;

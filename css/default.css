@@ -171,7 +171,12 @@ header h2 {
   overflow-y: scroll;
   height: 90vh;
 }
-/* line 148, ../default.scss */
+/* line 147, ../default.scss */
+.results .highlight {
+  height: 20px !important;
+  box-shadow: 3px 3px 4px #000 !important;
+}
+/* line 152, ../default.scss */
 .results .tile-header {
   height: 65px;
   width: 100%;
@@ -193,21 +198,21 @@ header h2 {
   color: #82888A;
   background-color: white;
 }
-/* line 161, ../default.scss */
+/* line 165, ../default.scss */
 .results .tile-header .profile img {
   display: inline-block;
   border-radius: 50%;
   width: 40px;
 }
-/* line 167, ../default.scss */
+/* line 171, ../default.scss */
 .results .tile-header p {
   display: inline-block;
 }
-/* line 174, ../default.scss */
+/* line 178, ../default.scss */
 .results .tile img {
   width: 100%;
 }
-/* line 179, ../default.scss */
+/* line 183, ../default.scss */
 .results .tile-footer {
   height: 90px;
   width: 100%;
@@ -217,19 +222,19 @@ header h2 {
   background-color: white;
   padding: 10px;
 }
-/* line 188, ../default.scss */
+/* line 192, ../default.scss */
 .results .tile-footer .likes {
   font-weight: 700;
   color: #565A5C;
   margin-bottom: 2px;
 }
-/* line 194, ../default.scss */
+/* line 198, ../default.scss */
 .results .tile-footer .description {
   color: #565A5C;
   font-size: 13px;
 }
 
-/* line 201, ../default.scss */
+/* line 205, ../default.scss */
 #map {
   height: 90vh;
 }

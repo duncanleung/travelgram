@@ -12,9 +12,10 @@ function initMap() {
     zoom: 13
   });
 
+  /*DOM LISTENER*/
   google.maps.event.addDomListener(window, 'load', function () {
+    
     //- ADD MARKERS   
-
     var marker1 = new google.maps.Marker({
       animation: google.maps.Animation.DROP,
       position: {lat: 51.507351, lng: -0.127758},
@@ -55,29 +56,32 @@ function initMap() {
     });
     allMarkers.push(marker4);
 
-    });/*DOM LISTENER*/
+    google.maps.event.addDomListener(marker1, 'mouseover', function(){
+      console.log("marker1 hover");
+      $('#tile1').toggleClass('.highlight');
+    });
+  });/*DOM WINDOW LISTENER*/
 
+}/*END CREATE MAP*/
 
-}/*END INIT MAP*/
-
-//- When Hover Over Instagram Tiles
-    function hover(id) {
-      for(var i=0; i<allMarkers.length; i++) {
-        if(id === allMarkers[i].id) {
-          allMarkers[i].setIcon(iconLight);
-          break;
-        }
-      }
+//- HIGHLIGHT MARKER ON DIV HOVER
+function hover(id) {
+  for(var i=0; i<allMarkers.length; i++) {
+    if(id === allMarkers[i].id) {
+      allMarkers[i].setIcon(iconLight);
+      break;
     }
+  }
+}
 
-    function out(id) {
-      for(var i=0; i<allMarkers.length; i++) {
-        if(id === allMarkers[i].id) {
-          allMarkers[i].setIcon(icon);
-          break;
-        }
-      }
+function out(id) {
+  for(var i=0; i<allMarkers.length; i++) {
+    if(id === allMarkers[i].id) {
+      allMarkers[i].setIcon(icon);
+      break;
     }
+  }
+}
 
 
 
