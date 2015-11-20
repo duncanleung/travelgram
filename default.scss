@@ -145,59 +145,63 @@ header {
   height: 90vh;
 
   .highlight {
-    height: 20px !important;
-    box-shadow: 3px 3px 4px #000 !important;
-  }
-
-  .tile-header {
-    height: 65px;
-    width: 100%;
-    padding: 10px;
-    border: 1px solid #d3d3d3;
-    border-radius: 10px 10px 0 0;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    color: $secondary-gray;
-    background-color: white;
-
-
-    .profile img {
-      display: inline-block;
-      border-radius: 50%;
-      width: 40px;
-    }
-
-    p {
-      display: inline-block;
-    }
-  }
+    box-shadow: 0 0 20px 5px rgba(74, 191, 187, 0.87);
+    border-radius: 10px;
+  } 
 
   .tile {
 
-    img {
+    .tile-header {
+      height: 65px;
       width: 100%;
+      padding: 10px;
+      margin-top: 10px;
+      border: 1px solid #d3d3d3;
+      border-radius: 10px 10px 0 0;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      color: $secondary-gray;
+      background-color: white;
+
+
+      .profile img {
+        display: inline-block;
+        border-radius: 50%;
+        width: 40px;
+      }
+
+      p {
+        display: inline-block;
+      }
     }
-  }
 
-  .tile-footer {
-    height: 90px;
-    width: 100%;
-    border: 1px solid #d3d3d3;
-    border-radius: 0 0 10px 10px;
-    margin-bottom: 40px;
-    background-color: white;
-    padding: 10px;
+    .tile-photo {
 
-    .likes {
-      font-weight: 700;
-      color: $primary-gray;
-      margin-bottom: 2px;
+      img {
+        width: 100%;
+      }
     }
 
-    .description {
-      color: $primary-gray;
-      font-size: 13px;
+    .tile-footer {
+      height: 90px;
+      width: 100%;
+      border: 1px solid #d3d3d3;
+      border-radius: 0 0 10px 10px;
+      margin-bottom: 40px;
+      background-color: white;
+      padding: 10px;
+
+      .likes {
+        font-weight: 700;
+        color: $primary-gray;
+        margin-bottom: 2px;
+      }
+
+      .description {
+        color: $primary-gray;
+        font-size: 13px;
+      }
     }
   }
 }

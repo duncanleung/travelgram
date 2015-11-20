@@ -15,7 +15,7 @@ function initMap() {
   /*DOM LISTENER*/
   google.maps.event.addDomListener(window, 'load', function () {
     
-    //- ADD MARKERS   
+    //- ADD MARKER 1 
     var marker1 = new google.maps.Marker({
       animation: google.maps.Animation.DROP,
       position: {lat: 51.507351, lng: -0.127758},
@@ -26,6 +26,17 @@ function initMap() {
     });
     allMarkers.push(marker1);
 
+    marker1.addListener('mouseover', function(){
+      console.log("marker1 mouseover");
+      $('#tile1').toggleClass('highlight');
+    });
+
+    marker1.addListener('mouseout', function(){
+      console.log("marker1 mouseout");
+      $('#tile1').toggleClass('highlight');
+    });
+
+    //- ADD MARKER 2
     var marker2 = new google.maps.Marker({
       animation: google.maps.Animation.DROP,
       position: {lat: 51.504787, lng: -0.113469},
@@ -36,6 +47,17 @@ function initMap() {
     });
     allMarkers.push(marker2);
 
+    marker2.addListener('mouseover', function(){
+      console.log("marker2 mouseover");
+      $('#tile2').toggleClass('highlight');
+    });
+
+    marker2.addListener('mouseout', function(){
+      console.log("marker2 mouseout");
+      $('#tile2').toggleClass('highlight');
+    });
+
+    //- ADD MARKER 3
     var marker3 = new google.maps.Marker({
       animation: google.maps.Animation.DROP,
       position: {lat: 51.524112, lng: -0.118147},
@@ -46,6 +68,17 @@ function initMap() {
     });
     allMarkers.push(marker3);
 
+    marker3.addListener('mouseover', function(){
+      console.log("marker3 mouseover");
+      $('#tile3').toggleClass('highlight');
+    });
+
+    marker3.addListener('mouseout', function(){
+      console.log("marker3 mouseout");
+      $('#tile3').toggleClass('highlight');
+    });
+
+    //- ADD MARKER 4
     var marker4 = new google.maps.Marker({
       animation: google.maps.Animation.DROP,
       position: {lat: 51.508051, lng: -0.168641},
@@ -56,10 +89,50 @@ function initMap() {
     });
     allMarkers.push(marker4);
 
-    google.maps.event.addDomListener(marker1, 'mouseover', function(){
-      console.log("marker1 hover");
-      $('#tile1').toggleClass('.highlight');
+    marker4.addListener('mouseover', function(){
+      console.log("marker4 mouseover");
+      $('#tile4').toggleClass('highlight');
     });
+
+    marker4.addListener('mouseout', function(){
+      console.log("marker4 mouseout");
+      $('#tile4').toggleClass('highlight');
+    });
+
+    /*
+        - If mousemove in map
+        - If marker1 is hovered over
+        - set marker = marker1
+        - run mouseover/mouseout listeners
+    */
+
+/*    google.maps.event.addDomListener(map, 'mousemove', function(){
+
+    });
+    
+    google.maps.event.addDomListener(marker, 'mouseover', function(){
+      switch (marker) {
+        case marker1:
+          console.log("marker1 mouseover");
+          $('#tile1').toggleClass('highlight');
+
+        case marker2:
+          console.log("marker2 mouseover");
+          $('#tile2').toggleClass('highlight');
+      }
+    });*/
+
+
+
+/*    google.maps.event.addDomListener(marker1, 'mouseover', function(){
+      console.log("marker1 mouseover");
+      $('#tile1').toggleClass('highlight');
+    });
+
+    google.maps.event.addDomListener(marker1, 'mouseout', function(){
+      console.log("marker1 mouseout");
+      $('#tile1').toggleClass('highlight');
+    });*/
   });/*DOM WINDOW LISTENER*/
 
 }/*END CREATE MAP*/
