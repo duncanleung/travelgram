@@ -8,19 +8,35 @@ html
     //- OPEN SANS FONT GOOGLE CDN
     link(href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,600,300" rel="stylesheet" type="text/css")
     link(rel="stylesheet" href="css/default.css")
-    //- JQUERY CDN
+    //- JQUERY
     script(src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js")
-    //- script(type="text/javascript" src="http://maps.googleapis.com/maps/api/js?v=3&amp;sensor=false")
+    //- GOOGLE MAPS API
     script(async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAErIbE5HGwX-I3j8QnZAnVAdDJb7qcHUc&callback=initMap")
     script(src="js/map.js" type="text/javascript")
     title travelGram
   body
     //- Hero Section
     header.container-fluid
+      
+      //- Nav Bar
+      nav.row
+        .col-sm-12.col-centered
+          ul
+            li#explore
+              a(href="#") Explore
+            li#home
+              a(href="#") travelGram | Explore the world via Instagram
+                span.logo-frame
+            li#about
+              a(href="#") About
       .row
-        .col-sm-12
-          h2 Where do you want to explore today?
+        .title.col-sm-12
           h1 Explore the world via instagram
+          h2 Where do you want to explore today?
+          h2.text-logo
+            //- img(class="logo" src="img/pin-dark.png" alt="TravelGram Logo")
+            | travelGram
+          
 
     //- Search Bar Section
     section.search-container.container-fluid
@@ -92,7 +108,7 @@ html
                   span Indonesia
     
 
-    //- Listings Section
+    //- Photo Listings and Results Section
     section.listings.container-fluid
       .row
         .col-sm-12
