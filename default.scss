@@ -64,6 +64,10 @@ body {
     background-repeat: no-repeat;
     background-position: center;
     background-size: 61px 61px;
+
+    &:after {
+      border-bottom: none !important; 
+    }
     
     span {
       position: absolute;
@@ -107,9 +111,10 @@ header {
       li {
         display: inline-block;
         vertical-align: top;
-        margin-top: 15px;
+        margin-top: 16px;
 
         a {
+          position: relative;
           text-decoration: none !important;
           color: $primary-black;
           text-transform: uppercase;
@@ -120,6 +125,18 @@ header {
           &:hover,
           &:active {
             color: $primary-black;
+          }
+
+          &:after {
+            content: "";
+            display: block;
+            border-bottom: 2px solid $primary-black;
+            transform: scaleX(.00001);
+            transition: all 0.25s ease-in-out;
+          }
+
+          &:hover:after {
+            transform: scaleX(1);
           }
         }
       }
