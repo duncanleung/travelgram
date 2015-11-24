@@ -319,12 +319,11 @@ header .title img {
   padding-right: 0;
   padding-left: 0;
   width: 100%;
-  height: 250px;
   background-color: white;
   color: #82888A;
   vertical-align: middle;
 }
-/* line 335, ../default.scss */
+/* line 334, ../default.scss */
 .results .filters-container .filter-header {
   padding-top: 20px;
   padding-left: 30px;
@@ -333,43 +332,43 @@ header .title img {
   font-size: 15px;
   color: #565A5C;
 }
-/* line 344, ../default.scss */
+/* line 343, ../default.scss */
 .results .filters-container .filter-group {
   padding-top: 20px;
   padding-left: 40px;
   height: 80px;
   font-weight: 600;
 }
-/* line 351, ../default.scss */
+/* line 350, ../default.scss */
 .results .filters-container .filter-controls {
   padding-top: 20px;
   padding-left: 20px;
   padding-bottom: 20px;
 }
-/* line 356, ../default.scss */
+/* line 355, ../default.scss */
 .results .filters-container .filter-controls input {
   margin-bottom: 5px;
 }
-/* line 360, ../default.scss */
+/* line 359, ../default.scss */
 .results .filters-container .filter-controls label {
   font-weight: 400;
   margin-right: 15px;
 }
-/* line 365, ../default.scss */
+/* line 364, ../default.scss */
 .results .filters-container .filter-controls .range-control {
   display: flex;
   justify-content: space-between;
 }
-/* line 371, ../default.scss */
+/* line 370, ../default.scss */
 .results .filters-container hr {
   margin: 0 15px;
 }
-/* line 379, ../default.scss */
+/* line 378, ../default.scss */
 .results .highlight {
   box-shadow: 0 0 20px 5px rgba(74, 191, 187, 0.87);
   border-radius: 10px;
 }
-/* line 386, ../default.scss */
+/* line 385, ../default.scss */
 .results .tile .tile-header {
   height: 65px;
   width: 100%;
@@ -383,21 +382,21 @@ header .title img {
   color: #82888A;
   background-color: white;
 }
-/* line 400, ../default.scss */
+/* line 399, ../default.scss */
 .results .tile .tile-header .profile img {
   display: inline-block;
   border-radius: 50%;
   width: 40px;
 }
-/* line 406, ../default.scss */
+/* line 405, ../default.scss */
 .results .tile .tile-header p {
   display: inline-block;
 }
-/* line 413, ../default.scss */
+/* line 412, ../default.scss */
 .results .tile .tile-photo img {
   width: 100%;
 }
-/* line 418, ../default.scss */
+/* line 417, ../default.scss */
 .results .tile .tile-footer {
   height: 90px;
   width: 100%;
@@ -407,19 +406,19 @@ header .title img {
   background-color: white;
   padding: 10px;
 }
-/* line 427, ../default.scss */
+/* line 426, ../default.scss */
 .results .tile .tile-footer .likes {
   font-weight: 700;
   color: #565A5C;
   margin-bottom: 2px;
 }
-/* line 433, ../default.scss */
+/* line 432, ../default.scss */
 .results .tile .tile-footer .description {
   color: #565A5C;
   font-size: 13px;
 }
 
-/* line 441, ../default.scss */
+/* line 440, ../default.scss */
 #map {
   height: 100vh;
 }
