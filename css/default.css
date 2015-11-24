@@ -246,7 +246,7 @@ header .title img {
 ======================== */
 /* line 258, ../default.scss */
 .listings {
-  height: 100vh;
+  height: 95vh;
   position: relative;
 }
 
@@ -311,11 +311,11 @@ header .title img {
 /* line 321, ../default.scss */
 .results {
   overflow-y: scroll;
-  height: 100vh;
+  height: 95vh;
 }
 /* line 325, ../default.scss */
 .results .filters-container {
-  padding-top: 60px;
+  padding-top: 10px;
   padding-right: 0;
   padding-left: 0;
   width: 100%;
@@ -420,7 +420,7 @@ header .title img {
 
 /* line 440, ../default.scss */
 #map {
-  height: 100vh;
+  height: 95vh;
 }
 
 /*# sourceMappingURL=default.css.map */
