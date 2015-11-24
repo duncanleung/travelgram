@@ -9,7 +9,8 @@ var allMarkers = [];
 function initMap() {
   map = new google.maps.Map(document.getElementById('map'), {
     center: londonLatLang,
-    zoom: 13
+    zoom: 13,
+    scrollwheel: false
   });
 
   /*DOM LISTENER*/
