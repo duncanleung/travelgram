@@ -247,38 +247,59 @@ header .title img {
 }
 /* line 259, ../default.scss */
 .menu-bar .home-logo {
+  display: inline-block;
   width: 60px;
   height: 60px;
   border-right: 1px solid #dce0e0;
   text-align: center;
 }
-/* line 265, ../default.scss */
+/* line 266, ../default.scss */
 .menu-bar .home-logo:hover {
   background-color: #f7f8f8;
   border-bottom: 1px solid #dce0e0;
 }
-/* line 270, ../default.scss */
+/* line 271, ../default.scss */
 .menu-bar .home-logo img {
   width: auto;
   height: 50px;
   margin-top: 5px;
 }
-/* line 277, ../default.scss */
+/* line 278, ../default.scss */
 .menu-bar .listings-search {
-  width: 100%;
+  display: inline-block;
+  width: 70%;
+}
+/* line 282, ../default.scss */
+.menu-bar .listings-search i {
+  vertical-align: middle;
+  margin: 0 10px 0 10px;
+  color: #d3d3d3;
+  font-size: 25px;
+}
+/* line 289, ../default.scss */
+.menu-bar .listings-search input {
+  vertical-align: middle;
+  width: 50%;
+  margin-top: 5px;
+  box-shadow: none;
+  border: none;
+  outline: none;
+  line-height: 1.2em;
+  font-family: "Open Sans", sans-serif;
+  color: #82888A;
 }
 
-/* line 283, ../default.scss */
+/* line 304, ../default.scss */
 .results {
   overflow-y: scroll;
   height: 90vh;
 }
-/* line 287, ../default.scss */
+/* line 308, ../default.scss */
 .results .highlight {
   box-shadow: 0 0 20px 5px rgba(74, 191, 187, 0.87);
   border-radius: 10px;
 }
-/* line 294, ../default.scss */
+/* line 315, ../default.scss */
 .results .tile .tile-header {
   height: 65px;
   width: 100%;
@@ -292,21 +313,21 @@ header .title img {
   color: #82888A;
   background-color: white;
 }
-/* line 308, ../default.scss */
+/* line 329, ../default.scss */
 .results .tile .tile-header .profile img {
   display: inline-block;
   border-radius: 50%;
   width: 40px;
 }
-/* line 314, ../default.scss */
+/* line 335, ../default.scss */
 .results .tile .tile-header p {
   display: inline-block;
 }
-/* line 321, ../default.scss */
+/* line 342, ../default.scss */
 .results .tile .tile-photo img {
   width: 100%;
 }
-/* line 326, ../default.scss */
+/* line 347, ../default.scss */
 .results .tile .tile-footer {
   height: 90px;
   width: 100%;
@@ -316,19 +337,19 @@ header .title img {
   background-color: white;
   padding: 10px;
 }
-/* line 335, ../default.scss */
+/* line 356, ../default.scss */
 .results .tile .tile-footer .likes {
   font-weight: 700;
   color: #565A5C;
   margin-bottom: 2px;
 }
-/* line 341, ../default.scss */
+/* line 362, ../default.scss */
 .results .tile .tile-footer .description {
   color: #565A5C;
   font-size: 13px;
 }
 
-/* line 349, ../default.scss */
+/* line 370, ../default.scss */
 #map {
   height: 90vh;
 }

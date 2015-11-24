@@ -116,8 +116,12 @@ html
         .col-sm-12.menu-bar
           .home-logo
             a(href="#")
-              img(src="../img/pin-green.png" alt="travelGram Home Button")
+              img(src="img/pin-green.png" alt="travelGram Home Button")
           .listings-search
+            form
+              i(class="fa fa-search")
+              label(class="sr-only" for="header-search") Where do you want to go?
+              input(type="search" id="header-search" name="location" value="Istanbul, Turkey" placeholder="Where do you want to go?" autocomplete="off")
 
       .row
         .col-sm-12

@@ -254,9 +254,10 @@ header {
   height: 60px;
   padding-left: 0;
   background-color: white;
-  border: 1px solid #dce0e0;
+  border: 1px solid $border-gray;
 
   .home-logo {
+    display: inline-block;
     width: 60px;
     height: 60px;
     border-right: 1px solid $border-gray;
@@ -275,7 +276,27 @@ header {
   }
 
   .listings-search {
-    width: 100%;
+    display: inline-block;
+    width: 70%;
+    
+    i {
+      vertical-align: middle;
+      margin: 0 10px 0 10px;
+      color: #d3d3d3;
+      font-size: 25px;
+    }
+
+    input {
+      vertical-align: middle;
+      width: 50%;
+      margin-top: 5px;
+      box-shadow: none;
+      border: none;
+      outline: none;
+      line-height: 1.2em;
+      font-family: $font-family;
+      color: $secondary-gray;
+    }
   }
 
 }
