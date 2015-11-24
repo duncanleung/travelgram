@@ -5,6 +5,7 @@ $primary-black: #323433;
 $primary-gray: #565A5C;
 $secondary-gray: #82888A;
 $tertiary-gray: #F5F5F5;
+$border-gray: #dce0e0;
 $primary-green: #4BBFBB;
 $secondary-green: #0F948F;
 $primary-pink: #FE6367;
@@ -248,6 +249,57 @@ header {
 
 /* Photo Listings and Results Section Styles
 ======================== */
+
+.menu-bar {
+  height: 60px;
+  padding-left: 0;
+  background-color: white;
+  border: 1px solid $border-gray;
+
+  .home-logo {
+    display: inline-block;
+    width: 60px;
+    height: 60px;
+    border-right: 1px solid $border-gray;
+    text-align: center;
+
+    &:hover {
+      background-color: #f7f8f8;
+      border-bottom: 1px solid $border-gray;
+    }
+
+    img {
+      width: auto;
+      height: 50px;
+      margin-top: 5px;
+    }
+  }
+
+  .listings-search {
+    display: inline-block;
+    width: 70%;
+    
+    i {
+      vertical-align: middle;
+      margin: 0 10px 0 10px;
+      color: #d3d3d3;
+      font-size: 25px;
+    }
+
+    input {
+      vertical-align: middle;
+      width: 50%;
+      margin-top: 5px;
+      box-shadow: none;
+      border: none;
+      outline: none;
+      line-height: 1.2em;
+      font-family: $font-family;
+      color: $secondary-gray;
+    }
+  }
+
+}
 
 .results {
   overflow-y: scroll;

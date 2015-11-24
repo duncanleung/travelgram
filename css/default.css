@@ -1,6 +1,6 @@
 /* Reusable Styles
 ======================== */
-/* line 15, ../default.scss */
+/* line 16, ../default.scss */
 html,
 body {
   font-family: "Open Sans", sans-serif;
@@ -8,35 +8,26 @@ body {
   background-color: #F5F5F5;
 }
 
-/* line 22, ../default.scss */
+/* line 23, ../default.scss */
 .col-centered {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-  -webkit-align-items: center;
-      -ms-flex-align: center;
-          align-items: center;
+  justify-content: center;
+  align-items: center;
 }
 
-/* line 28, ../default.scss */
+/* line 29, ../default.scss */
 .intro-text {
   margin-top: 100px;
   margin-bottom: 40px;
   text-align: center;
   color: #565A5C;
 }
-/* line 34, ../default.scss */
+/* line 35, ../default.scss */
 .intro-text h2 {
   font-size: 35px;
   font-weight: 700;
 }
-/* line 39, ../default.scss */
+/* line 40, ../default.scss */
 .intro-text p {
   font-weight: 400;
   font-size: 16px;
@@ -44,18 +35,18 @@ body {
 
 /* Header and Search Bar Styles
 ======================== */
-/* line 49, ../default.scss */
+/* line 50, ../default.scss */
 #explore {
   margin-right: 90px;
 }
 
-/* line 53, ../default.scss */
+/* line 54, ../default.scss */
 #home {
   position: absolute;
   margin-left: -40px;
   z-index: 999;
 }
-/* line 58, ../default.scss */
+/* line 59, ../default.scss */
 #home a {
   display: block;
   width: 63px;
@@ -66,11 +57,11 @@ body {
   background-position: center;
   background-size: 61px 61px;
 }
-/* line 68, ../default.scss */
+/* line 69, ../default.scss */
 #home a:after {
   border-bottom: none !important;
 }
-/* line 72, ../default.scss */
+/* line 73, ../default.scss */
 #home a span {
   position: absolute;
   left: 0;
@@ -79,52 +70,46 @@ body {
   height: 100%;
   border-radius: 50%;
   border: 1px solid #323433;
-  -webkit-transform: scale(0.8, 0.8);
-      -ms-transform: scale(0.8, 0.8);
-          transform: scale(0.8, 0.8);
-  -webkit-transition: all 0.3s cubic-bezier(0.51, 0.2, 0.29, 2.07);
-          transition: all 0.3s cubic-bezier(0.51, 0.2, 0.29, 2.07);
+  transform: scale(0.8, 0.8);
+  transition: all 0.3s cubic-bezier(0.51, 0.2, 0.29, 2.07);
 }
-/* line 83, ../default.scss */
+/* line 84, ../default.scss */
 #home a span:hover {
-  -webkit-transform: scale(1, 1);
-      -ms-transform: scale(1, 1);
-          transform: scale(1, 1);
+  transform: scale(1, 1);
 }
 
-/* line 90, ../default.scss */
+/* line 91, ../default.scss */
 #about {
   margin-left: 90px;
 }
 
-/* line 94, ../default.scss */
+/* line 95, ../default.scss */
 header {
   height: 700px;
-  background-image: -webkit-linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.7)), url(../img/hero-istanbul.jpg);
   background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.7)), url(../img/hero-istanbul.jpg);
   background-size: cover;
   background-position: center;
   position: relative;
 }
-/* line 101, ../default.scss */
+/* line 102, ../default.scss */
 header nav {
   height: 50px;
   background-color: #4BBFBB;
 }
-/* line 105, ../default.scss */
+/* line 106, ../default.scss */
 header nav ul {
   position: relative;
   list-style: none;
   padding: 0;
   margin-left: -10px;
 }
-/* line 111, ../default.scss */
+/* line 112, ../default.scss */
 header nav ul li {
   display: inline-block;
   vertical-align: top;
   margin-top: 16px;
 }
-/* line 116, ../default.scss */
+/* line 117, ../default.scss */
 header nav ul li a {
   position: relative;
   text-decoration: none !important;
@@ -134,88 +119,64 @@ header nav ul li a {
   font-weight: 600;
   font-size: 16px;
 }
-/* line 125, ../default.scss */
+/* line 126, ../default.scss */
 header nav ul li a:hover, header nav ul li a:active {
   color: #323433;
 }
-/* line 130, ../default.scss */
+/* line 131, ../default.scss */
 header nav ul li a:after {
   content: "";
   display: block;
   border-bottom: 2px solid #323433;
-  -webkit-transform: scaleX(0.00001);
-      -ms-transform: scaleX(0.00001);
-          transform: scaleX(0.00001);
-  -webkit-transition: all 0.25s ease-in-out;
-          transition: all 0.25s ease-in-out;
+  transform: scaleX(0.00001);
+  transition: all 0.25s ease-in-out;
 }
-/* line 138, ../default.scss */
+/* line 139, ../default.scss */
 header nav ul li a:hover:after {
-  -webkit-transform: scaleX(1);
-      -ms-transform: scaleX(1);
-          transform: scaleX(1);
+  transform: scaleX(1);
 }
-/* line 146, ../default.scss */
+/* line 147, ../default.scss */
 header .title {
   position: absolute;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -webkit-flex-direction: column;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  flex-direction: column;
+  justify-content: center;
   height: 700px;
 }
-/* line 153, ../default.scss */
+/* line 154, ../default.scss */
 header .title h1,
 header .title h2 {
   color: white;
   text-align: center;
   display: inline-block;
 }
-/* line 160, ../default.scss */
+/* line 161, ../default.scss */
 header .title h1 {
   font-size: 20px;
   font-weight: 300;
   letter-spacing: 1px;
-  -webkit-box-ordinal-group: 4;
-  -webkit-order: 3;
-      -ms-flex-order: 3;
-          order: 3;
+  order: 3;
 }
-/* line 167, ../default.scss */
+/* line 168, ../default.scss */
 header .title h2 {
   font-size: 40px;
   font-weight: 700;
-  -webkit-box-ordinal-group: 3;
-  -webkit-order: 2;
-      -ms-flex-order: 2;
-          order: 2;
+  order: 2;
 }
-/* line 173, ../default.scss */
+/* line 174, ../default.scss */
 header .title .text-logo {
-  -webkit-box-ordinal-group: 2;
-  -webkit-order: 1;
-      -ms-flex-order: 1;
-          order: 1;
+  order: 1;
   font-weight: 600;
   font-size: 24px;
   color: #4BBFBB;
 }
-/* line 180, ../default.scss */
+/* line 181, ../default.scss */
 header .title img {
   height: 28px;
   margin: 0 5px 10px 0;
 }
 
-/* line 187, ../default.scss */
+/* line 188, ../default.scss */
 .search-container {
   position: relative;
   margin-top: -80px;
@@ -224,17 +185,16 @@ header .title img {
   height: 80px;
   background-color: rgba(0, 0, 0, 0.4);
 }
-/* line 195, ../default.scss */
+/* line 196, ../default.scss */
 .search-container .btn-default {
   background-color: #4BBFBB;
   border-color: #4BBFBB;
   font-family: "Open Sans", sans-serif;
   font-weight: 300;
   color: white;
-  -webkit-transition: all 0.2s ease-in-out;
-          transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
 }
-/* line 204, ../default.scss */
+/* line 205, ../default.scss */
 .search-container .btn-default:hover {
   background-color: #0F948F;
   border-color: #0F948F;
@@ -242,11 +202,11 @@ header .title img {
 
 /* Discovery Section Styles
 ======================== */
-/* line 215, ../default.scss */
+/* line 216, ../default.scss */
 .discovery-tiles a {
   text-decoration: none;
 }
-/* line 219, ../default.scss */
+/* line 220, ../default.scss */
 .discovery-tiles .discovery-card {
   height: 350px;
   margin-bottom: 30px;
@@ -254,27 +214,13 @@ header .title img {
   background-size: 100%;
   background-position: center;
   background-repeat: no-repeat;
-  -webkit-transition: all 0.2s ease-in;
-          transition: all 0.2s ease-in;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
+  transition: all 0.2s ease-in;
   display: flex;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-  -webkit-align-items: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -webkit-flex-direction: column;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
-/* line 232, ../default.scss */
+/* line 233, ../default.scss */
 .discovery-tiles .discovery-card span {
   display: inline-block;
   margin-bottom: 5px;
@@ -285,24 +231,75 @@ header .title img {
   text-align: center;
   background-color: rgba(0, 0, 0, 0.4);
 }
-/* line 244, ../default.scss */
+/* line 245, ../default.scss */
 .discovery-tiles .discovery-card:hover {
   opacity: 1;
 }
 
 /* Photo Listings and Results Section Styles
 ======================== */
-/* line 252, ../default.scss */
+/* line 253, ../default.scss */
+.menu-bar {
+  height: 60px;
+  padding-left: 0;
+  background-color: white;
+  border: 1px solid #dce0e0;
+}
+/* line 259, ../default.scss */
+.menu-bar .home-logo {
+  display: inline-block;
+  width: 60px;
+  height: 60px;
+  border-right: 1px solid #dce0e0;
+  text-align: center;
+}
+/* line 266, ../default.scss */
+.menu-bar .home-logo:hover {
+  background-color: #f7f8f8;
+  border-bottom: 1px solid #dce0e0;
+}
+/* line 271, ../default.scss */
+.menu-bar .home-logo img {
+  width: auto;
+  height: 50px;
+  margin-top: 5px;
+}
+/* line 278, ../default.scss */
+.menu-bar .listings-search {
+  display: inline-block;
+  width: 70%;
+}
+/* line 282, ../default.scss */
+.menu-bar .listings-search i {
+  vertical-align: middle;
+  margin: 0 10px 0 10px;
+  color: #d3d3d3;
+  font-size: 25px;
+}
+/* line 289, ../default.scss */
+.menu-bar .listings-search input {
+  vertical-align: middle;
+  width: 50%;
+  margin-top: 5px;
+  box-shadow: none;
+  border: none;
+  outline: none;
+  line-height: 1.2em;
+  font-family: "Open Sans", sans-serif;
+  color: #82888A;
+}
+
+/* line 304, ../default.scss */
 .results {
   overflow-y: scroll;
   height: 90vh;
 }
-/* line 256, ../default.scss */
+/* line 308, ../default.scss */
 .results .highlight {
   box-shadow: 0 0 20px 5px rgba(74, 191, 187, 0.87);
   border-radius: 10px;
 }
-/* line 263, ../default.scss */
+/* line 315, ../default.scss */
 .results .tile .tile-header {
   height: 65px;
   width: 100%;
@@ -310,36 +307,27 @@ header .title img {
   margin-top: 10px;
   border: 1px solid #d3d3d3;
   border-radius: 10px 10px 0 0;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-  -webkit-align-items: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  align-items: center;
+  justify-content: space-between;
   color: #82888A;
   background-color: white;
 }
-/* line 277, ../default.scss */
+/* line 329, ../default.scss */
 .results .tile .tile-header .profile img {
   display: inline-block;
   border-radius: 50%;
   width: 40px;
 }
-/* line 283, ../default.scss */
+/* line 335, ../default.scss */
 .results .tile .tile-header p {
   display: inline-block;
 }
-/* line 290, ../default.scss */
+/* line 342, ../default.scss */
 .results .tile .tile-photo img {
   width: 100%;
 }
-/* line 295, ../default.scss */
+/* line 347, ../default.scss */
 .results .tile .tile-footer {
   height: 90px;
   width: 100%;
@@ -349,19 +337,19 @@ header .title img {
   background-color: white;
   padding: 10px;
 }
-/* line 304, ../default.scss */
+/* line 356, ../default.scss */
 .results .tile .tile-footer .likes {
   font-weight: 700;
   color: #565A5C;
   margin-bottom: 2px;
 }
-/* line 310, ../default.scss */
+/* line 362, ../default.scss */
 .results .tile .tile-footer .description {
   color: #565A5C;
   font-size: 13px;
 }
 
-/* line 318, ../default.scss */
+/* line 370, ../default.scss */
 #map {
   height: 90vh;
 }

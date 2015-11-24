@@ -7,6 +7,8 @@ html
     link(rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" integrity="sha512-dTfge/zgoMYpP7QbHy4gWMEGsbsdZeCXz7irItjcC3sPUFtf0kuFbDz/ixG7ArTxmDjLXDmezHubeNikyKGVyQ==" crossorigin="anonymous")
     //- OPEN SANS FONT GOOGLE CDN
     link(href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,600,300" rel="stylesheet" type="text/css")
+    //- FONTAWESOME CDN
+    link(rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css")
     link(rel="stylesheet" href="css/default.css")
     //- JQUERY
     script(src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js")
@@ -18,7 +20,7 @@ html
     //- Hero Section
     header.container-fluid
       
-      //- Nav Bar
+      //- Navigation/Menu Bar
       nav.row
         .col-sm-12.col-centered
           ul
@@ -110,6 +112,17 @@ html
 
     //- Photo Listings and Results Section
     section.listings.container-fluid
+      .row
+        .col-sm-12.menu-bar
+          .home-logo
+            a(href="#")
+              img(src="img/pin-green.png" alt="travelGram Home Button")
+          .listings-search
+            form
+              i(class="fa fa-search")
+              label(class="sr-only" for="header-search") Where do you want to go?
+              input(type="search" id="header-search" name="location" value="Istanbul, Turkey" placeholder="Where do you want to go?" autocomplete="off")
+
       .row
         .col-sm-12
           .intro-text
