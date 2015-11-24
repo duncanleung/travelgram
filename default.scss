@@ -27,7 +27,7 @@ body {
 }
 
   .intro-text {
-  margin-top: 100px;
+  margin-top: 20px;
   margin-bottom:40px;
   text-align: center;
   color: $primary-gray;
@@ -188,6 +188,7 @@ header {
 .search-container {
   position: relative;
   margin-top: -80px;
+  margin-bottom: 40px;
   padding: 20px;
   z-index: 1;
   height: 80px;
@@ -211,6 +212,9 @@ header {
 
 /* Discovery Section Styles
 ======================== */
+.discovery {
+  margin-bottom: 80px;
+}
 
 .discovery-tiles {
   a {
@@ -272,6 +276,12 @@ header {
       width: auto;
       height: 50px;
       margin-top: 5px;
+      transform: scale(.9, .9);
+      transition: all 0.3s cubic-bezier(0.51, 0.2, 0.29, 2.07);
+
+      &:hover {
+      transform: scale(1, 1);
+      }
     }
   }
 
