@@ -123,12 +123,40 @@ html
               label(class="sr-only" for="header-search") Where do you want to go?
               input(type="search" id="header-search" name="location" value="London, United Kingdom" placeholder="Where do you want to go?" autocomplete="off")
 
-      .row
-        .col-sm-12
-          .intro-text
-            h2 Discover London, United Kingdom
+      //- .row
+      //-   .col-sm-12
+      //-     .intro-text
+      //-       h2 Discover London, United Kingdom
       .row
         .results.col-sm-7
+          .row
+            //- Filter Photos
+            .col-sm-12.filters-container
+              .row
+                .filter-header.col-sm-12 Filters
+              .row
+                .filter-group.col-xs-12.col-sm-12.col-md-3
+                  i(class="fa fa-heart")
+                  |  Avg Likes
+                .filter-controls.col-xs-10.col-sm-10.col-md-8
+                  form
+                    input(id="slider" type="range" min="0" max="20" step="10")
+                    .range-control
+                      .low 0 Likes
+                      .mid 10 Likes
+                      .max 20 Likes
+              hr
+              .row
+                .filter-group.col-xs-12.col-sm-12.col-md-3 # Hashtags
+                .filter-controls.col-xs-10.col-sm-10.col-md-8
+                  form
+                    label
+                      input(type="checkbox" id="hash-selfie" value="hash-selfie" checked="true")
+                      |  #selfie
+                      input(type="checkbox" id="hash-vacation" value="hash-vacation" checked="true")
+                      |  #vacation
+                      input(type="checkbox" id="hash-landscape" value="hash-landscape" checked="true")
+                      |  #landscape
           .row
             //- Profile
             .col-md-12.col-lg-6

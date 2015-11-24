@@ -89,14 +89,40 @@
         </div>
       </div>
       <div class="row">
-        <div class="col-sm-12">
-          <div class="intro-text">
-            <h2>Discover London, United Kingdom</h2>
-          </div>
-        </div>
-      </div>
-      <div class="row">
         <div class="results col-sm-7">
+          <div class="row">
+            <div class="col-sm-12 filters-container">
+              <div class="row">
+                <div class="filter-header col-sm-12">Filters</div>
+              </div>
+              <div class="row">
+                <div class="filter-group col-xs-12 col-sm-12 col-md-3"><i class="fa fa-heart"></i> Avg Likes</div>
+                <div class="filter-controls col-xs-10 col-sm-10 col-md-8">
+                  <form>
+                    <input id="slider" type="range" min="0" max="20" step="10">
+                    <div class="range-control">
+                      <div class="low">0 Likes</div>
+                      <div class="mid">10 Likes</div>
+                      <div class="max">20 Likes</div>
+                    </div>
+                  </form>
+                </div>
+              </div>
+              <hr>
+              <div class="row">
+                <div class="filter-group col-xs-12 col-sm-12 col-md-3"># Hashtags</div>
+                <div class="filter-controls col-xs-10 col-sm-10 col-md-8">
+                  <form>
+                    <label>
+                      <input type="checkbox" id="hash-selfie" value="hash-selfie" checked="true"> #selfie
+                      <input type="checkbox" id="hash-vacation" value="hash-vacation" checked="true"> #vacation
+                      <input type="checkbox" id="hash-landscape" value="hash-landscape" checked="true"> #landscape
+                    </label>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
           <div class="row">
             <div class="col-md-12 col-lg-6">
               <div id="tile1" onmouseover="hover(1)" onmouseout="out(1)" class="tile">

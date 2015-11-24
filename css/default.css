@@ -70,7 +70,7 @@ body {
 }
 /* line 79, ../default.scss */
 #home a img:hover {
-  box-shadow: 0 1px 1px 1px rgba(255, 201, 102, 0.7);
+  box-shadow: 0 1px 1px 1px rgba(254, 98, 103, 0.82);
 }
 
 /* line 87, ../default.scss */
@@ -81,7 +81,7 @@ body {
 /* line 91, ../default.scss */
 header {
   height: 700px;
-  background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.7)), url(../img/hero-paris.jpg);
+  background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.8)), url(../img/hero-paris.jpg);
   background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed;
@@ -125,9 +125,9 @@ header nav ul li a:hover, header nav ul li a:active {
 /* line 131, ../default.scss */
 header nav ul li a:after {
   content: "";
-  padding-bottom: 7px;
+  padding-bottom: 6px;
   display: block;
-  border-bottom: 3px solid #FFCA64;
+  border-bottom: 4px solid #FE6367;
   transform: scaleX(0.00001);
   transition: all 0.25s ease-in-out;
 }
@@ -141,7 +141,7 @@ header .title {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  height: 700px;
+  height: 750px;
 }
 /* line 155, ../default.scss */
 header .title h1,
@@ -167,8 +167,8 @@ header .title h2 {
 header .title .text-logo {
   order: 1;
   font-weight: 600;
-  font-size: 24px;
-  color: #4BBFBB;
+  font-size: 30px;
+  color: #FE6367;
 }
 /* line 182, ../default.scss */
 header .title img {
@@ -245,13 +245,21 @@ header .title img {
 /* Photo Listings and Results Section Styles
 ======================== */
 /* line 258, ../default.scss */
+.listings {
+  height: 100vh;
+  position: relative;
+}
+
+/* line 263, ../default.scss */
 .menu-bar {
+  position: absolute;
+  z-index: 100;
   height: 60px;
   padding-left: 0;
   background-color: white;
   border: 1px solid #dce0e0;
 }
-/* line 264, ../default.scss */
+/* line 271, ../default.scss */
 .menu-bar .home-logo {
   display: inline-block;
   width: 60px;
@@ -259,12 +267,12 @@ header .title img {
   border-right: 1px solid #dce0e0;
   text-align: center;
 }
-/* line 271, ../default.scss */
+/* line 278, ../default.scss */
 .menu-bar .home-logo:hover {
   background-color: #f7f8f8;
   border-bottom: 1px solid #dce0e0;
 }
-/* line 276, ../default.scss */
+/* line 283, ../default.scss */
 .menu-bar .home-logo img {
   width: auto;
   height: 50px;
@@ -272,23 +280,23 @@ header .title img {
   transform: scale(0.9, 0.9);
   transition: all 0.3s cubic-bezier(0.51, 0.2, 0.29, 2.07);
 }
-/* line 283, ../default.scss */
+/* line 290, ../default.scss */
 .menu-bar .home-logo img:hover {
   transform: scale(1, 1);
 }
-/* line 289, ../default.scss */
+/* line 296, ../default.scss */
 .menu-bar .listings-search {
   display: inline-block;
   width: 70%;
 }
-/* line 293, ../default.scss */
+/* line 300, ../default.scss */
 .menu-bar .listings-search i {
   vertical-align: middle;
   margin: 0 10px 0 10px;
   color: #d3d3d3;
   font-size: 25px;
 }
-/* line 300, ../default.scss */
+/* line 307, ../default.scss */
 .menu-bar .listings-search input {
   vertical-align: middle;
   width: 50%;
@@ -301,17 +309,76 @@ header .title img {
   color: #82888A;
 }
 
-/* line 315, ../default.scss */
+/* line 322, ../default.scss */
 .results {
   overflow-y: scroll;
-  height: 90vh;
+  height: 100vh;
 }
-/* line 319, ../default.scss */
+/* line 326, ../default.scss */
+.results .filters-container {
+  padding-top: 60px;
+  padding-right: 0;
+  padding-left: 0;
+  width: 100%;
+  height: 250px;
+  background-color: white;
+  color: #82888A;
+  vertical-align: middle;
+}
+/* line 336, ../default.scss */
+.results .filters-container .filter-header {
+  padding-top: 20px;
+  padding-left: 30px;
+  height: 30px;
+  font-weight: 600;
+  font-size: 15px;
+  color: #565A5C;
+}
+/* line 345, ../default.scss */
+.results .filters-container .filter-group {
+  padding-top: 20px;
+  padding-left: 40px;
+  height: 80px;
+  font-weight: 600;
+  text-align: right;
+}
+/* line 354, ../default.scss */
+.results .filters-container .filter-controls {
+  padding-top: 20px;
+  padding-left: 20px;
+  padding-bottom: 20px;
+}
+/* line 359, ../default.scss */
+.results .filters-container .filter-controls input {
+  margin-bottom: 5px;
+}
+/* line 363, ../default.scss */
+.results .filters-container .filter-controls input[type="checkbox"] {
+  margin-left: 15px;
+}
+/* line 366, ../default.scss */
+.results .filters-container .filter-controls input[type="checkbox"]:first-child {
+  margin-left: 0;
+}
+/* line 371, ../default.scss */
+.results .filters-container .filter-controls label {
+  font-weight: 400;
+}
+/* line 375, ../default.scss */
+.results .filters-container .filter-controls .range-control {
+  display: flex;
+  justify-content: space-between;
+}
+/* line 381, ../default.scss */
+.results .filters-container hr {
+  margin: 0 15px;
+}
+/* line 389, ../default.scss */
 .results .highlight {
   box-shadow: 0 0 20px 5px rgba(74, 191, 187, 0.87);
   border-radius: 10px;
 }
-/* line 326, ../default.scss */
+/* line 396, ../default.scss */
 .results .tile .tile-header {
   height: 65px;
   width: 100%;
@@ -325,21 +392,21 @@ header .title img {
   color: #82888A;
   background-color: white;
 }
-/* line 340, ../default.scss */
+/* line 410, ../default.scss */
 .results .tile .tile-header .profile img {
   display: inline-block;
   border-radius: 50%;
   width: 40px;
 }
-/* line 346, ../default.scss */
+/* line 416, ../default.scss */
 .results .tile .tile-header p {
   display: inline-block;
 }
-/* line 353, ../default.scss */
+/* line 423, ../default.scss */
 .results .tile .tile-photo img {
   width: 100%;
 }
-/* line 358, ../default.scss */
+/* line 428, ../default.scss */
 .results .tile .tile-footer {
   height: 90px;
   width: 100%;
@@ -349,21 +416,21 @@ header .title img {
   background-color: white;
   padding: 10px;
 }
-/* line 367, ../default.scss */
+/* line 437, ../default.scss */
 .results .tile .tile-footer .likes {
   font-weight: 700;
   color: #565A5C;
   margin-bottom: 2px;
 }
-/* line 373, ../default.scss */
+/* line 443, ../default.scss */
 .results .tile .tile-footer .description {
   color: #565A5C;
   font-size: 13px;
 }
 
-/* line 381, ../default.scss */
+/* line 451, ../default.scss */
 #map {
-  height: 90vh;
+  height: 100vh;
 }
 
 /*# sourceMappingURL=default.css.map */
