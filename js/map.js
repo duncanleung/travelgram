@@ -99,40 +99,6 @@ function initMap() {
       $('#tile4').toggleClass('highlight');
     });
 
-    /*
-        - If mousemove in map
-        - If marker1 is hovered over
-        - set marker = marker1
-        - run mouseover/mouseout listeners
-    */
-
-/*    google.maps.event.addDomListener(map, 'mousemove', function(){
-
-    });
-    
-    google.maps.event.addDomListener(marker, 'mouseover', function(){
-      switch (marker) {
-        case marker1:
-          console.log("marker1 mouseover");
-          $('#tile1').toggleClass('highlight');
-
-        case marker2:
-          console.log("marker2 mouseover");
-          $('#tile2').toggleClass('highlight');
-      }
-    });*/
-
-
-
-/*    google.maps.event.addDomListener(marker1, 'mouseover', function(){
-      console.log("marker1 mouseover");
-      $('#tile1').toggleClass('highlight');
-    });
-
-    google.maps.event.addDomListener(marker1, 'mouseout', function(){
-      console.log("marker1 mouseout");
-      $('#tile1').toggleClass('highlight');
-    });*/
   });/*DOM WINDOW LISTENER*/
 
 }/*END CREATE MAP*/
