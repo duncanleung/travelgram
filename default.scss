@@ -5,6 +5,7 @@ $primary-black: #323433;
 $primary-gray: #565A5C;
 $secondary-gray: #82888A;
 $tertiary-gray: #F5F5F5;
+$border-gray: #dce0e0;
 $primary-green: #4BBFBB;
 $secondary-green: #0F948F;
 $primary-pink: #FE6367;
@@ -248,6 +249,36 @@ header {
 
 /* Photo Listings and Results Section Styles
 ======================== */
+
+.menu-bar {
+  height: 60px;
+  padding-left: 0;
+  background-color: white;
+  border: 1px solid #dce0e0;
+
+  .home-logo {
+    width: 60px;
+    height: 60px;
+    border-right: 1px solid $border-gray;
+    text-align: center;
+
+    &:hover {
+      background-color: #f7f8f8;
+      border-bottom: 1px solid $border-gray;
+    }
+
+    img {
+      width: auto;
+      height: 50px;
+      margin-top: 5px;
+    }
+  }
+
+  .listings-search {
+    width: 100%;
+  }
+
+}
 
 .results {
   overflow-y: scroll;
