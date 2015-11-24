@@ -78,7 +78,7 @@ body {
 
       &:hover {
         
-        box-shadow: 0 1px 1px 1px rgba(255, 201, 102, 0.7);
+        box-shadow: 0 1px 1px 1px rgba(254, 98, 103, 0.82);
       }
     }
   }
@@ -90,7 +90,7 @@ body {
 
 header {
   height: 700px;
-  background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.7)), url(../img/hero-paris.jpg);
+  background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.8)), url(../img/hero-paris.jpg);
   background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed;
@@ -130,9 +130,9 @@ header {
 
           &:after {
             content: "";
-            padding-bottom: 7px;
+            padding-bottom: 6px;
             display: block;
-            border-bottom: 3px solid $primary-yellow;
+            border-bottom: 4px solid $primary-pink;
             transform: scaleX(.00001);
             transition: all 0.25s ease-in-out;
           }
@@ -150,7 +150,7 @@ header {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    height: 700px;
+    height: 750px;
 
     h1,
     h2 {
@@ -175,8 +175,8 @@ header {
     .text-logo {
       order: 1;
       font-weight: 600;
-      font-size: 24px;
-      color: $primary-green;
+      font-size: 30px;
+      color: $primary-pink;
     }
 
     img {
@@ -255,7 +255,14 @@ header {
 /* Photo Listings and Results Section Styles
 ======================== */
 
+.listings {
+  height: 100vh;
+  position: relative;
+}
+
 .menu-bar {
+  position: absolute;
+  z-index: 100;
   height: 60px;
   padding-left: 0;
   background-color: white;
@@ -314,7 +321,70 @@ header {
 
 .results {
   overflow-y: scroll;
-  height: 90vh;
+  height: 100vh;
+
+  .filters-container {
+    padding-top: 60px;
+    padding-right: 0;
+    padding-left: 0;
+    width: 100%;
+    height: 250px;
+    background-color: white;
+    color: $secondary-gray;
+    vertical-align: middle;
+
+    .filter-header {
+      padding-top: 20px;
+      padding-left: 30px;
+      height: 30px;
+      font-weight: 600;
+      font-size: 15px;
+      color: $primary-gray;
+    }
+
+    .filter-group {
+      padding-top: 20px;
+      padding-left: 40px;
+      height: 80px;
+      font-weight: 600;
+      text-align: right;
+
+    }
+
+    .filter-controls {
+      padding-top: 20px;
+      padding-left: 20px;
+      padding-bottom: 20px;
+
+      input {
+        margin-bottom: 5px;
+      }
+
+      input[type="checkbox"] {
+        margin-left: 15px;
+
+        &:first-child {
+          margin-left: 0;
+        }
+      }
+
+      label {
+        font-weight: 400;
+      }
+
+      .range-control {
+        display: flex;
+        justify-content: space-between;
+      }
+    }
+
+    hr {
+      margin: 0 15px;
+    }
+  }
+
+
+
 
   .highlight {
     box-shadow: 0 0 20px 5px rgba(74, 191, 187, 0.87);
@@ -379,7 +449,7 @@ header {
 }
 
 #map {
-  height: 90vh;
+  height: 100vh;
 }
 
 
