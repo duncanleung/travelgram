@@ -360,16 +360,9 @@ header {
         margin-bottom: 5px;
       }
 
-      input[type="checkbox"] {
-        margin-left: 15px;
-
-        &:first-child {
-          margin-left: 0;
-        }
-      }
-
       label {
         font-weight: 400;
+        margin-right: 15px;
       }
 
       .range-control {

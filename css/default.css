@@ -353,32 +353,25 @@ header .title img {
   margin-bottom: 5px;
 }
 /* line 363, ../default.scss */
-.results .filters-container .filter-controls input[type="checkbox"] {
-  margin-left: 15px;
-}
-/* line 366, ../default.scss */
-.results .filters-container .filter-controls input[type="checkbox"]:first-child {
-  margin-left: 0;
-}
-/* line 371, ../default.scss */
 .results .filters-container .filter-controls label {
   font-weight: 400;
+  margin-right: 15px;
 }
-/* line 375, ../default.scss */
+/* line 368, ../default.scss */
 .results .filters-container .filter-controls .range-control {
   display: flex;
   justify-content: space-between;
 }
-/* line 381, ../default.scss */
+/* line 374, ../default.scss */
 .results .filters-container hr {
   margin: 0 15px;
 }
-/* line 389, ../default.scss */
+/* line 382, ../default.scss */
 .results .highlight {
   box-shadow: 0 0 20px 5px rgba(74, 191, 187, 0.87);
   border-radius: 10px;
 }
-/* line 396, ../default.scss */
+/* line 389, ../default.scss */
 .results .tile .tile-header {
   height: 65px;
   width: 100%;
@@ -392,21 +385,21 @@ header .title img {
   color: #82888A;
   background-color: white;
 }
-/* line 410, ../default.scss */
+/* line 403, ../default.scss */
 .results .tile .tile-header .profile img {
   display: inline-block;
   border-radius: 50%;
   width: 40px;
 }
-/* line 416, ../default.scss */
+/* line 409, ../default.scss */
 .results .tile .tile-header p {
   display: inline-block;
 }
-/* line 423, ../default.scss */
+/* line 416, ../default.scss */
 .results .tile .tile-photo img {
   width: 100%;
 }
-/* line 428, ../default.scss */
+/* line 421, ../default.scss */
 .results .tile .tile-footer {
   height: 90px;
   width: 100%;
@@ -416,19 +409,19 @@ header .title img {
   background-color: white;
   padding: 10px;
 }
-/* line 437, ../default.scss */
+/* line 430, ../default.scss */
 .results .tile .tile-footer .likes {
   font-weight: 700;
   color: #565A5C;
   margin-bottom: 2px;
 }
-/* line 443, ../default.scss */
+/* line 436, ../default.scss */
 .results .tile .tile-footer .description {
   color: #565A5C;
   font-size: 13px;
 }
 
-/* line 451, ../default.scss */
+/* line 444, ../default.scss */
 #map {
   height: 100vh;
 }
