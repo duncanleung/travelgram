@@ -340,38 +340,37 @@ header .title img {
   padding-left: 40px;
   height: 80px;
   font-weight: 600;
-  text-align: right;
 }
-/* line 354, ../default.scss */
+/* line 352, ../default.scss */
 .results .filters-container .filter-controls {
   padding-top: 20px;
   padding-left: 20px;
   padding-bottom: 20px;
 }
-/* line 359, ../default.scss */
+/* line 357, ../default.scss */
 .results .filters-container .filter-controls input {
   margin-bottom: 5px;
 }
-/* line 363, ../default.scss */
+/* line 361, ../default.scss */
 .results .filters-container .filter-controls label {
   font-weight: 400;
   margin-right: 15px;
 }
-/* line 368, ../default.scss */
+/* line 366, ../default.scss */
 .results .filters-container .filter-controls .range-control {
   display: flex;
   justify-content: space-between;
 }
-/* line 374, ../default.scss */
+/* line 372, ../default.scss */
 .results .filters-container hr {
   margin: 0 15px;
 }
-/* line 382, ../default.scss */
+/* line 380, ../default.scss */
 .results .highlight {
   box-shadow: 0 0 20px 5px rgba(74, 191, 187, 0.87);
   border-radius: 10px;
 }
-/* line 389, ../default.scss */
+/* line 387, ../default.scss */
 .results .tile .tile-header {
   height: 65px;
   width: 100%;
@@ -385,21 +384,21 @@ header .title img {
   color: #82888A;
   background-color: white;
 }
-/* line 403, ../default.scss */
+/* line 401, ../default.scss */
 .results .tile .tile-header .profile img {
   display: inline-block;
   border-radius: 50%;
   width: 40px;
 }
-/* line 409, ../default.scss */
+/* line 407, ../default.scss */
 .results .tile .tile-header p {
   display: inline-block;
 }
-/* line 416, ../default.scss */
+/* line 414, ../default.scss */
 .results .tile .tile-photo img {
   width: 100%;
 }
-/* line 421, ../default.scss */
+/* line 419, ../default.scss */
 .results .tile .tile-footer {
   height: 90px;
   width: 100%;
@@ -409,19 +408,19 @@ header .title img {
   background-color: white;
   padding: 10px;
 }
-/* line 430, ../default.scss */
+/* line 428, ../default.scss */
 .results .tile .tile-footer .likes {
   font-weight: 700;
   color: #565A5C;
   margin-bottom: 2px;
 }
-/* line 436, ../default.scss */
+/* line 434, ../default.scss */
 .results .tile .tile-footer .description {
   color: #565A5C;
   font-size: 13px;
 }
 
-/* line 444, ../default.scss */
+/* line 442, ../default.scss */
 #map {
   height: 100vh;
 }
