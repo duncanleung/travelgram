@@ -246,7 +246,6 @@ footer {
   text-align: center;
   padding-bottom: 10px;
 
-
   .technologies-container {
     padding-top: 20px;
     display: flex;
@@ -324,75 +323,110 @@ footer {
         }
       }
     }
+
+    @media(max-width: 930px) {
+      .sass,
+      .jade,
+      .google-maps,
+      .instagram {
+        flex: 50%;
+
+        a {
+          display: inline-block;
+        }
+      }
+    }
+
+    @media(max-width: 590px) {
+      .sass,
+      .jade,
+      .google-maps,
+      .instagram {
+        flex: 100%;
+      }
+
+      .heading {
+        font-size: 17px;
+      }
+    }
+
   }  
 
-.baseline-container {
-  margin-top: 70px;
-  position: relative;
-  display: inline-block;
-}
+  .baseline-container {
+    margin-top: 70px;
+    position: relative;
+    display: inline-block;
 
-  .connect-container {
-    position: absolute;
-    right: 40px;
-    bottom: 0;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: center;
-    z-index: 100;
-
-
-    p {
-      margin-top: 10px;
+    .connect-container {
+      position: absolute;
+      right: 40px;
+      bottom: 0;
       margin-right: 20px;
-      font-size: 14px;
-      font-weight: 300;
-      color: $secondary-gray;
-    }
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: center;
+      z-index: 100;
 
-    .github-logo {
-      height: 30px;
-      width: 30px;
-      margin-right: 20px;
-      background-image: url("../img/logo/github-gray.png");
-      background-repeat: no-repeat;
-      background-position: center;
-      background-size: 100%;
-      transition: all 0.2s ease-in-out;
 
-      &:hover {
-        background-image: url("../img/logo/github.png");
+      p {
+        margin-top: 10px;
+        margin-right: 20px;
+        font-size: 14px;
+        font-weight: 300;
+        color: $secondary-gray;
       }
+
+      .github-logo {
+        height: 30px;
+        width: 30px;
+        margin-right: 10px;
+        background-image: url("../img/logo/github-gray.png");
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: 100%;
+        transition: all 0.2s ease-in-out;
+
+        &:hover {
+          background-image: url("../img/logo/github.png");
+        }
+      }
+
+      .linkedin-logo {
+        height: 25px;
+        width: 25px;
+        margin-top: 5px;
+        margin-left: 10px;
+        background-image: url("../img/logo/linkedin-gray.png");
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: 100%;
+        transition: all 0.2s ease-in-out;
+
+        &:hover {
+          background-image: url("../img/logo/linkedin.png");
+        }
+      }
+
+      @media(max-width: 930px) {
+        position: relative;
+        right: 0;
+        margin-right: 0;
+      }
+
+
     }
 
-    .linkedin-logo {
-      height: 25px;
-      width: 25px;
-      margin-top: 5px;
-      margin-left: 20px;
-      background-image: url("../img/logo/linkedin-gray.png");
-      background-repeat: no-repeat;
-      background-position: center;
-      background-size: 100%;
-      transition: all 0.2s ease-in-out;
+    .branding-container {
+      margin-top: 30px;
 
-      &:hover {
-        background-image: url("../img/logo/linkedin.png");
+      p {
+        color: $primary-gray;
+        font-size: 16px;
       }
     }
   }
-
-  .branding-container {
-    margin-top: 30px;
-
-    p {
-      color: $primary-gray;
-      font-size: 16px;
-    }
-  }
-
 }
 
 
