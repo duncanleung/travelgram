@@ -244,7 +244,7 @@ footer {
   font-weight: 300;
   font-size: 19px;
   text-align: center;
-  padding-bottom: 30px;
+  padding-bottom: 10px;
 
 
   .technologies-container {
@@ -255,7 +255,7 @@ footer {
     align-items: center;
     justify-content: space-around;
 
-    p {
+    .heading {
       flex: 100%;
       color: $secondary-gray;
       margin-bottom: 30px;
@@ -265,14 +265,14 @@ footer {
       .sass-logo {
         height: 90px;
         width: 100px;
-        background-image: url("../img/tech/sass-gray.png");
+        background-image: url("../img/logo/sass-gray.png");
         background-repeat: no-repeat;
         background-position: center;
         background-size: 100%;
         transition: all 0.2s ease-in-out;
 
         &:hover {
-          background-image: url("../img/tech/sass.png");
+          background-image: url("../img/logo/sass.png");
         }
       }
     }
@@ -281,14 +281,14 @@ footer {
       .jade-logo {
         height: 100px;
         width: 200px;
-        background-image: url("../img/tech/jade-gray.png");
+        background-image: url("../img/logo/jade-gray.png");
         background-repeat: no-repeat;
         background-position: center;
         background-size: 100%;
         transition: all 0.2s ease-in-out;
 
         &:hover {
-          background-image: url("../img/tech/jade.png");
+          background-image: url("../img/logo/jade.png");
         }
       }
     }
@@ -297,14 +297,14 @@ footer {
       .google-maps-logo {
         height: 90px;
         width: 250px;
-        background-image: url("../img/tech/google-maps-gray.png");
+        background-image: url("../img/logo/google-maps-gray.png");
         background-repeat: no-repeat;
         background-position: center;
         background-size: 100%;
         transition: all 0.2s ease-in-out;
 
         &:hover {
-          background-image: url("../img/tech/google-maps.png");        
+          background-image: url("../img/logo/google-maps.png");        
         }
       }
     }
@@ -313,20 +313,86 @@ footer {
       .instagram-logo {
         height: 90px;
         width: 250px;
-        background-image: url("../img/tech/instagram-gray.png");
+        background-image: url("../img/logo/instagram-gray.png");
         background-repeat: no-repeat;
         background-position: center;
         background-size: 100%;
         transition: all 0.2s ease-in-out;
 
         &:hover {
-          background-image: url("../img/tech/instagram.png");
+          background-image: url("../img/logo/instagram.png");
         }
       }
     }
-
-
   }  
+
+.baseline-container {
+  margin-top: 70px;
+  position: relative;
+  display: inline-block;
+}
+
+  .connect-container {
+    position: absolute;
+    right: 40px;
+    bottom: 0;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    z-index: 100;
+
+
+    p {
+      margin-top: 10px;
+      margin-right: 20px;
+      font-size: 14px;
+      font-weight: 300;
+      color: $secondary-gray;
+    }
+
+    .github-logo {
+      height: 30px;
+      width: 30px;
+      margin-right: 20px;
+      background-image: url("../img/logo/github-gray.png");
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: 100%;
+      transition: all 0.2s ease-in-out;
+
+      &:hover {
+        background-image: url("../img/logo/github.png");
+      }
+    }
+
+    .linkedin-logo {
+      height: 25px;
+      width: 25px;
+      margin-top: 5px;
+      margin-left: 20px;
+      background-image: url("../img/logo/linkedin-gray.png");
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: 100%;
+      transition: all 0.2s ease-in-out;
+
+      &:hover {
+        background-image: url("../img/logo/linkedin.png");
+      }
+    }
+  }
+
+  .branding-container {
+    margin-top: 30px;
+
+    p {
+      color: $primary-gray;
+      font-size: 16px;
+    }
+  }
+
 }
 
 
