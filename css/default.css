@@ -37,48 +37,33 @@ body {
 ======================== */
 /* line 50, ../default.scss */
 #explore {
-  margin-right: 90px;
+  margin-left: 120px;
 }
 
 /* line 54, ../default.scss */
 #home {
   position: absolute;
-  margin-left: -40px;
-  z-index: 999;
-}
-/* line 59, ../default.scss */
-#home a {
-  display: block;
-  width: 63px;
-  height: 63px;
-}
-/* line 64, ../default.scss */
-#home a:after {
-  border-bottom: none !important;
-}
-/* line 68, ../default.scss */
-#home a img {
-  position: absolute;
-  left: 12;
   top: 0;
-  margin-right: 1px;
-  width: 61px;
-  height: 61px;
+  left: 0;
+  background-color: #F5F5F5;
+  height: 50px;
+  padding-top: 15px;
+  padding-left: 10px;
+  padding-right: 10px;
+  text-transform: none !important;
+  color: #FE6367;
+  font-weight: 600;
+  font-size: 17px;
+  text-decoration: none !important;
   z-index: 100;
-  transition: all 0.3s cubic-bezier(0.4, 0.09, 0.55, 1.31);
-  border-radius: 50%;
-}
-/* line 79, ../default.scss */
-#home a img:hover {
-  box-shadow: 0 1px 1px 1px rgba(254, 98, 103, 0.82);
 }
 
-/* line 87, ../default.scss */
+/* line 71, ../default.scss */
 #about {
-  margin-left: 90px;
+  margin-left: 30px;
 }
 
-/* line 91, ../default.scss */
+/* line 75, ../default.scss */
 header {
   height: 700px;
   background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.8)), url(../img/hero-paris.jpg);
@@ -88,26 +73,26 @@ header {
   background-position: top;
   position: relative;
 }
-/* line 100, ../default.scss */
+/* line 84, ../default.scss */
 header nav {
+  position: relative;
   height: 50px;
   background-color: #4BBFBB;
   box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.2);
 }
-/* line 105, ../default.scss */
+/* line 90, ../default.scss */
 header nav ul {
+  display: inline-block;
   position: relative;
   list-style: none;
   padding: 0;
-  margin-left: -10px;
 }
-/* line 111, ../default.scss */
+/* line 96, ../default.scss */
 header nav ul li {
   display: inline-block;
-  vertical-align: top;
-  margin-top: 18px;
+  padding-top: 16px;
 }
-/* line 116, ../default.scss */
+/* line 100, ../default.scss */
 header nav ul li a {
   position: relative;
   text-decoration: none !important;
@@ -118,24 +103,24 @@ header nav ul li a {
   font-weight: 400;
   font-size: 16px;
 }
-/* line 126, ../default.scss */
+/* line 110, ../default.scss */
 header nav ul li a:hover, header nav ul li a:active {
   color: white;
 }
-/* line 131, ../default.scss */
+/* line 115, ../default.scss */
 header nav ul li a:after {
   content: "";
-  padding-bottom: 6px;
+  padding-bottom: 8px;
   display: block;
   border-bottom: 4px solid #FE6367;
   transform: scaleX(0.00001);
   transition: all 0.25s ease-in-out;
 }
-/* line 140, ../default.scss */
+/* line 124, ../default.scss */
 header nav ul li a:hover:after {
   transform: scaleX(1);
 }
-/* line 148, ../default.scss */
+/* line 132, ../default.scss */
 header .title {
   position: absolute;
   display: flex;
@@ -143,40 +128,40 @@ header .title {
   justify-content: center;
   height: 750px;
 }
-/* line 155, ../default.scss */
+/* line 139, ../default.scss */
 header .title h1,
 header .title h2 {
   color: white;
   text-align: center;
   display: inline-block;
 }
-/* line 162, ../default.scss */
+/* line 146, ../default.scss */
 header .title h1 {
   font-size: 20px;
   font-weight: 300;
   letter-spacing: 1px;
   order: 3;
 }
-/* line 169, ../default.scss */
+/* line 153, ../default.scss */
 header .title h2 {
   font-size: 40px;
   font-weight: 700;
   order: 2;
 }
-/* line 175, ../default.scss */
+/* line 159, ../default.scss */
 header .title .text-logo {
   order: 1;
   font-weight: 600;
   font-size: 30px;
   color: #FE6367;
 }
-/* line 182, ../default.scss */
+/* line 166, ../default.scss */
 header .title img {
   height: 28px;
   margin: 0 5px 10px 0;
 }
 
-/* line 189, ../default.scss */
+/* line 173, ../default.scss */
 .search-container {
   position: relative;
   margin-top: -80px;
@@ -186,7 +171,7 @@ header .title img {
   height: 80px;
   background-color: rgba(0, 0, 0, 0.4);
 }
-/* line 198, ../default.scss */
+/* line 182, ../default.scss */
 .search-container .btn-default {
   background-color: #4BBFBB;
   border-color: #4BBFBB;
@@ -195,7 +180,7 @@ header .title img {
   color: white;
   transition: all 0.2s ease-in-out;
 }
-/* line 207, ../default.scss */
+/* line 191, ../default.scss */
 .search-container .btn-default:hover {
   background-color: #0F948F;
   border-color: #0F948F;
@@ -203,16 +188,16 @@ header .title img {
 
 /* Discovery Section Styles
 ======================== */
-/* line 216, ../default.scss */
+/* line 200, ../default.scss */
 .discovery {
   margin-bottom: 80px;
 }
 
-/* line 221, ../default.scss */
+/* line 205, ../default.scss */
 .discovery-tiles a {
   text-decoration: none;
 }
-/* line 225, ../default.scss */
+/* line 209, ../default.scss */
 .discovery-tiles .discovery-card {
   height: 350px;
   margin-bottom: 30px;
@@ -226,7 +211,7 @@ header .title img {
   align-items: center;
   flex-direction: column;
 }
-/* line 238, ../default.scss */
+/* line 222, ../default.scss */
 .discovery-tiles .discovery-card span {
   display: inline-block;
   margin-bottom: 5px;
@@ -237,20 +222,20 @@ header .title img {
   text-align: center;
   background-color: rgba(0, 0, 0, 0.4);
 }
-/* line 250, ../default.scss */
+/* line 234, ../default.scss */
 .discovery-tiles .discovery-card:hover {
   opacity: 1;
 }
 
 /* Photo Listings and Results Section Styles
 ======================== */
-/* line 258, ../default.scss */
+/* line 242, ../default.scss */
 .listings {
   height: 95vh;
   position: relative;
 }
 
-/* line 263, ../default.scss */
+/* line 247, ../default.scss */
 .menu-bar {
   z-index: 100;
   height: 60px;
@@ -258,7 +243,7 @@ header .title img {
   background-color: white;
   border: 1px solid #dce0e0;
 }
-/* line 270, ../default.scss */
+/* line 254, ../default.scss */
 .menu-bar .home-logo {
   display: inline-block;
   width: 60px;
@@ -266,12 +251,12 @@ header .title img {
   border-right: 1px solid #dce0e0;
   text-align: center;
 }
-/* line 277, ../default.scss */
+/* line 261, ../default.scss */
 .menu-bar .home-logo:hover {
   background-color: #f7f8f8;
   border-bottom: 1px solid #dce0e0;
 }
-/* line 282, ../default.scss */
+/* line 266, ../default.scss */
 .menu-bar .home-logo img {
   width: auto;
   height: 50px;
@@ -279,23 +264,23 @@ header .title img {
   transform: scale(0.9, 0.9);
   transition: all 0.3s cubic-bezier(0.51, 0.2, 0.29, 2.07);
 }
-/* line 289, ../default.scss */
+/* line 273, ../default.scss */
 .menu-bar .home-logo img:hover {
   transform: scale(1, 1);
 }
-/* line 295, ../default.scss */
+/* line 279, ../default.scss */
 .menu-bar .listings-search {
   display: inline-block;
   width: 70%;
 }
-/* line 299, ../default.scss */
+/* line 283, ../default.scss */
 .menu-bar .listings-search i {
   vertical-align: middle;
   margin: 0 10px 0 10px;
   color: #d3d3d3;
   font-size: 25px;
 }
-/* line 306, ../default.scss */
+/* line 290, ../default.scss */
 .menu-bar .listings-search input {
   vertical-align: middle;
   width: 50%;
@@ -308,12 +293,12 @@ header .title img {
   color: #82888A;
 }
 
-/* line 321, ../default.scss */
+/* line 305, ../default.scss */
 .results {
   overflow-y: scroll;
   height: 95vh;
 }
-/* line 325, ../default.scss */
+/* line 309, ../default.scss */
 .results .filters-container {
   padding-top: 10px;
   padding-right: 0;
@@ -323,7 +308,7 @@ header .title img {
   color: #82888A;
   vertical-align: middle;
 }
-/* line 334, ../default.scss */
+/* line 318, ../default.scss */
 .results .filters-container .filter-header {
   padding-top: 20px;
   padding-left: 30px;
@@ -332,43 +317,43 @@ header .title img {
   font-size: 15px;
   color: #565A5C;
 }
-/* line 343, ../default.scss */
+/* line 327, ../default.scss */
 .results .filters-container .filter-group {
   padding-top: 20px;
   padding-left: 40px;
   height: 80px;
   font-weight: 600;
 }
-/* line 350, ../default.scss */
+/* line 334, ../default.scss */
 .results .filters-container .filter-controls {
   padding-top: 20px;
   padding-left: 20px;
   padding-bottom: 20px;
 }
-/* line 355, ../default.scss */
+/* line 339, ../default.scss */
 .results .filters-container .filter-controls input {
   margin-bottom: 5px;
 }
-/* line 359, ../default.scss */
+/* line 343, ../default.scss */
 .results .filters-container .filter-controls label {
   font-weight: 400;
   margin-right: 15px;
 }
-/* line 364, ../default.scss */
+/* line 348, ../default.scss */
 .results .filters-container .filter-controls .range-control {
   display: flex;
   justify-content: space-between;
 }
-/* line 370, ../default.scss */
+/* line 354, ../default.scss */
 .results .filters-container hr {
   margin: 0 15px;
 }
-/* line 378, ../default.scss */
+/* line 362, ../default.scss */
 .results .highlight {
   box-shadow: 0 0 20px 5px rgba(74, 191, 187, 0.87);
   border-radius: 10px;
 }
-/* line 385, ../default.scss */
+/* line 369, ../default.scss */
 .results .tile .tile-header {
   height: 65px;
   width: 100%;
@@ -382,21 +367,21 @@ header .title img {
   color: #82888A;
   background-color: white;
 }
-/* line 399, ../default.scss */
+/* line 383, ../default.scss */
 .results .tile .tile-header .profile img {
   display: inline-block;
   border-radius: 50%;
   width: 40px;
 }
-/* line 405, ../default.scss */
+/* line 389, ../default.scss */
 .results .tile .tile-header p {
   display: inline-block;
 }
-/* line 412, ../default.scss */
+/* line 396, ../default.scss */
 .results .tile .tile-photo img {
   width: 100%;
 }
-/* line 417, ../default.scss */
+/* line 401, ../default.scss */
 .results .tile .tile-footer {
   height: 90px;
   width: 100%;
@@ -406,19 +391,19 @@ header .title img {
   background-color: white;
   padding: 10px;
 }
-/* line 426, ../default.scss */
+/* line 410, ../default.scss */
 .results .tile .tile-footer .likes {
   font-weight: 700;
   color: #565A5C;
   margin-bottom: 2px;
 }
-/* line 432, ../default.scss */
+/* line 416, ../default.scss */
 .results .tile .tile-footer .description {
   color: #565A5C;
   font-size: 13px;
 }
 
-/* line 440, ../default.scss */
+/* line 424, ../default.scss */
 #map {
   height: 95vh;
 }

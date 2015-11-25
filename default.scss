@@ -48,44 +48,28 @@ body {
 ======================== */
 
 #explore {
-  margin-right: 90px;
+  margin-left: 120px;
 }
 
 #home {
   position: absolute;
-  margin-left: -40px;
-  z-index: 999;
-
-  a {
-    display: block;
-    width: 63px;
-    height: 63px;
-
-    &:after {
-      border-bottom: none !important; 
-    }
-
-    img {
-      position: absolute;
-      left: 12;
-      top: 0;
-      margin-right: 1px;
-      width: 61px;
-      height: 61px;      
-      z-index: 100;
-      transition: all 0.3s cubic-bezier(0.4, 0.09, 0.55, 1.31);
-      border-radius: 50%;
-
-      &:hover {
-        
-        box-shadow: 0 1px 1px 1px rgba(254, 98, 103, 0.82);
-      }
-    }
-  }
+  top: 0;
+  left: 0;
+  background-color: $tertiary-gray;
+  height: 50px;
+  padding-top: 15px;
+  padding-left: 10px;
+  padding-right: 10px;
+  text-transform: none !important;
+  color: $primary-pink;
+  font-weight: 600;  
+  font-size: 17px;
+  text-decoration: none !important;
+  z-index: 100;
 }
 
 #about {
-  margin-left: 90px;
+  margin-left: 30px;
 }
 
 header {
@@ -98,20 +82,20 @@ header {
   position: relative;
 
   nav {
+    position: relative;
     height: 50px;
     background-color: $primary-green;
     box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.2);
 
     ul {
+      display: inline-block;
       position: relative;
       list-style: none;
       padding: 0;
-      margin-left: -10px;
 
       li {
         display: inline-block;
-        vertical-align: top;
-        margin-top: 18px;
+        padding-top: 16px;
 
         a {
           position: relative;
@@ -130,7 +114,7 @@ header {
 
           &:after {
             content: "";
-            padding-bottom: 6px;
+            padding-bottom: 8px;
             display: block;
             border-bottom: 4px solid $primary-pink;
             transform: scaleX(.00001);
