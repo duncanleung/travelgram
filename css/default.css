@@ -227,15 +227,98 @@ header .title img {
   opacity: 1;
 }
 
+/* Footer Section Styles
+======================== */
+/* line 241, ../default.scss */
+footer {
+  background-color: #323433;
+  color: white;
+  font-weight: 300;
+  font-size: 19px;
+  text-align: center;
+  padding-bottom: 30px;
+}
+/* line 250, ../default.scss */
+footer .technologies-container {
+  padding-top: 20px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-around;
+}
+/* line 258, ../default.scss */
+footer .technologies-container p {
+  flex: 100%;
+  color: #82888A;
+  margin-bottom: 30px;
+}
+/* line 265, ../default.scss */
+footer .technologies-container .sass .sass-logo {
+  height: 90px;
+  width: 100px;
+  background-image: url("../img/tech/sass-gray.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 100%;
+  transition: all 0.2s ease-in-out;
+}
+/* line 274, ../default.scss */
+footer .technologies-container .sass .sass-logo:hover {
+  background-image: url("../img/tech/sass.png");
+}
+/* line 281, ../default.scss */
+footer .technologies-container .jade .jade-logo {
+  height: 100px;
+  width: 200px;
+  background-image: url("../img/tech/jade-gray.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 100%;
+  transition: all 0.2s ease-in-out;
+}
+/* line 290, ../default.scss */
+footer .technologies-container .jade .jade-logo:hover {
+  background-image: url("../img/tech/jade.png");
+}
+/* line 297, ../default.scss */
+footer .technologies-container .google-maps .google-maps-logo {
+  height: 90px;
+  width: 250px;
+  background-image: url("../img/tech/google-maps-gray.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 100%;
+  transition: all 0.2s ease-in-out;
+}
+/* line 306, ../default.scss */
+footer .technologies-container .google-maps .google-maps-logo:hover {
+  background-image: url("../img/tech/google-maps.png");
+}
+/* line 313, ../default.scss */
+footer .technologies-container .instagram .instagram-logo {
+  height: 90px;
+  width: 250px;
+  background-image: url("../img/tech/instagram-gray.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 100%;
+  transition: all 0.2s ease-in-out;
+}
+/* line 322, ../default.scss */
+footer .technologies-container .instagram .instagram-logo:hover {
+  background-image: url("../img/tech/instagram.png");
+}
+
 /* Photo Listings and Results Section Styles
 ======================== */
-/* line 242, ../default.scss */
+/* line 338, ../default.scss */
 .listings {
   height: 95vh;
   position: relative;
 }
 
-/* line 247, ../default.scss */
+/* line 343, ../default.scss */
 .menu-bar {
   z-index: 100;
   height: 60px;
@@ -243,7 +326,7 @@ header .title img {
   background-color: white;
   border: 1px solid #dce0e0;
 }
-/* line 254, ../default.scss */
+/* line 350, ../default.scss */
 .menu-bar .home-logo {
   display: inline-block;
   width: 60px;
@@ -251,12 +334,12 @@ header .title img {
   border-right: 1px solid #dce0e0;
   text-align: center;
 }
-/* line 261, ../default.scss */
+/* line 357, ../default.scss */
 .menu-bar .home-logo:hover {
   background-color: #f7f8f8;
   border-bottom: 1px solid #dce0e0;
 }
-/* line 266, ../default.scss */
+/* line 362, ../default.scss */
 .menu-bar .home-logo img {
   width: auto;
   height: 50px;
@@ -264,23 +347,23 @@ header .title img {
   transform: scale(0.9, 0.9);
   transition: all 0.3s cubic-bezier(0.51, 0.2, 0.29, 2.07);
 }
-/* line 273, ../default.scss */
+/* line 369, ../default.scss */
 .menu-bar .home-logo img:hover {
   transform: scale(1, 1);
 }
-/* line 279, ../default.scss */
+/* line 375, ../default.scss */
 .menu-bar .listings-search {
   display: inline-block;
   width: 70%;
 }
-/* line 283, ../default.scss */
+/* line 379, ../default.scss */
 .menu-bar .listings-search i {
   vertical-align: middle;
   margin: 0 10px 0 10px;
   color: #d3d3d3;
   font-size: 25px;
 }
-/* line 290, ../default.scss */
+/* line 386, ../default.scss */
 .menu-bar .listings-search input {
   vertical-align: middle;
   width: 50%;
@@ -293,12 +376,12 @@ header .title img {
   color: #82888A;
 }
 
-/* line 305, ../default.scss */
+/* line 401, ../default.scss */
 .results {
   overflow-y: scroll;
   height: 95vh;
 }
-/* line 309, ../default.scss */
+/* line 405, ../default.scss */
 .results .filters-container {
   padding-top: 10px;
   padding-right: 0;
@@ -308,7 +391,7 @@ header .title img {
   color: #82888A;
   vertical-align: middle;
 }
-/* line 318, ../default.scss */
+/* line 414, ../default.scss */
 .results .filters-container .filter-header {
   padding-top: 20px;
   padding-left: 30px;
@@ -317,43 +400,43 @@ header .title img {
   font-size: 15px;
   color: #565A5C;
 }
-/* line 327, ../default.scss */
+/* line 423, ../default.scss */
 .results .filters-container .filter-group {
   padding-top: 20px;
   padding-left: 40px;
   height: 80px;
   font-weight: 600;
 }
-/* line 334, ../default.scss */
+/* line 430, ../default.scss */
 .results .filters-container .filter-controls {
   padding-top: 20px;
   padding-left: 20px;
   padding-bottom: 20px;
 }
-/* line 339, ../default.scss */
+/* line 435, ../default.scss */
 .results .filters-container .filter-controls input {
   margin-bottom: 5px;
 }
-/* line 343, ../default.scss */
+/* line 439, ../default.scss */
 .results .filters-container .filter-controls label {
   font-weight: 400;
   margin-right: 15px;
 }
-/* line 348, ../default.scss */
+/* line 444, ../default.scss */
 .results .filters-container .filter-controls .range-control {
   display: flex;
   justify-content: space-between;
 }
-/* line 354, ../default.scss */
+/* line 450, ../default.scss */
 .results .filters-container hr {
   margin: 0 15px;
 }
-/* line 362, ../default.scss */
+/* line 458, ../default.scss */
 .results .highlight {
   box-shadow: 0 0 20px 5px rgba(74, 191, 187, 0.87);
   border-radius: 10px;
 }
-/* line 369, ../default.scss */
+/* line 465, ../default.scss */
 .results .tile .tile-header {
   height: 65px;
   width: 100%;
@@ -367,21 +450,21 @@ header .title img {
   color: #82888A;
   background-color: white;
 }
-/* line 383, ../default.scss */
+/* line 479, ../default.scss */
 .results .tile .tile-header .profile img {
   display: inline-block;
   border-radius: 50%;
   width: 40px;
 }
-/* line 389, ../default.scss */
+/* line 485, ../default.scss */
 .results .tile .tile-header p {
   display: inline-block;
 }
-/* line 396, ../default.scss */
+/* line 492, ../default.scss */
 .results .tile .tile-photo img {
   width: 100%;
 }
-/* line 401, ../default.scss */
+/* line 497, ../default.scss */
 .results .tile .tile-footer {
   height: 90px;
   width: 100%;
@@ -391,19 +474,19 @@ header .title img {
   background-color: white;
   padding: 10px;
 }
-/* line 410, ../default.scss */
+/* line 506, ../default.scss */
 .results .tile .tile-footer .likes {
   font-weight: 700;
   color: #565A5C;
   margin-bottom: 2px;
 }
-/* line 416, ../default.scss */
+/* line 512, ../default.scss */
 .results .tile .tile-footer .description {
   color: #565A5C;
   font-size: 13px;
 }
 
-/* line 424, ../default.scss */
+/* line 520, ../default.scss */
 #map {
   height: 95vh;
 }

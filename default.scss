@@ -236,6 +236,102 @@ header {
   }
 }
 
+/* Footer Section Styles
+======================== */
+footer {
+  background-color: $primary-black;
+  color: white;
+  font-weight: 300;
+  font-size: 19px;
+  text-align: center;
+  padding-bottom: 30px;
+
+
+  .technologies-container {
+    padding-top: 20px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-around;
+
+    p {
+      flex: 100%;
+      color: $secondary-gray;
+      margin-bottom: 30px;
+    }
+
+    .sass {
+      .sass-logo {
+        height: 90px;
+        width: 100px;
+        background-image: url("../img/tech/sass-gray.png");
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: 100%;
+        transition: all 0.2s ease-in-out;
+
+        &:hover {
+          background-image: url("../img/tech/sass.png");
+        }
+      }
+    }
+
+    .jade {
+      .jade-logo {
+        height: 100px;
+        width: 200px;
+        background-image: url("../img/tech/jade-gray.png");
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: 100%;
+        transition: all 0.2s ease-in-out;
+
+        &:hover {
+          background-image: url("../img/tech/jade.png");
+        }
+      }
+    }
+
+    .google-maps {
+      .google-maps-logo {
+        height: 90px;
+        width: 250px;
+        background-image: url("../img/tech/google-maps-gray.png");
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: 100%;
+        transition: all 0.2s ease-in-out;
+
+        &:hover {
+          background-image: url("../img/tech/google-maps.png");        
+        }
+      }
+    }
+
+    .instagram {
+      .instagram-logo {
+        height: 90px;
+        width: 250px;
+        background-image: url("../img/tech/instagram-gray.png");
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: 100%;
+        transition: all 0.2s ease-in-out;
+
+        &:hover {
+          background-image: url("../img/tech/instagram.png");
+        }
+      }
+    }
+
+
+  }  
+}
+
+
+
+
 /* Photo Listings and Results Section Styles
 ======================== */
 
