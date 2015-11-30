@@ -108,8 +108,10 @@ header {
           font-size: 16px;
 
           &:hover,
-          &:active {
+          &:active,
+          &:focus {
             color: white;
+            outline: none;
           }
 
           &:after {
