@@ -43,6 +43,10 @@ body {
   }
 }
 
+.hide {
+  display: none;
+}
+
 
 /* Header and Search Bar Styles
 ======================== */
@@ -474,7 +478,6 @@ footer {
 .listings {
   height: 95vh;
   position: relative;
-  display: none;
 }
 
 .menu-bar {
