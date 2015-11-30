@@ -168,7 +168,7 @@ header .title img {
 }
 
 /* line 179, ../default.scss */
-.search-container {
+#search-container {
   position: relative;
   margin-top: -80px;
   margin-bottom: 40px;
@@ -178,7 +178,7 @@ header .title img {
   background-color: rgba(0, 0, 0, 0.4);
 }
 /* line 188, ../default.scss */
-.search-container .btn-default {
+#search-container .btn-default {
   background-color: #4BBFBB;
   border-color: #4BBFBB;
   font-family: "Open Sans", sans-serif;
@@ -187,7 +187,7 @@ header .title img {
   transition: all 0.2s ease-in-out;
 }
 /* line 197, ../default.scss */
-.search-container .btn-default:hover {
+#search-container .btn-default:hover {
   background-color: #0F948F;
   border-color: #0F948F;
 }
@@ -458,7 +458,7 @@ footer .baseline-container .branding-container p {
 /* Photo Listings and Results Section Styles
 ======================== */
 /* line 478, ../default.scss */
-.listings {
+#listings {
   height: 95vh;
   position: relative;
 }

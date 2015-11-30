@@ -36,7 +36,7 @@ html
           
 
     //- Search Bar Section
-    section.search-container.container-fluid
+    section#search-container.container-fluid
       .row
         .col-centered
           .col-xs-10.col-sm-5.col-lg-4
@@ -54,12 +54,12 @@ html
             p See what's happening on Instagram, anywhere in the world
           .discovery-tiles
             .col-sm-12.col-lg-8
-              a(href="")
+              a()
                 .discovery-card(style="background-image:url(img/discovery/spain.jpg)")
                   span Costa Brava
                   span Spain
             .col-sm-6.col-lg-4
-              a(href="")
+              a(id="paris-tile")
                 .discovery-card(style="background-image:url(img/discovery/paris.jpg)")
                   span Paris
                   span France
@@ -161,7 +161,7 @@ html
 
 
     //- Photo Listings and Results Section
-    section.listings.hide.container-fluid
+    section#listings.hide.container-fluid
       .row
         .col-sm-12.menu-bar
           .home-logo
