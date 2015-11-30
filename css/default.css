@@ -456,9 +456,10 @@ footer .baseline-container .branding-container p {
 .listings {
   height: 95vh;
   position: relative;
+  display: none;
 }
 
-/* line 479, ../default.scss */
+/* line 480, ../default.scss */
 .menu-bar {
   z-index: 100;
   height: 60px;
@@ -466,7 +467,7 @@ footer .baseline-container .branding-container p {
   background-color: white;
   border: 1px solid #dce0e0;
 }
-/* line 486, ../default.scss */
+/* line 487, ../default.scss */
 .menu-bar .home-logo {
   display: inline-block;
   width: 60px;
@@ -474,12 +475,12 @@ footer .baseline-container .branding-container p {
   border-right: 1px solid #dce0e0;
   text-align: center;
 }
-/* line 493, ../default.scss */
+/* line 494, ../default.scss */
 .menu-bar .home-logo:hover {
   background-color: #f7f8f8;
   border-bottom: 1px solid #dce0e0;
 }
-/* line 498, ../default.scss */
+/* line 499, ../default.scss */
 .menu-bar .home-logo img {
   width: auto;
   height: 50px;
@@ -487,23 +488,23 @@ footer .baseline-container .branding-container p {
   transform: scale(0.9, 0.9);
   transition: all 0.3s cubic-bezier(0.51, 0.2, 0.29, 2.07);
 }
-/* line 505, ../default.scss */
+/* line 506, ../default.scss */
 .menu-bar .home-logo img:hover {
   transform: scale(1, 1);
 }
-/* line 511, ../default.scss */
+/* line 512, ../default.scss */
 .menu-bar .listings-search {
   display: inline-block;
   width: 70%;
 }
-/* line 515, ../default.scss */
+/* line 516, ../default.scss */
 .menu-bar .listings-search i {
   vertical-align: middle;
   margin: 0 10px 0 10px;
   color: #d3d3d3;
   font-size: 25px;
 }
-/* line 522, ../default.scss */
+/* line 523, ../default.scss */
 .menu-bar .listings-search input {
   vertical-align: middle;
   width: 50%;
@@ -516,12 +517,12 @@ footer .baseline-container .branding-container p {
   color: #82888A;
 }
 
-/* line 537, ../default.scss */
+/* line 538, ../default.scss */
 .results {
   overflow-y: scroll;
   height: 95vh;
 }
-/* line 541, ../default.scss */
+/* line 542, ../default.scss */
 .results .filters-container {
   padding-top: 10px;
   padding-right: 0;
@@ -531,7 +532,7 @@ footer .baseline-container .branding-container p {
   color: #82888A;
   vertical-align: middle;
 }
-/* line 550, ../default.scss */
+/* line 551, ../default.scss */
 .results .filters-container .filter-header {
   padding-top: 20px;
   padding-left: 30px;
@@ -540,43 +541,43 @@ footer .baseline-container .branding-container p {
   font-size: 15px;
   color: #565A5C;
 }
-/* line 559, ../default.scss */
+/* line 560, ../default.scss */
 .results .filters-container .filter-group {
   padding-top: 20px;
   padding-left: 40px;
   height: 80px;
   font-weight: 600;
 }
-/* line 566, ../default.scss */
+/* line 567, ../default.scss */
 .results .filters-container .filter-controls {
   padding-top: 20px;
   padding-left: 20px;
   padding-bottom: 20px;
 }
-/* line 571, ../default.scss */
+/* line 572, ../default.scss */
 .results .filters-container .filter-controls input {
   margin-bottom: 5px;
 }
-/* line 575, ../default.scss */
+/* line 576, ../default.scss */
 .results .filters-container .filter-controls label {
   font-weight: 400;
   margin-right: 15px;
 }
-/* line 580, ../default.scss */
+/* line 581, ../default.scss */
 .results .filters-container .filter-controls .range-control {
   display: flex;
   justify-content: space-between;
 }
-/* line 586, ../default.scss */
+/* line 587, ../default.scss */
 .results .filters-container hr {
   margin: 0 15px;
 }
-/* line 594, ../default.scss */
+/* line 595, ../default.scss */
 .results .highlight {
   box-shadow: 0 0 20px 5px rgba(74, 191, 187, 0.87);
   border-radius: 10px;
 }
-/* line 601, ../default.scss */
+/* line 602, ../default.scss */
 .results .tile .tile-header {
   height: 65px;
   width: 100%;
@@ -590,21 +591,21 @@ footer .baseline-container .branding-container p {
   color: #82888A;
   background-color: white;
 }
-/* line 615, ../default.scss */
+/* line 616, ../default.scss */
 .results .tile .tile-header .profile img {
   display: inline-block;
   border-radius: 50%;
   width: 40px;
 }
-/* line 621, ../default.scss */
+/* line 622, ../default.scss */
 .results .tile .tile-header p {
   display: inline-block;
 }
-/* line 628, ../default.scss */
+/* line 629, ../default.scss */
 .results .tile .tile-photo img {
   width: 100%;
 }
-/* line 633, ../default.scss */
+/* line 634, ../default.scss */
 .results .tile .tile-footer {
   height: 90px;
   width: 100%;
@@ -614,19 +615,19 @@ footer .baseline-container .branding-container p {
   background-color: white;
   padding: 10px;
 }
-/* line 642, ../default.scss */
+/* line 643, ../default.scss */
 .results .tile .tile-footer .likes {
   font-weight: 700;
   color: #565A5C;
   margin-bottom: 2px;
 }
-/* line 648, ../default.scss */
+/* line 649, ../default.scss */
 .results .tile .tile-footer .description {
   color: #565A5C;
   font-size: 13px;
 }
 
-/* line 656, ../default.scss */
+/* line 657, ../default.scss */
 #map {
   height: 95vh;
 }
