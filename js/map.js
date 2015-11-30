@@ -5,7 +5,9 @@ var icon = 'img/logo-40.png';
 var iconLight = 'img/pin-green-40.png';
 var allMarkers = [];
 
-//- CREATE MAP
+/* 
+CREATE MAP
+======================= */
 function initMap() {
   map = new google.maps.Map(document.getElementById('map'), {
     center: londonLatLang,

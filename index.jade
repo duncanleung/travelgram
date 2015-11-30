@@ -12,11 +12,6 @@ html
     //- FAVICON
     link(rel="shortcut icon" href="img/favicon.ico" type="image/x-icon")
     link(rel="stylesheet" href="css/default.css")
-    //- JQUERY
-    script(src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js")
-    //- GOOGLE MAPS API
-    script(async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAErIbE5HGwX-I3j8QnZAnVAdDJb7qcHUc&callback=initMap")
-    script(src="js/map.js" type="text/javascript")
     title travelGram
   body
     //- Hero Section
@@ -25,12 +20,12 @@ html
       //- Navigation/Menu Bar
       .row
         nav.col-sm-12
-          a(href="#" id="home") travelGram
+          a(href="#" id="home-nav") travelGram
           ul
-            li#explore
-              a(href="#") Explore
-            li#about
-              a(href="#") About
+            li#explore-nav
+              a(href="#explore") Explore
+            li#about-nav
+              a(href="#about") About
       .row
         .title.col-sm-12
           h1 Explore the world via instagram
@@ -51,7 +46,7 @@ html
                 button(class="btn btn-default" type="button") Search
 
     //- Discovery Section
-    section.discovery.container
+    section#explore.discovery.container
       .row
         .col-sm-12
           .intro-text
@@ -108,6 +103,7 @@ html
                 .discovery-card(style="background-image:url(img/discovery/bali.jpg)")
                   span Bali
                   span Indonesia
+
     footer.container-fluid
       .row
         .technologies-container.col-sm-12
@@ -233,19 +229,12 @@ html
                   .likes 53 likes
                   .description Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore
         #map.col-sm-5
-
-
-
-
-
-
-
-
-
-
-
-
-
+    //- JQUERY
+    script(src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js")
+    script(src="js/main.js" type="text/javascript")
+    //- GOOGLE MAPS API
+    script(async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAErIbE5HGwX-I3j8QnZAnVAdDJb7qcHUc&callback=initMap")
+    script(src="js/map.js" type="text/javascript")
 
 
 

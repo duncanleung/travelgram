@@ -47,11 +47,11 @@ body {
 /* Header and Search Bar Styles
 ======================== */
 
-#explore {
+#explore-nav {
   margin-left: 120px;
 }
 
-#home {
+#home-nav {
   position: absolute;
   top: 0;
   left: 0;
@@ -68,7 +68,7 @@ body {
   z-index: 100;
 }
 
-#about {
+#about-nav {
   margin-left: 30px;
 }
 
@@ -235,6 +235,8 @@ header {
     opacity: 1;
   }
 }
+
+
 
 /* Footer Section Styles
 ======================== */
@@ -428,7 +430,6 @@ footer {
     }
   }
 }
-
 
 
 

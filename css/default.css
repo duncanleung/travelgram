@@ -36,12 +36,12 @@ body {
 /* Header and Search Bar Styles
 ======================== */
 /* line 50, ../default.scss */
-#explore {
+#explore-nav {
   margin-left: 120px;
 }
 
 /* line 54, ../default.scss */
-#home {
+#home-nav {
   position: absolute;
   top: 0;
   left: 0;
@@ -59,7 +59,7 @@ body {
 }
 
 /* line 71, ../default.scss */
-#about {
+#about-nav {
   margin-left: 30px;
 }
 
@@ -229,7 +229,7 @@ header .title img {
 
 /* Footer Section Styles
 ======================== */
-/* line 241, ../default.scss */
+/* line 243, ../default.scss */
 footer {
   background-color: #323433;
   color: white;
@@ -238,7 +238,7 @@ footer {
   text-align: center;
   padding-bottom: 10px;
 }
-/* line 249, ../default.scss */
+/* line 251, ../default.scss */
 footer .technologies-container {
   padding-top: 20px;
   display: flex;
@@ -247,13 +247,13 @@ footer .technologies-container {
   align-items: center;
   justify-content: space-around;
 }
-/* line 257, ../default.scss */
+/* line 259, ../default.scss */
 footer .technologies-container .heading {
   flex: 100%;
   color: #82888A;
   margin-bottom: 30px;
 }
-/* line 264, ../default.scss */
+/* line 266, ../default.scss */
 footer .technologies-container .sass .sass-logo {
   height: 90px;
   width: 100px;
@@ -263,11 +263,11 @@ footer .technologies-container .sass .sass-logo {
   background-size: 100%;
   transition: all 0.2s ease-in-out;
 }
-/* line 273, ../default.scss */
+/* line 275, ../default.scss */
 footer .technologies-container .sass .sass-logo:hover {
   background-image: url("../img/logo/sass.png");
 }
-/* line 280, ../default.scss */
+/* line 282, ../default.scss */
 footer .technologies-container .jade .jade-logo {
   height: 100px;
   width: 200px;
@@ -277,11 +277,11 @@ footer .technologies-container .jade .jade-logo {
   background-size: 100%;
   transition: all 0.2s ease-in-out;
 }
-/* line 289, ../default.scss */
+/* line 291, ../default.scss */
 footer .technologies-container .jade .jade-logo:hover {
   background-image: url("../img/logo/jade.png");
 }
-/* line 296, ../default.scss */
+/* line 298, ../default.scss */
 footer .technologies-container .google-maps .google-maps-logo {
   height: 90px;
   width: 250px;
@@ -291,11 +291,11 @@ footer .technologies-container .google-maps .google-maps-logo {
   background-size: 100%;
   transition: all 0.2s ease-in-out;
 }
-/* line 305, ../default.scss */
+/* line 307, ../default.scss */
 footer .technologies-container .google-maps .google-maps-logo:hover {
   background-image: url("../img/logo/google-maps.png");
 }
-/* line 312, ../default.scss */
+/* line 314, ../default.scss */
 footer .technologies-container .instagram .instagram-logo {
   height: 90px;
   width: 250px;
@@ -305,19 +305,19 @@ footer .technologies-container .instagram .instagram-logo {
   background-size: 100%;
   transition: all 0.2s ease-in-out;
 }
-/* line 321, ../default.scss */
+/* line 323, ../default.scss */
 footer .technologies-container .instagram .instagram-logo:hover {
   background-image: url("../img/logo/instagram.png");
 }
 @media (max-width: 930px) {
-  /* line 328, ../default.scss */
+  /* line 330, ../default.scss */
   footer .technologies-container .sass,
   footer .technologies-container .jade,
   footer .technologies-container .google-maps,
   footer .technologies-container .instagram {
     flex: 50%;
   }
-  /* line 334, ../default.scss */
+  /* line 336, ../default.scss */
   footer .technologies-container .sass a,
   footer .technologies-container .jade a,
   footer .technologies-container .google-maps a,
@@ -326,25 +326,25 @@ footer .technologies-container .instagram .instagram-logo:hover {
   }
 }
 @media (max-width: 590px) {
-  /* line 341, ../default.scss */
+  /* line 343, ../default.scss */
   footer .technologies-container .sass,
   footer .technologies-container .jade,
   footer .technologies-container .google-maps,
   footer .technologies-container .instagram {
     flex: 100%;
   }
-  /* line 348, ../default.scss */
+  /* line 350, ../default.scss */
   footer .technologies-container .heading {
     font-size: 17px;
   }
 }
-/* line 355, ../default.scss */
+/* line 357, ../default.scss */
 footer .baseline-container {
   margin-top: 70px;
   position: relative;
   display: inline-block;
 }
-/* line 360, ../default.scss */
+/* line 362, ../default.scss */
 footer .baseline-container .connect-container {
   position: absolute;
   right: 40px;
@@ -357,7 +357,7 @@ footer .baseline-container .connect-container {
   justify-content: center;
   z-index: 100;
 }
-/* line 373, ../default.scss */
+/* line 375, ../default.scss */
 footer .baseline-container .connect-container p {
   margin-top: 10px;
   margin-right: 20px;
@@ -365,7 +365,7 @@ footer .baseline-container .connect-container p {
   font-weight: 300;
   color: #82888A;
 }
-/* line 381, ../default.scss */
+/* line 383, ../default.scss */
 footer .baseline-container .connect-container .github-logo {
   height: 30px;
   width: 30px;
@@ -376,11 +376,11 @@ footer .baseline-container .connect-container .github-logo {
   background-size: 100%;
   transition: all 0.2s ease-in-out;
 }
-/* line 391, ../default.scss */
+/* line 393, ../default.scss */
 footer .baseline-container .connect-container .github-logo:hover {
   background-image: url("../img/logo/github.png");
 }
-/* line 396, ../default.scss */
+/* line 398, ../default.scss */
 footer .baseline-container .connect-container .linkedin-logo {
   height: 25px;
   width: 25px;
@@ -392,23 +392,23 @@ footer .baseline-container .connect-container .linkedin-logo {
   background-size: 100%;
   transition: all 0.2s ease-in-out;
 }
-/* line 407, ../default.scss */
+/* line 409, ../default.scss */
 footer .baseline-container .connect-container .linkedin-logo:hover {
   background-image: url("../img/logo/linkedin.png");
 }
 @media (max-width: 930px) {
-  /* line 360, ../default.scss */
+  /* line 362, ../default.scss */
   footer .baseline-container .connect-container {
     position: relative;
     right: 0;
     margin-right: 0;
   }
 }
-/* line 421, ../default.scss */
+/* line 423, ../default.scss */
 footer .baseline-container .branding-container {
   margin-top: 30px;
 }
-/* line 424, ../default.scss */
+/* line 426, ../default.scss */
 footer .baseline-container .branding-container p {
   color: #565A5C;
   font-size: 16px;
@@ -416,13 +416,13 @@ footer .baseline-container .branding-container p {
 
 /* Photo Listings and Results Section Styles
 ======================== */
-/* line 438, ../default.scss */
+/* line 439, ../default.scss */
 .listings {
   height: 95vh;
   position: relative;
 }
 
-/* line 443, ../default.scss */
+/* line 444, ../default.scss */
 .menu-bar {
   z-index: 100;
   height: 60px;
@@ -430,7 +430,7 @@ footer .baseline-container .branding-container p {
   background-color: white;
   border: 1px solid #dce0e0;
 }
-/* line 450, ../default.scss */
+/* line 451, ../default.scss */
 .menu-bar .home-logo {
   display: inline-block;
   width: 60px;
@@ -438,12 +438,12 @@ footer .baseline-container .branding-container p {
   border-right: 1px solid #dce0e0;
   text-align: center;
 }
-/* line 457, ../default.scss */
+/* line 458, ../default.scss */
 .menu-bar .home-logo:hover {
   background-color: #f7f8f8;
   border-bottom: 1px solid #dce0e0;
 }
-/* line 462, ../default.scss */
+/* line 463, ../default.scss */
 .menu-bar .home-logo img {
   width: auto;
   height: 50px;
@@ -451,23 +451,23 @@ footer .baseline-container .branding-container p {
   transform: scale(0.9, 0.9);
   transition: all 0.3s cubic-bezier(0.51, 0.2, 0.29, 2.07);
 }
-/* line 469, ../default.scss */
+/* line 470, ../default.scss */
 .menu-bar .home-logo img:hover {
   transform: scale(1, 1);
 }
-/* line 475, ../default.scss */
+/* line 476, ../default.scss */
 .menu-bar .listings-search {
   display: inline-block;
   width: 70%;
 }
-/* line 479, ../default.scss */
+/* line 480, ../default.scss */
 .menu-bar .listings-search i {
   vertical-align: middle;
   margin: 0 10px 0 10px;
   color: #d3d3d3;
   font-size: 25px;
 }
-/* line 486, ../default.scss */
+/* line 487, ../default.scss */
 .menu-bar .listings-search input {
   vertical-align: middle;
   width: 50%;
@@ -480,12 +480,12 @@ footer .baseline-container .branding-container p {
   color: #82888A;
 }
 
-/* line 501, ../default.scss */
+/* line 502, ../default.scss */
 .results {
   overflow-y: scroll;
   height: 95vh;
 }
-/* line 505, ../default.scss */
+/* line 506, ../default.scss */
 .results .filters-container {
   padding-top: 10px;
   padding-right: 0;
@@ -495,7 +495,7 @@ footer .baseline-container .branding-container p {
   color: #82888A;
   vertical-align: middle;
 }
-/* line 514, ../default.scss */
+/* line 515, ../default.scss */
 .results .filters-container .filter-header {
   padding-top: 20px;
   padding-left: 30px;
@@ -504,43 +504,43 @@ footer .baseline-container .branding-container p {
   font-size: 15px;
   color: #565A5C;
 }
-/* line 523, ../default.scss */
+/* line 524, ../default.scss */
 .results .filters-container .filter-group {
   padding-top: 20px;
   padding-left: 40px;
   height: 80px;
   font-weight: 600;
 }
-/* line 530, ../default.scss */
+/* line 531, ../default.scss */
 .results .filters-container .filter-controls {
   padding-top: 20px;
   padding-left: 20px;
   padding-bottom: 20px;
 }
-/* line 535, ../default.scss */
+/* line 536, ../default.scss */
 .results .filters-container .filter-controls input {
   margin-bottom: 5px;
 }
-/* line 539, ../default.scss */
+/* line 540, ../default.scss */
 .results .filters-container .filter-controls label {
   font-weight: 400;
   margin-right: 15px;
 }
-/* line 544, ../default.scss */
+/* line 545, ../default.scss */
 .results .filters-container .filter-controls .range-control {
   display: flex;
   justify-content: space-between;
 }
-/* line 550, ../default.scss */
+/* line 551, ../default.scss */
 .results .filters-container hr {
   margin: 0 15px;
 }
-/* line 558, ../default.scss */
+/* line 559, ../default.scss */
 .results .highlight {
   box-shadow: 0 0 20px 5px rgba(74, 191, 187, 0.87);
   border-radius: 10px;
 }
-/* line 565, ../default.scss */
+/* line 566, ../default.scss */
 .results .tile .tile-header {
   height: 65px;
   width: 100%;
@@ -554,21 +554,21 @@ footer .baseline-container .branding-container p {
   color: #82888A;
   background-color: white;
 }
-/* line 579, ../default.scss */
+/* line 580, ../default.scss */
 .results .tile .tile-header .profile img {
   display: inline-block;
   border-radius: 50%;
   width: 40px;
 }
-/* line 585, ../default.scss */
+/* line 586, ../default.scss */
 .results .tile .tile-header p {
   display: inline-block;
 }
-/* line 592, ../default.scss */
+/* line 593, ../default.scss */
 .results .tile .tile-photo img {
   width: 100%;
 }
-/* line 597, ../default.scss */
+/* line 598, ../default.scss */
 .results .tile .tile-footer {
   height: 90px;
   width: 100%;
@@ -578,19 +578,19 @@ footer .baseline-container .branding-container p {
   background-color: white;
   padding: 10px;
 }
-/* line 606, ../default.scss */
+/* line 607, ../default.scss */
 .results .tile .tile-footer .likes {
   font-weight: 700;
   color: #565A5C;
   margin-bottom: 2px;
 }
-/* line 612, ../default.scss */
+/* line 613, ../default.scss */
 .results .tile .tile-footer .description {
   color: #565A5C;
   font-size: 13px;
 }
 
-/* line 620, ../default.scss */
+/* line 621, ../default.scss */
 #map {
   height: 95vh;
 }
