@@ -259,10 +259,10 @@ header {
 
 .about-tile {
   background-color: white;
-  padding-top: 30px;
-  height: 350px;
+  padding-top: 25px;
+  height: 340px;
   margin-bottom: 10px;
-  border-radius: 4px;
+  border-radius: 10px;
   box-shadow: 0 4px 8px rgba(166, 166, 166, 0.3);
   color: $secondary-gray;
 
@@ -280,7 +280,7 @@ header {
       height: 75px;      
       margin-right: auto;
       margin-left: auto;
-      margin-bottom: 50px;
+      margin-bottom: 30px;
       display: block;
       border: 3px solid rgba(0, 0, 0, 0.13);
       border-radius: 50%;
