@@ -250,7 +250,6 @@ header {
 .about {
   padding-top: 60px;
   padding-bottom: 50px;
-  height: 700px;
   background-color: white;
   background-image: url('../img/about.png');
   background-repeat: no-repeat;
@@ -260,21 +259,47 @@ header {
 
 .about-tile {
   background-color: white;
-  height: 400px;
-  padding-top: 5px;
+  padding-top: 30px;
+  height: 350px;
+  margin-bottom: 10px;
   border-radius: 4px;
   box-shadow: 0 4px 8px rgba(166, 166, 166, 0.3);
   color: $secondary-gray;
 
   h3 {
+    width: 95%;
+    margin-right: auto;
+    margin-left: auto;
     text-align: center;
-    font-size: 22px;
-    font-weight: 300;
+    letter-spacing: 1px;
+    font-size: 20px;
+    font-weight: 400;
 
-    i {
-      margin-right:15px;
-      color: $primary-gray;
+    .circle {
+      width: 75px;
+      height: 75px;      
+      margin-right: auto;
+      margin-left: auto;
+      margin-bottom: 50px;
+      display: block;
+      border: 3px solid rgba(0, 0, 0, 0.13);
+      border-radius: 50%;
+
+      i {
+      text-align: center;
+      vertical-align: middle;
+      margin-left: 2px;
+      line-height: 69px;
+      color: rgba(0, 0, 0, 0.35);
+      }
     }
+  }
+
+  p {
+    width: 80%;
+    text-align: justify;
+    margin-right: auto;
+    margin-left: auto;
   }
 }
 
