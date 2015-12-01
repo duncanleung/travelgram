@@ -8,6 +8,11 @@ var allMarkers = [];
 /* 
 Create Google Map
 ======================= */
+function displayMap() {
+  document.getElementById('map').style.display="block";
+  initMap();
+}
+
 function initMap() {
   map = new google.maps.Map(document.getElementById('map'), {
     center: londonLatLang,
@@ -15,7 +20,7 @@ function initMap() {
     scrollwheel: false
   });
 
-  //Load the Google Maps
+  //Add Google Maps Event Listener
   google.maps.event.addDomListener(window, 'load', function () {
     
     // Add Marker 1

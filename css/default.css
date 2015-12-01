@@ -35,7 +35,7 @@ body {
 
 /* line 46, ../default.scss */
 .hide {
-  visibility: hidden;
+  display: none;
 }
 
 /* Header and Search Bar Styles
