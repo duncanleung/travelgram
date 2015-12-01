@@ -14,6 +14,18 @@ html
     link(rel="stylesheet" href="css/default.css")
     title travelGram
   body
+    section#fixed-nav.container-fluid
+      .row
+        .col-sm-12.menu-bar
+          #scroll-top.home-logo
+            a(href="#")
+              img(src="img/pin-green.png" alt="travelGram Home Button")
+          .fixed-search
+            form
+              i(class="fa fa-search")
+              label(class="sr-only" for="header-search") Where do you want to go?
+              input(type="search" id="header-search" name="location" value="London, United Kingdom" placeholder="Where do you want to go?" autocomplete="off")
+
     //- Hero Section
     header.container-fluid
       
@@ -167,10 +179,10 @@ html
     section#listings.hide.container-fluid
       .row
         .col-sm-12.menu-bar
-          #home-logo
+          #home-logo.home-logo
             a(href="#")
               img(src="img/pin-green.png" alt="travelGram Home Button")
-          .listings-search
+          .fixed-search
             form
               i(class="fa fa-search")
               label(class="sr-only" for="header-search") Where do you want to go?

@@ -47,6 +47,132 @@ body {
   display: none;
 }
 
+/* Fixed Nav Bar Styles
+======================== */
+
+#fixed-nav {
+  position: fixed;
+  z-index: 9999;
+  top: 0;
+  left: 0;
+  width: 100%;
+
+/*   .menu-bar {
+  height: 60px;
+  padding-left: 0;
+  background-color: rgba(255, 255, 255, 0.95);
+  border: 1px solid $border-gray;
+
+    .home-logo {
+      display: inline-block;
+      width: 60px;
+      height: 59px;
+      border-right: 1px solid $border-gray;
+      text-align: center;
+
+      &:hover {
+        background-color: #f7f8f8;
+        border-bottom: 1px solid $border-gray;
+      }
+
+      img {
+        width: auto;
+        height: 50px;
+        margin-top: 5px;
+        transform: scale(.9, .9);
+        transition: all 0.3s cubic-bezier(0.51, 0.2, 0.29, 2.07);
+
+        &:hover {
+        transform: scale(1, 1);
+        }
+      }
+    }
+
+    .fixed-search {
+      display: inline-block;
+      width: 70%;
+      
+      i {
+        vertical-align: middle;
+        margin: 0 10px 0 10px;
+        color: #d3d3d3;
+        font-size: 25px;
+      }
+
+      input {
+        vertical-align: middle;
+        width: 50%;
+        margin-top: 5px;
+        box-shadow: none;
+        border: none;
+        outline: none;
+        line-height: 1.2em;
+        font-family: $font-family;
+        color: $secondary-gray;
+        background-color: rgba(255, 255, 255, 0.05);
+      }
+    }
+  } */
+}
+
+.menu-bar {
+height: 60px;
+padding-left: 0;
+background-color: rgba(255, 255, 255, 0.95);
+border: 1px solid $border-gray;
+
+  .home-logo {
+    display: inline-block;
+    width: 60px;
+    height: 59px;
+    border-right: 1px solid $border-gray;
+    text-align: center;
+
+    &:hover {
+      background-color: #f7f8f8;
+      border-bottom: 1px solid $border-gray;
+    }
+
+    img {
+      width: auto;
+      height: 50px;
+      margin-top: 5px;
+      transform: scale(.9, .9);
+      transition: all 0.3s cubic-bezier(0.51, 0.2, 0.29, 2.07);
+
+      &:hover {
+      transform: scale(1, 1);
+      }
+    }
+  }
+
+  .fixed-search {
+    display: inline-block;
+    width: 70%;
+    
+    i {
+      vertical-align: middle;
+      margin: 0 10px 0 10px;
+      color: #d3d3d3;
+      font-size: 25px;
+    }
+
+    input {
+      vertical-align: middle;
+      width: 50%;
+      margin-top: 5px;
+      box-shadow: none;
+      border: none;
+      outline: none;
+      line-height: 1.2em;
+      font-family: $font-family;
+      color: $secondary-gray;
+      background-color: rgba(255, 255, 255, 0.05);
+    }
+  }
+}
+
+
 
 /* Header and Search Bar Styles
 ======================== */
@@ -69,7 +195,7 @@ body {
   font-weight: 600;  
   font-size: 17px;
   text-decoration: none !important;
-  z-index: 100;
+  z-index: 50;
 }
 
 #about-nav {
@@ -434,7 +560,7 @@ footer {
       flex-wrap: wrap;
       align-items: center;
       justify-content: center;
-      z-index: 100;
+      z-index: 50;
 
 
       p {
@@ -503,11 +629,10 @@ footer {
 
 #listings {
   height: 100vh;
-  position: relative;
   overflow: hidden;
 }
 
-.menu-bar {
+/* .menu-bar {
   z-index: 100;
   height: 60px;
   padding-left: 0;
@@ -563,7 +688,7 @@ footer {
     }
   }
 
-}
+} */
 
 .results {
   overflow-y: scroll;
