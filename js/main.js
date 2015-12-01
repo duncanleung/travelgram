@@ -20,12 +20,14 @@ $(function() {
 Discovery Tiles Section
  ========================== */
 
+/* Show Section Map and Instagram Photos */
 function showListings() {
   var listingsEle = document.getElementById('listings');
 
   listingsEle.classList.remove('hide');
 }
 
+/* Hide All Main Content */
 function hideMain() {
   var headerEle = document.querySelector('header');
   var searchBarEle = document.getElementById('search-container');
@@ -39,9 +41,16 @@ function hideMain() {
   aboutEle.setAttribute('class', 'hide');
   footerEle.setAttribute('class', 'hide');
 
+  // showListings Function Run Here
   showListings();
 }
 
 
-var parisEle = document.getElementById('paris-tile');
-parisEle.addEventListener('click', hideMain, false);
+/* When Tile is Clicked,  run hideMain */
+var tileEle = document.getElementById('discovery-tiles').querySelectorAll('a');
+
+//Adds an event listener to all tiles
+[].forEach.call(tileEle, function(e) {
+  e.addEventListener('click', hideMain, false);
+});
+

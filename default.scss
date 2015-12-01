@@ -207,9 +207,10 @@ header {
   margin-bottom: 80px;
 }
 
-.discovery-tiles {
+#discovery-tiles {
   a {
     text-decoration: none;
+    cursor: pointer;
   }
 
   .discovery-card {
