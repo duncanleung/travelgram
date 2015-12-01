@@ -35,7 +35,7 @@ body {
 
 /* line 46, ../default.scss */
 .hide {
-  display: none;
+  visibility: hidden;
 }
 
 /* Header and Search Bar Styles
@@ -473,7 +473,7 @@ footer .baseline-container .branding-container p {
   border: 1px solid #dce0e0;
 }
 /* line 491, ../default.scss */
-.menu-bar .home-logo {
+.menu-bar #home-logo {
   display: inline-block;
   width: 60px;
   height: 60px;
@@ -481,12 +481,12 @@ footer .baseline-container .branding-container p {
   text-align: center;
 }
 /* line 498, ../default.scss */
-.menu-bar .home-logo:hover {
+.menu-bar #home-logo:hover {
   background-color: #f7f8f8;
   border-bottom: 1px solid #dce0e0;
 }
 /* line 503, ../default.scss */
-.menu-bar .home-logo img {
+.menu-bar #home-logo img {
   width: auto;
   height: 50px;
   margin-top: 5px;
@@ -494,7 +494,7 @@ footer .baseline-container .branding-container p {
   transition: all 0.3s cubic-bezier(0.51, 0.2, 0.29, 2.07);
 }
 /* line 510, ../default.scss */
-.menu-bar .home-logo img:hover {
+.menu-bar #home-logo img:hover {
   transform: scale(1, 1);
 }
 /* line 516, ../default.scss */

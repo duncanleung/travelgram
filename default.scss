@@ -44,7 +44,7 @@ body {
 }
 
 .hide {
-  display: none;
+  visibility: hidden;
 }
 
 
@@ -488,7 +488,7 @@ footer {
   background-color: white;
   border: 1px solid $border-gray;
 
-  .home-logo {
+  #home-logo {
     display: inline-block;
     width: 60px;
     height: 60px;
