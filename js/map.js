@@ -28,7 +28,7 @@ function initMap() {
       animation: google.maps.Animation.DROP,
       position: {lat: 51.507351, lng: -0.127758},
       map: map,
-      id: 1,
+      id: 'tile1',
       icon: icon,
       title: "Marker1"
     });
@@ -49,7 +49,7 @@ function initMap() {
       animation: google.maps.Animation.DROP,
       position: {lat: 51.504787, lng: -0.113469},
       map: map,
-      id: 2,
+      id: 'tile2',
       icon: icon,
       title: "Marker2"
     });
@@ -70,7 +70,7 @@ function initMap() {
       animation: google.maps.Animation.DROP,
       position: {lat: 51.524112, lng: -0.118147},
       map: map,
-      id: 3,
+      id: 'tile3',
       icon: icon,
       title: "Marker3"
     });
@@ -91,7 +91,7 @@ function initMap() {
       animation: google.maps.Animation.DROP,
       position: {lat: 51.508051, lng: -0.168641},
       map: map,
-      id: 4,
+      id: 'tile4',
       icon: icon,
       title: "Marker4"
     });
@@ -111,23 +111,46 @@ function initMap() {
 
 }/*END Google Maps*/
 
-// Highlight Markers when hover in/out of Pictures
-function hover(id) {
-  for(var i=0; i<allMarkers.length; i++) {
-    if(id === allMarkers[i].id) {
+
+/* 
+Highlight Markers when hover in/out of Pictures
+======================= */
+
+
+// Match the Tile ID with the Icon ID
+// Set Icon back to iconLight
+function hover() {
+  /*console.log('hover ' + this.id)*/
+  for(var i = 0; i < allMarkers.length; i++) {
+    if(this.id === allMarkers[i].id) {
       allMarkers[i].setIcon(iconLight);
       break;
     }
   }
 }
 
-function out(id) {
-  for(var i=0; i<allMarkers.length; i++) {
-    if(id === allMarkers[i].id) {
+// Match the Tile ID with the Icon ID
+// Set Icon back to Black
+function out() {
+/*  console.log('out '  + this.id)*/
+  for(var i = 0; i < allMarkers.length; i++) {
+    if(this.id === allMarkers[i].id) {
       allMarkers[i].setIcon(icon);
       break;
     }
   }
+}
+
+
+
+
+
+//Get Array of All .tile
+var tile = document.getElementById('listings').querySelectorAll('.tile');
+//Add Event Listener to All Tiles
+for(var i = 0; i < tile.length; i++) {
+  tile[i].addEventListener('mouseover', hover, false);
+  tile[i].addEventListener('mouseout', out, false);
 }
 
 

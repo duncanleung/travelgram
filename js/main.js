@@ -110,7 +110,11 @@ function showMain() {
   window.location.hash = '#';
 }
 
-
+// When Home Logo is Clicked
+// Show main screen and hide Browse Section
 var logoEle = document.getElementById('home-logo');
-
 logoEle.addEventListener('click', showMain, false);
+
+
+
+
