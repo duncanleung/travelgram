@@ -477,8 +477,9 @@ footer {
 ======================== */
 
 #listings {
-  height: 95vh;
+  height: 100vh;
   position: relative;
+  overflow: hidden;
 }
 
 .menu-bar {
@@ -541,6 +542,7 @@ footer {
 
 .results {
   overflow-y: scroll;
+  overflow-x: hidden;
   height: 95vh;
 
   .filters-container {

@@ -29,7 +29,6 @@ function showListings() {
   listingsEle.classList.remove('hide');
 
   //Fix Google Maps Show/Hide bug
-  /*displayMap();*/
   var center = map.getCenter();
   google.maps.event.trigger(map, 'resize');
   map.setCenter(center);
