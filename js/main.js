@@ -1,5 +1,5 @@
 /*
-Scroll Nav Links
+Smooth Scroll from Nav Links
 ========================== */
 $(function() {
   $('a[href*=#]:not([href=#])').click(function() {
@@ -23,14 +23,18 @@ $(function() {
 Discovery Tiles Section
 ========================== */
 
-/* Show Section Map and Instagram Photos */
+// Show the Photos and Map Section
 function showListings() {
   var listingsEle = document.getElementById('listings');
-
   listingsEle.classList.remove('hide');
+
+  //Fix Google Maps Show/Hide bug
+  var center = map.getCenter();
+  google.maps.event.trigger(map, 'resize');
+  map.setCenter(center);
 }
 
-/* Hide All Main Content */
+// Hide all Main Content Sections
 function hideMain() {
   var headerEle = document.querySelector('header');
   var searchBarEle = document.getElementById('search-container');
@@ -50,10 +54,10 @@ function hideMain() {
 }
 
 
-/* When Tile is Clicked,  run hideMain */
+// When Location Tile is Clicked
+// Add hideMain to all tiles
 var tileEle = document.getElementById('discovery-tiles').querySelectorAll('a');
 
-//Adds an event listener to all tiles
 [].forEach.call(tileEle, function(e) {
   e.addEventListener('click', hideMain, false);
 });
@@ -64,14 +68,14 @@ var tileEle = document.getElementById('discovery-tiles').querySelectorAll('a');
 Listings Nav Bar
 ========================== */
 
-/* Hide Section Map and Instagram Photos */
+// Hide Section Map and Instagram Photos 
 function hideListings() {
   var listingsEle = document.getElementById('listings');
 
   listingsEle.classList.add('hide');
 }
 
-/* Show All Main Content */
+// Show All Main Content 
 function showMain() {
   var headerEle = document.querySelector('header');
   var searchBarEle = document.getElementById('search-container');
@@ -85,7 +89,7 @@ function showMain() {
   aboutEle.classList.remove('hide');
   footerEle.classList.remove('hide');
 
-  // hideListings Function Run Here
+  // Hide Photos and Map Section
   hideListings();
   window.location.hash = '#';
 }

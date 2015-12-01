@@ -6,7 +6,7 @@ var iconLight = 'img/pin-green-40.png';
 var allMarkers = [];
 
 /* 
-CREATE MAP
+Create Google Map
 ======================= */
 function initMap() {
   map = new google.maps.Map(document.getElementById('map'), {
@@ -15,10 +15,10 @@ function initMap() {
     scrollwheel: false
   });
 
-  /*DOM LISTENER*/
+  //Load the Google Maps
   google.maps.event.addDomListener(window, 'load', function () {
     
-    //- ADD MARKER 1 
+    // Add Marker 1
     var marker1 = new google.maps.Marker({
       animation: google.maps.Animation.DROP,
       position: {lat: 51.507351, lng: -0.127758},
@@ -39,7 +39,7 @@ function initMap() {
       $('#tile1').toggleClass('highlight');
     });
 
-    //- ADD MARKER 2
+    // Add Marker 2
     var marker2 = new google.maps.Marker({
       animation: google.maps.Animation.DROP,
       position: {lat: 51.504787, lng: -0.113469},
@@ -60,7 +60,7 @@ function initMap() {
       $('#tile2').toggleClass('highlight');
     });
 
-    //- ADD MARKER 3
+    // Add Marker 3
     var marker3 = new google.maps.Marker({
       animation: google.maps.Animation.DROP,
       position: {lat: 51.524112, lng: -0.118147},
@@ -81,7 +81,7 @@ function initMap() {
       $('#tile3').toggleClass('highlight');
     });
 
-    //- ADD MARKER 4
+    // Add Marker 4
     var marker4 = new google.maps.Marker({
       animation: google.maps.Animation.DROP,
       position: {lat: 51.508051, lng: -0.168641},
@@ -102,11 +102,11 @@ function initMap() {
       $('#tile4').toggleClass('highlight');
     });
 
-  });/*DOM WINDOW LISTENER*/
+  });/*END DOM Window Listener*/
 
-}/*END CREATE MAP*/
+}/*END Google Maps*/
 
-//- HIGHLIGHT MARKER ON DIV HOVER
+// Highlight Markers when hover in/out of Pictures
 function hover(id) {
   for(var i=0; i<allMarkers.length; i++) {
     if(id === allMarkers[i].id) {
