@@ -296,7 +296,7 @@ header .title img {
 #search-container {
   position: relative;
   margin-top: -80px;
-  margin-bottom: 40px;
+  /* margin-bottom: 40px; */
   padding: 20px;
   z-index: 1;
   height: 80px;
@@ -321,15 +321,16 @@ header .title img {
 ======================== */
 /* line 332, ../default.scss */
 .discovery {
-  margin-bottom: 80px;
+  padding-top: 60px;
+  margin-bottom: 40px;
 }
 
-/* line 337, ../default.scss */
+/* line 338, ../default.scss */
 #discovery-tiles a {
   text-decoration: none;
   cursor: pointer;
 }
-/* line 342, ../default.scss */
+/* line 343, ../default.scss */
 #discovery-tiles .discovery-card {
   height: 350px;
   margin-bottom: 30px;
@@ -343,7 +344,7 @@ header .title img {
   align-items: center;
   flex-direction: column;
 }
-/* line 355, ../default.scss */
+/* line 356, ../default.scss */
 #discovery-tiles .discovery-card span {
   display: inline-block;
   margin-bottom: 5px;
@@ -354,14 +355,14 @@ header .title img {
   text-align: center;
   background-color: rgba(0, 0, 0, 0.4);
 }
-/* line 367, ../default.scss */
+/* line 368, ../default.scss */
 #discovery-tiles .discovery-card:hover {
   opacity: 1;
 }
 
 /* About Section Styles
 ======================== */
-/* line 376, ../default.scss */
+/* line 377, ../default.scss */
 .about {
   padding-top: 60px;
   padding-bottom: 50px;
@@ -372,7 +373,7 @@ header .title img {
   background-position: center;
 }
 
-/* line 386, ../default.scss */
+/* line 387, ../default.scss */
 .about-tile {
   background-color: white;
   padding-top: 25px;
@@ -382,7 +383,7 @@ header .title img {
   box-shadow: 0 4px 8px rgba(166, 166, 166, 0.3);
   color: #82888A;
 }
-/* line 395, ../default.scss */
+/* line 396, ../default.scss */
 .about-tile h3 {
   width: 95%;
   margin-right: auto;
@@ -392,7 +393,7 @@ header .title img {
   font-size: 20px;
   font-weight: 400;
 }
-/* line 404, ../default.scss */
+/* line 405, ../default.scss */
 .about-tile h3 .circle {
   width: 75px;
   height: 75px;
@@ -403,7 +404,7 @@ header .title img {
   border: 3px solid rgba(0, 0, 0, 0.13);
   border-radius: 50%;
 }
-/* line 414, ../default.scss */
+/* line 415, ../default.scss */
 .about-tile h3 .circle i {
   text-align: center;
   vertical-align: middle;
@@ -411,7 +412,7 @@ header .title img {
   line-height: 69px;
   color: rgba(0, 0, 0, 0.35);
 }
-/* line 424, ../default.scss */
+/* line 425, ../default.scss */
 .about-tile p {
   width: 80%;
   text-align: justify;
@@ -421,7 +422,7 @@ header .title img {
 
 /* Footer Section Styles
 ======================== */
-/* line 434, ../default.scss */
+/* line 435, ../default.scss */
 footer {
   background-color: #323433;
   color: white;
@@ -430,7 +431,7 @@ footer {
   text-align: center;
   padding-bottom: 10px;
 }
-/* line 442, ../default.scss */
+/* line 443, ../default.scss */
 footer .technologies-container {
   padding-top: 20px;
   display: flex;
@@ -439,13 +440,13 @@ footer .technologies-container {
   align-items: center;
   justify-content: space-around;
 }
-/* line 450, ../default.scss */
+/* line 451, ../default.scss */
 footer .technologies-container .heading {
   flex: 100%;
   color: #82888A;
   margin-bottom: 30px;
 }
-/* line 457, ../default.scss */
+/* line 458, ../default.scss */
 footer .technologies-container .sass .sass-logo {
   height: 90px;
   width: 100px;
@@ -455,11 +456,11 @@ footer .technologies-container .sass .sass-logo {
   background-size: 100%;
   transition: all 0.2s ease-in-out;
 }
-/* line 466, ../default.scss */
+/* line 467, ../default.scss */
 footer .technologies-container .sass .sass-logo:hover {
   background-image: url("../img/logo/sass.png");
 }
-/* line 473, ../default.scss */
+/* line 474, ../default.scss */
 footer .technologies-container .jade .jade-logo {
   height: 100px;
   width: 200px;
@@ -469,11 +470,11 @@ footer .technologies-container .jade .jade-logo {
   background-size: 100%;
   transition: all 0.2s ease-in-out;
 }
-/* line 482, ../default.scss */
+/* line 483, ../default.scss */
 footer .technologies-container .jade .jade-logo:hover {
   background-image: url("../img/logo/jade.png");
 }
-/* line 489, ../default.scss */
+/* line 490, ../default.scss */
 footer .technologies-container .google-maps .google-maps-logo {
   height: 90px;
   width: 250px;
@@ -483,11 +484,11 @@ footer .technologies-container .google-maps .google-maps-logo {
   background-size: 100%;
   transition: all 0.2s ease-in-out;
 }
-/* line 498, ../default.scss */
+/* line 499, ../default.scss */
 footer .technologies-container .google-maps .google-maps-logo:hover {
   background-image: url("../img/logo/google-maps.png");
 }
-/* line 505, ../default.scss */
+/* line 506, ../default.scss */
 footer .technologies-container .instagram .instagram-logo {
   height: 90px;
   width: 250px;
@@ -497,19 +498,19 @@ footer .technologies-container .instagram .instagram-logo {
   background-size: 100%;
   transition: all 0.2s ease-in-out;
 }
-/* line 514, ../default.scss */
+/* line 515, ../default.scss */
 footer .technologies-container .instagram .instagram-logo:hover {
   background-image: url("../img/logo/instagram.png");
 }
 @media (max-width: 930px) {
-  /* line 521, ../default.scss */
+  /* line 522, ../default.scss */
   footer .technologies-container .sass,
   footer .technologies-container .jade,
   footer .technologies-container .google-maps,
   footer .technologies-container .instagram {
     flex: 50%;
   }
-  /* line 527, ../default.scss */
+  /* line 528, ../default.scss */
   footer .technologies-container .sass a,
   footer .technologies-container .jade a,
   footer .technologies-container .google-maps a,
@@ -518,25 +519,25 @@ footer .technologies-container .instagram .instagram-logo:hover {
   }
 }
 @media (max-width: 590px) {
-  /* line 534, ../default.scss */
+  /* line 535, ../default.scss */
   footer .technologies-container .sass,
   footer .technologies-container .jade,
   footer .technologies-container .google-maps,
   footer .technologies-container .instagram {
     flex: 100%;
   }
-  /* line 541, ../default.scss */
+  /* line 542, ../default.scss */
   footer .technologies-container .heading {
     font-size: 17px;
   }
 }
-/* line 548, ../default.scss */
+/* line 549, ../default.scss */
 footer .baseline-container {
   margin-top: 70px;
   position: relative;
   display: inline-block;
 }
-/* line 553, ../default.scss */
+/* line 554, ../default.scss */
 footer .baseline-container .connect-container {
   position: absolute;
   right: 40px;
@@ -549,7 +550,7 @@ footer .baseline-container .connect-container {
   justify-content: center;
   z-index: 50;
 }
-/* line 566, ../default.scss */
+/* line 567, ../default.scss */
 footer .baseline-container .connect-container p {
   margin-top: 10px;
   margin-right: 20px;
@@ -557,7 +558,7 @@ footer .baseline-container .connect-container p {
   font-weight: 300;
   color: #82888A;
 }
-/* line 574, ../default.scss */
+/* line 575, ../default.scss */
 footer .baseline-container .connect-container .github-logo {
   height: 30px;
   width: 30px;
@@ -568,11 +569,11 @@ footer .baseline-container .connect-container .github-logo {
   background-size: 100%;
   transition: all 0.2s ease-in-out;
 }
-/* line 584, ../default.scss */
+/* line 585, ../default.scss */
 footer .baseline-container .connect-container .github-logo:hover {
   background-image: url("../img/logo/github.png");
 }
-/* line 589, ../default.scss */
+/* line 590, ../default.scss */
 footer .baseline-container .connect-container .linkedin-logo {
   height: 25px;
   width: 25px;
@@ -584,23 +585,23 @@ footer .baseline-container .connect-container .linkedin-logo {
   background-size: 100%;
   transition: all 0.2s ease-in-out;
 }
-/* line 600, ../default.scss */
+/* line 601, ../default.scss */
 footer .baseline-container .connect-container .linkedin-logo:hover {
   background-image: url("../img/logo/linkedin.png");
 }
 @media (max-width: 930px) {
-  /* line 553, ../default.scss */
+  /* line 554, ../default.scss */
   footer .baseline-container .connect-container {
     position: relative;
     right: 0;
     margin-right: 0;
   }
 }
-/* line 614, ../default.scss */
+/* line 615, ../default.scss */
 footer .baseline-container .branding-container {
   margin-top: 30px;
 }
-/* line 617, ../default.scss */
+/* line 618, ../default.scss */
 footer .baseline-container .branding-container p {
   color: #565A5C;
   font-size: 16px;
@@ -608,76 +609,19 @@ footer .baseline-container .branding-container p {
 
 /* Photo Listings and Results Section Styles
 ======================== */
-/* line 630, ../default.scss */
+/* line 631, ../default.scss */
 #listings {
   height: 100vh;
   overflow: hidden;
 }
 
-/* .menu-bar {
-  z-index: 100;
-  height: 60px;
-  padding-left: 0;
-  background-color: white;
-  border: 1px solid $border-gray;
-
-  #home-logo {
-    display: inline-block;
-    width: 60px;
-    height: 60px;
-    border-right: 1px solid $border-gray;
-    text-align: center;
-
-    &:hover {
-      background-color: #f7f8f8;
-      border-bottom: 1px solid $border-gray;
-    }
-
-    img {
-      width: auto;
-      height: 50px;
-      margin-top: 5px;
-      transform: scale(.9, .9);
-      transition: all 0.3s cubic-bezier(0.51, 0.2, 0.29, 2.07);
-
-      &:hover {
-      transform: scale(1, 1);
-      }
-    }
-  }
-
-  .listings-search {
-    display: inline-block;
-    width: 70%;
-    
-    i {
-      vertical-align: middle;
-      margin: 0 10px 0 10px;
-      color: #d3d3d3;
-      font-size: 25px;
-    }
-
-    input {
-      vertical-align: middle;
-      width: 50%;
-      margin-top: 5px;
-      box-shadow: none;
-      border: none;
-      outline: none;
-      line-height: 1.2em;
-      font-family: $font-family;
-      color: $secondary-gray;
-    }
-  }
-
-} */
-/* line 693, ../default.scss */
+/* line 636, ../default.scss */
 .results {
   overflow-y: scroll;
   overflow-x: hidden;
   height: 95vh;
 }
-/* line 698, ../default.scss */
+/* line 641, ../default.scss */
 .results .filters-container {
   padding-top: 10px;
   padding-right: 0;
@@ -687,7 +631,7 @@ footer .baseline-container .branding-container p {
   color: #82888A;
   vertical-align: middle;
 }
-/* line 707, ../default.scss */
+/* line 650, ../default.scss */
 .results .filters-container .filter-header {
   padding-top: 20px;
   padding-left: 30px;
@@ -696,43 +640,43 @@ footer .baseline-container .branding-container p {
   font-size: 15px;
   color: #565A5C;
 }
-/* line 716, ../default.scss */
+/* line 659, ../default.scss */
 .results .filters-container .filter-group {
   padding-top: 20px;
   padding-left: 40px;
   height: 80px;
   font-weight: 600;
 }
-/* line 723, ../default.scss */
+/* line 666, ../default.scss */
 .results .filters-container .filter-controls {
   padding-top: 20px;
   padding-left: 20px;
   padding-bottom: 20px;
 }
-/* line 728, ../default.scss */
+/* line 671, ../default.scss */
 .results .filters-container .filter-controls input {
   margin-bottom: 5px;
 }
-/* line 732, ../default.scss */
+/* line 675, ../default.scss */
 .results .filters-container .filter-controls label {
   font-weight: 400;
   margin-right: 15px;
 }
-/* line 737, ../default.scss */
+/* line 680, ../default.scss */
 .results .filters-container .filter-controls .range-control {
   display: flex;
   justify-content: space-between;
 }
-/* line 743, ../default.scss */
+/* line 686, ../default.scss */
 .results .filters-container hr {
   margin: 0 15px;
 }
-/* line 751, ../default.scss */
+/* line 694, ../default.scss */
 .results .highlight {
   box-shadow: 0 0 20px 5px rgba(74, 191, 187, 0.87);
   border-radius: 10px;
 }
-/* line 758, ../default.scss */
+/* line 701, ../default.scss */
 .results .tile .tile-header {
   height: 65px;
   width: 100%;
@@ -746,21 +690,21 @@ footer .baseline-container .branding-container p {
   color: #82888A;
   background-color: white;
 }
-/* line 772, ../default.scss */
+/* line 715, ../default.scss */
 .results .tile .tile-header .profile img {
   display: inline-block;
   border-radius: 50%;
   width: 40px;
 }
-/* line 778, ../default.scss */
+/* line 721, ../default.scss */
 .results .tile .tile-header p {
   display: inline-block;
 }
-/* line 785, ../default.scss */
+/* line 728, ../default.scss */
 .results .tile .tile-photo img {
   width: 100%;
 }
-/* line 790, ../default.scss */
+/* line 733, ../default.scss */
 .results .tile .tile-footer {
   height: 90px;
   width: 100%;
@@ -770,19 +714,19 @@ footer .baseline-container .branding-container p {
   background-color: white;
   padding: 10px;
 }
-/* line 799, ../default.scss */
+/* line 742, ../default.scss */
 .results .tile .tile-footer .likes {
   font-weight: 700;
   color: #565A5C;
   margin-bottom: 2px;
 }
-/* line 805, ../default.scss */
+/* line 748, ../default.scss */
 .results .tile .tile-footer .description {
   color: #565A5C;
   font-size: 13px;
 }
 
-/* line 813, ../default.scss */
+/* line 756, ../default.scss */
 #map {
   height: 95vh;
 }

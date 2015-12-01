@@ -14,11 +14,11 @@ html
     link(rel="stylesheet" href="css/default.css")
     title travelGram
   body
-    section#fixed-nav.container-fluid
+    section#fixed-nav.container-fluid.hide
       .row
         .col-sm-12.menu-bar
-          #scroll-top.home-logo
-            a(href="#")
+          .home-logo
+            a(href="#home")
               img(src="img/pin-green.png" alt="travelGram Home Button")
           .fixed-search
             form
@@ -27,12 +27,12 @@ html
               input(type="search" id="header-search" name="location" value="London, United Kingdom" placeholder="Where do you want to go?" autocomplete="off")
 
     //- Hero Section
-    header.container-fluid
+    header#home.container-fluid
       
       //- Navigation/Menu Bar
       .row
         nav.col-sm-12
-          a(href="#" id="home-nav") travelGram
+          a(href="#home" id="home-nav") travelGram
           ul
             li#explore-nav
               a(href="#explore") Explore

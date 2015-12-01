@@ -10,13 +10,36 @@ $(function() {
         $('html,body').animate({
           scrollTop: target.offset().top
         }, 1000);
-        window.location.hash = this.hash;
         return false;
       }
     }
   });
 });
 
+
+/*
+Show Fixed Nav Bar on Scroll
+========================== */
+
+var width = window.innerWidth || document.documentElement.clientWidth;
+//Trigger the script only on browser width above 1150px. Recommended on responsive websites
+if (width > 1150) {
+  
+  function testScroll() {
+    //Will set the position to FIXED with TOP=80px when user scrolls 850px below. 
+    if(window.pageYOffset>635) {
+      document.getElementById('fixed-nav').classList.remove('hide');
+      /*document.getElementById('fixed-nav').style.top = "80px";*/
+    } 
+
+    //Will set the position to ABSOLUTE with TOP=AUTO when user scrolls to top just above 850px line
+    else {
+      document.getElementById('fixed-nav').classList.add('hide');
+      /*document.getElementById('#scroll-top').style.top = "auto";*/
+    };
+  }
+  window.onscroll=testScroll;
+};
 
 
 /*
