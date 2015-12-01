@@ -47,72 +47,16 @@ body {
   top: 0;
   left: 0;
   width: 100%;
-  /*   .menu-bar {
-    height: 60px;
-    padding-left: 0;
-    background-color: rgba(255, 255, 255, 0.95);
-    border: 1px solid $border-gray;
-  
-      .home-logo {
-        display: inline-block;
-        width: 60px;
-        height: 59px;
-        border-right: 1px solid $border-gray;
-        text-align: center;
-  
-        &:hover {
-          background-color: #f7f8f8;
-          border-bottom: 1px solid $border-gray;
-        }
-  
-        img {
-          width: auto;
-          height: 50px;
-          margin-top: 5px;
-          transform: scale(.9, .9);
-          transition: all 0.3s cubic-bezier(0.51, 0.2, 0.29, 2.07);
-  
-          &:hover {
-          transform: scale(1, 1);
-          }
-        }
-      }
-  
-      .fixed-search {
-        display: inline-block;
-        width: 70%;
-        
-        i {
-          vertical-align: middle;
-          margin: 0 10px 0 10px;
-          color: #d3d3d3;
-          font-size: 25px;
-        }
-  
-        input {
-          vertical-align: middle;
-          width: 50%;
-          margin-top: 5px;
-          box-shadow: none;
-          border: none;
-          outline: none;
-          line-height: 1.2em;
-          font-family: $font-family;
-          color: $secondary-gray;
-          background-color: rgba(255, 255, 255, 0.05);
-        }
-      }
-    } */
 }
 
-/* line 118, ../default.scss */
+/* line 61, ../default.scss */
 .menu-bar {
   height: 60px;
   padding-left: 0;
   background-color: rgba(255, 255, 255, 0.95);
   border: 1px solid #dce0e0;
 }
-/* line 124, ../default.scss */
+/* line 67, ../default.scss */
 .menu-bar .home-logo {
   display: inline-block;
   width: 60px;
@@ -120,12 +64,12 @@ body {
   border-right: 1px solid #dce0e0;
   text-align: center;
 }
-/* line 131, ../default.scss */
+/* line 74, ../default.scss */
 .menu-bar .home-logo:hover {
   background-color: #f7f8f8;
   border-bottom: 1px solid #dce0e0;
 }
-/* line 136, ../default.scss */
+/* line 79, ../default.scss */
 .menu-bar .home-logo img {
   width: auto;
   height: 50px;
@@ -133,23 +77,23 @@ body {
   transform: scale(0.9, 0.9);
   transition: all 0.3s cubic-bezier(0.51, 0.2, 0.29, 2.07);
 }
-/* line 143, ../default.scss */
+/* line 86, ../default.scss */
 .menu-bar .home-logo img:hover {
   transform: scale(1, 1);
 }
-/* line 149, ../default.scss */
+/* line 92, ../default.scss */
 .menu-bar .fixed-search {
   display: inline-block;
   width: 70%;
 }
-/* line 153, ../default.scss */
+/* line 96, ../default.scss */
 .menu-bar .fixed-search i {
   vertical-align: middle;
   margin: 0 10px 0 10px;
   color: #d3d3d3;
   font-size: 25px;
 }
-/* line 160, ../default.scss */
+/* line 103, ../default.scss */
 .menu-bar .fixed-search input {
   vertical-align: middle;
   width: 50%;
@@ -162,15 +106,21 @@ body {
   color: #82888A;
   background-color: rgba(255, 255, 255, 0.05);
 }
+@media (max-width: 630px) {
+  /* line 103, ../default.scss */
+  .menu-bar .fixed-search input {
+    width: 80%;
+  }
+}
 
 /* Header and Search Bar Styles
 ======================== */
-/* line 180, ../default.scss */
+/* line 127, ../default.scss */
 #explore-nav {
   margin-left: 120px;
 }
 
-/* line 184, ../default.scss */
+/* line 131, ../default.scss */
 #home-nav {
   position: absolute;
   top: 0;
@@ -188,12 +138,12 @@ body {
   z-index: 50;
 }
 
-/* line 201, ../default.scss */
+/* line 148, ../default.scss */
 #about-nav {
   margin-left: 30px;
 }
 
-/* line 205, ../default.scss */
+/* line 152, ../default.scss */
 header {
   height: 700px;
   background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.8)), url(../img/hero-paris.jpg);
@@ -203,26 +153,26 @@ header {
   background-position: top;
   position: relative;
 }
-/* line 214, ../default.scss */
+/* line 161, ../default.scss */
 header nav {
   position: relative;
   height: 50px;
   background-color: #4BBFBB;
   box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.2);
 }
-/* line 220, ../default.scss */
+/* line 167, ../default.scss */
 header nav ul {
   display: inline-block;
   position: relative;
   list-style: none;
   padding: 0;
 }
-/* line 226, ../default.scss */
+/* line 173, ../default.scss */
 header nav ul li {
   display: inline-block;
   padding-top: 16px;
 }
-/* line 230, ../default.scss */
+/* line 177, ../default.scss */
 header nav ul li a {
   position: relative;
   text-decoration: none !important;
@@ -233,12 +183,12 @@ header nav ul li a {
   font-weight: 400;
   font-size: 16px;
 }
-/* line 240, ../default.scss */
+/* line 187, ../default.scss */
 header nav ul li a:hover, header nav ul li a:active, header nav ul li a:focus {
   color: white;
   outline: none;
 }
-/* line 247, ../default.scss */
+/* line 194, ../default.scss */
 header nav ul li a:after {
   content: "";
   padding-bottom: 8px;
@@ -247,11 +197,11 @@ header nav ul li a:after {
   transform: scaleX(0.00001);
   transition: all 0.25s ease-in-out;
 }
-/* line 256, ../default.scss */
+/* line 203, ../default.scss */
 header nav ul li a:hover:after {
   transform: scaleX(1);
 }
-/* line 264, ../default.scss */
+/* line 211, ../default.scss */
 header .title {
   position: absolute;
   display: flex;
@@ -259,40 +209,40 @@ header .title {
   justify-content: center;
   height: 750px;
 }
-/* line 271, ../default.scss */
+/* line 218, ../default.scss */
 header .title h1,
 header .title h2 {
   color: white;
   text-align: center;
   display: inline-block;
 }
-/* line 278, ../default.scss */
+/* line 225, ../default.scss */
 header .title h1 {
   font-size: 20px;
   font-weight: 300;
   letter-spacing: 1px;
   order: 3;
 }
-/* line 285, ../default.scss */
+/* line 232, ../default.scss */
 header .title h2 {
   font-size: 40px;
   font-weight: 700;
   order: 2;
 }
-/* line 291, ../default.scss */
+/* line 238, ../default.scss */
 header .title .text-logo {
   order: 1;
   font-weight: 600;
   font-size: 30px;
   color: #FE6367;
 }
-/* line 298, ../default.scss */
+/* line 245, ../default.scss */
 header .title img {
   height: 28px;
   margin: 0 5px 10px 0;
 }
 
-/* line 305, ../default.scss */
+/* line 252, ../default.scss */
 #search-container {
   position: relative;
   margin-top: -80px;
@@ -302,7 +252,7 @@ header .title img {
   height: 80px;
   background-color: rgba(0, 0, 0, 0.4);
 }
-/* line 314, ../default.scss */
+/* line 261, ../default.scss */
 #search-container .btn-default {
   background-color: #4BBFBB;
   border-color: #4BBFBB;
@@ -311,7 +261,7 @@ header .title img {
   color: white;
   transition: all 0.2s ease-in-out;
 }
-/* line 323, ../default.scss */
+/* line 270, ../default.scss */
 #search-container .btn-default:hover {
   background-color: #0F948F;
   border-color: #0F948F;
@@ -319,18 +269,18 @@ header .title img {
 
 /* Discovery Section Styles
 ======================== */
-/* line 332, ../default.scss */
+/* line 279, ../default.scss */
 .discovery {
   padding-top: 60px;
   margin-bottom: 40px;
 }
 
-/* line 338, ../default.scss */
+/* line 285, ../default.scss */
 #discovery-tiles a {
   text-decoration: none;
   cursor: pointer;
 }
-/* line 343, ../default.scss */
+/* line 290, ../default.scss */
 #discovery-tiles .discovery-card {
   height: 350px;
   margin-bottom: 30px;
@@ -344,7 +294,7 @@ header .title img {
   align-items: center;
   flex-direction: column;
 }
-/* line 356, ../default.scss */
+/* line 303, ../default.scss */
 #discovery-tiles .discovery-card span {
   display: inline-block;
   margin-bottom: 5px;
@@ -355,14 +305,14 @@ header .title img {
   text-align: center;
   background-color: rgba(0, 0, 0, 0.4);
 }
-/* line 368, ../default.scss */
+/* line 315, ../default.scss */
 #discovery-tiles .discovery-card:hover {
   opacity: 1;
 }
 
 /* About Section Styles
 ======================== */
-/* line 377, ../default.scss */
+/* line 324, ../default.scss */
 .about {
   padding-top: 60px;
   padding-bottom: 50px;
@@ -373,7 +323,7 @@ header .title img {
   background-position: center;
 }
 
-/* line 387, ../default.scss */
+/* line 334, ../default.scss */
 .about-tile {
   background-color: white;
   padding-top: 25px;
@@ -383,7 +333,7 @@ header .title img {
   box-shadow: 0 4px 8px rgba(166, 166, 166, 0.3);
   color: #82888A;
 }
-/* line 396, ../default.scss */
+/* line 343, ../default.scss */
 .about-tile h3 {
   width: 95%;
   margin-right: auto;
@@ -393,7 +343,7 @@ header .title img {
   font-size: 20px;
   font-weight: 400;
 }
-/* line 405, ../default.scss */
+/* line 352, ../default.scss */
 .about-tile h3 .circle {
   width: 75px;
   height: 75px;
@@ -404,7 +354,7 @@ header .title img {
   border: 3px solid rgba(0, 0, 0, 0.13);
   border-radius: 50%;
 }
-/* line 415, ../default.scss */
+/* line 362, ../default.scss */
 .about-tile h3 .circle i {
   text-align: center;
   vertical-align: middle;
@@ -412,7 +362,7 @@ header .title img {
   line-height: 69px;
   color: rgba(0, 0, 0, 0.35);
 }
-/* line 425, ../default.scss */
+/* line 372, ../default.scss */
 .about-tile p {
   width: 80%;
   text-align: justify;
@@ -422,7 +372,7 @@ header .title img {
 
 /* Footer Section Styles
 ======================== */
-/* line 435, ../default.scss */
+/* line 382, ../default.scss */
 footer {
   background-color: #323433;
   color: white;
@@ -431,7 +381,7 @@ footer {
   text-align: center;
   padding-bottom: 10px;
 }
-/* line 443, ../default.scss */
+/* line 390, ../default.scss */
 footer .technologies-container {
   padding-top: 20px;
   display: flex;
@@ -440,13 +390,13 @@ footer .technologies-container {
   align-items: center;
   justify-content: space-around;
 }
-/* line 451, ../default.scss */
+/* line 398, ../default.scss */
 footer .technologies-container .heading {
   flex: 100%;
   color: #82888A;
   margin-bottom: 30px;
 }
-/* line 458, ../default.scss */
+/* line 405, ../default.scss */
 footer .technologies-container .sass .sass-logo {
   height: 90px;
   width: 100px;
@@ -456,11 +406,11 @@ footer .technologies-container .sass .sass-logo {
   background-size: 100%;
   transition: all 0.2s ease-in-out;
 }
-/* line 467, ../default.scss */
+/* line 414, ../default.scss */
 footer .technologies-container .sass .sass-logo:hover {
   background-image: url("../img/logo/sass.png");
 }
-/* line 474, ../default.scss */
+/* line 421, ../default.scss */
 footer .technologies-container .jade .jade-logo {
   height: 100px;
   width: 200px;
@@ -470,11 +420,11 @@ footer .technologies-container .jade .jade-logo {
   background-size: 100%;
   transition: all 0.2s ease-in-out;
 }
-/* line 483, ../default.scss */
+/* line 430, ../default.scss */
 footer .technologies-container .jade .jade-logo:hover {
   background-image: url("../img/logo/jade.png");
 }
-/* line 490, ../default.scss */
+/* line 437, ../default.scss */
 footer .technologies-container .google-maps .google-maps-logo {
   height: 90px;
   width: 250px;
@@ -484,11 +434,11 @@ footer .technologies-container .google-maps .google-maps-logo {
   background-size: 100%;
   transition: all 0.2s ease-in-out;
 }
-/* line 499, ../default.scss */
+/* line 446, ../default.scss */
 footer .technologies-container .google-maps .google-maps-logo:hover {
   background-image: url("../img/logo/google-maps.png");
 }
-/* line 506, ../default.scss */
+/* line 453, ../default.scss */
 footer .technologies-container .instagram .instagram-logo {
   height: 90px;
   width: 250px;
@@ -498,19 +448,19 @@ footer .technologies-container .instagram .instagram-logo {
   background-size: 100%;
   transition: all 0.2s ease-in-out;
 }
-/* line 515, ../default.scss */
+/* line 462, ../default.scss */
 footer .technologies-container .instagram .instagram-logo:hover {
   background-image: url("../img/logo/instagram.png");
 }
 @media (max-width: 930px) {
-  /* line 522, ../default.scss */
+  /* line 469, ../default.scss */
   footer .technologies-container .sass,
   footer .technologies-container .jade,
   footer .technologies-container .google-maps,
   footer .technologies-container .instagram {
     flex: 50%;
   }
-  /* line 528, ../default.scss */
+  /* line 475, ../default.scss */
   footer .technologies-container .sass a,
   footer .technologies-container .jade a,
   footer .technologies-container .google-maps a,
@@ -519,25 +469,25 @@ footer .technologies-container .instagram .instagram-logo:hover {
   }
 }
 @media (max-width: 590px) {
-  /* line 535, ../default.scss */
+  /* line 482, ../default.scss */
   footer .technologies-container .sass,
   footer .technologies-container .jade,
   footer .technologies-container .google-maps,
   footer .technologies-container .instagram {
     flex: 100%;
   }
-  /* line 542, ../default.scss */
+  /* line 489, ../default.scss */
   footer .technologies-container .heading {
     font-size: 17px;
   }
 }
-/* line 549, ../default.scss */
+/* line 496, ../default.scss */
 footer .baseline-container {
   margin-top: 70px;
   position: relative;
   display: inline-block;
 }
-/* line 554, ../default.scss */
+/* line 501, ../default.scss */
 footer .baseline-container .connect-container {
   position: absolute;
   right: 40px;
@@ -550,7 +500,7 @@ footer .baseline-container .connect-container {
   justify-content: center;
   z-index: 50;
 }
-/* line 567, ../default.scss */
+/* line 514, ../default.scss */
 footer .baseline-container .connect-container p {
   margin-top: 10px;
   margin-right: 20px;
@@ -558,7 +508,7 @@ footer .baseline-container .connect-container p {
   font-weight: 300;
   color: #82888A;
 }
-/* line 575, ../default.scss */
+/* line 522, ../default.scss */
 footer .baseline-container .connect-container .github-logo {
   height: 30px;
   width: 30px;
@@ -569,11 +519,11 @@ footer .baseline-container .connect-container .github-logo {
   background-size: 100%;
   transition: all 0.2s ease-in-out;
 }
-/* line 585, ../default.scss */
+/* line 532, ../default.scss */
 footer .baseline-container .connect-container .github-logo:hover {
   background-image: url("../img/logo/github.png");
 }
-/* line 590, ../default.scss */
+/* line 537, ../default.scss */
 footer .baseline-container .connect-container .linkedin-logo {
   height: 25px;
   width: 25px;
@@ -585,23 +535,23 @@ footer .baseline-container .connect-container .linkedin-logo {
   background-size: 100%;
   transition: all 0.2s ease-in-out;
 }
-/* line 601, ../default.scss */
+/* line 548, ../default.scss */
 footer .baseline-container .connect-container .linkedin-logo:hover {
   background-image: url("../img/logo/linkedin.png");
 }
 @media (max-width: 930px) {
-  /* line 554, ../default.scss */
+  /* line 501, ../default.scss */
   footer .baseline-container .connect-container {
     position: relative;
     right: 0;
     margin-right: 0;
   }
 }
-/* line 615, ../default.scss */
+/* line 562, ../default.scss */
 footer .baseline-container .branding-container {
   margin-top: 30px;
 }
-/* line 618, ../default.scss */
+/* line 565, ../default.scss */
 footer .baseline-container .branding-container p {
   color: #565A5C;
   font-size: 16px;
@@ -609,19 +559,19 @@ footer .baseline-container .branding-container p {
 
 /* Photo Listings and Results Section Styles
 ======================== */
-/* line 631, ../default.scss */
+/* line 578, ../default.scss */
 #listings {
   height: 100vh;
   overflow: hidden;
 }
 
-/* line 636, ../default.scss */
+/* line 583, ../default.scss */
 .results {
   overflow-y: scroll;
   overflow-x: hidden;
   height: 95vh;
 }
-/* line 641, ../default.scss */
+/* line 588, ../default.scss */
 .results .filters-container {
   padding-top: 10px;
   padding-right: 0;
@@ -631,7 +581,7 @@ footer .baseline-container .branding-container p {
   color: #82888A;
   vertical-align: middle;
 }
-/* line 650, ../default.scss */
+/* line 597, ../default.scss */
 .results .filters-container .filter-header {
   padding-top: 20px;
   padding-left: 30px;
@@ -640,43 +590,43 @@ footer .baseline-container .branding-container p {
   font-size: 15px;
   color: #565A5C;
 }
-/* line 659, ../default.scss */
+/* line 606, ../default.scss */
 .results .filters-container .filter-group {
   padding-top: 20px;
   padding-left: 40px;
   height: 80px;
   font-weight: 600;
 }
-/* line 666, ../default.scss */
+/* line 613, ../default.scss */
 .results .filters-container .filter-controls {
   padding-top: 20px;
   padding-left: 20px;
   padding-bottom: 20px;
 }
-/* line 671, ../default.scss */
+/* line 618, ../default.scss */
 .results .filters-container .filter-controls input {
   margin-bottom: 5px;
 }
-/* line 675, ../default.scss */
+/* line 622, ../default.scss */
 .results .filters-container .filter-controls label {
   font-weight: 400;
   margin-right: 15px;
 }
-/* line 680, ../default.scss */
+/* line 627, ../default.scss */
 .results .filters-container .filter-controls .range-control {
   display: flex;
   justify-content: space-between;
 }
-/* line 686, ../default.scss */
+/* line 633, ../default.scss */
 .results .filters-container hr {
   margin: 0 15px;
 }
-/* line 694, ../default.scss */
+/* line 641, ../default.scss */
 .results .highlight {
   box-shadow: 0 0 20px 5px rgba(74, 191, 187, 0.87);
   border-radius: 10px;
 }
-/* line 701, ../default.scss */
+/* line 648, ../default.scss */
 .results .tile .tile-header {
   height: 65px;
   width: 100%;
@@ -690,21 +640,21 @@ footer .baseline-container .branding-container p {
   color: #82888A;
   background-color: white;
 }
-/* line 715, ../default.scss */
+/* line 662, ../default.scss */
 .results .tile .tile-header .profile img {
   display: inline-block;
   border-radius: 50%;
   width: 40px;
 }
-/* line 721, ../default.scss */
+/* line 668, ../default.scss */
 .results .tile .tile-header p {
   display: inline-block;
 }
-/* line 728, ../default.scss */
+/* line 675, ../default.scss */
 .results .tile .tile-photo img {
   width: 100%;
 }
-/* line 733, ../default.scss */
+/* line 680, ../default.scss */
 .results .tile .tile-footer {
   height: 90px;
   width: 100%;
@@ -714,19 +664,19 @@ footer .baseline-container .branding-container p {
   background-color: white;
   padding: 10px;
 }
-/* line 742, ../default.scss */
+/* line 689, ../default.scss */
 .results .tile .tile-footer .likes {
   font-weight: 700;
   color: #565A5C;
   margin-bottom: 2px;
 }
-/* line 748, ../default.scss */
+/* line 695, ../default.scss */
 .results .tile .tile-footer .description {
   color: #565A5C;
   font-size: 13px;
 }
 
-/* line 756, ../default.scss */
+/* line 703, ../default.scss */
 #map {
   height: 95vh;
 }
