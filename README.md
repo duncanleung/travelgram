@@ -7,3 +7,7 @@ Built Upon:
 - AJAX
 - Google Maps API
 - Instagram API
+
+![TravelGram Main Screen](http://www.duncanleung.com/portfolio/travelgram-github/hero.jpg)
+![TravelGram Explore Section](http://www.duncanleung.com/portfolio/travelgram-github/explore.jpg)
+![TravelGram Photos Section](http://www.duncanleung.com/portfolio/travelgram-github/browse.jpg)
