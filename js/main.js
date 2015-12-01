@@ -10,6 +10,7 @@ $(function() {
         $('html,body').animate({
           scrollTop: target.offset().top
         }, 1000);
+        window.location.hash = this.hash;
         return false;
       }
     }
@@ -36,13 +37,13 @@ Show Fixed Nav Bar on Scroll
 
 
 /*
-Discovery Tiles Section
+Show / Hide - Results Section and Main Section
 ========================== */
 
 // Show the Photos and Map Section
-function showListings() {
-  var listingsEle = document.getElementById('listings');
-  listingsEle.classList.remove('hide');
+function showResults() {
+  var resultsEle = document.getElementById('results');
+  resultsEle.classList.remove('hide');
 
   //Fix Google Maps Show/Hide bug
   var center = map.getCenter();
@@ -64,9 +65,9 @@ function hideMain() {
   aboutEle.classList.add('hide');
   footerEle.classList.add('hide');
 
-  // showListings Function Run Here
-  showListings();
-  window.location.hash = '#browse';
+  // showResults Function Run Here
+  showResults();
+  window.location.hash = '#results';
 }
 
 
@@ -81,14 +82,14 @@ var tileEle = document.getElementById('discovery-tiles').querySelectorAll('a');
 
 
 /*
-Listings Nav Bar
+Results Section Nav Bar
 ========================== */
 
 // Hide Section Map and Instagram Photos 
-function hideListings() {
-  var listingsEle = document.getElementById('listings');
+function hideResults() {
+  var resultsEle = document.getElementById('results');
 
-  listingsEle.classList.add('hide');
+  resultsEle.classList.add('hide');
 }
 
 // Show All Main Content 
@@ -106,14 +107,56 @@ function showMain() {
   footerEle.classList.remove('hide');
 
   // Hide Photos and Map Section
-  hideListings();
+  hideResults();
   window.location.hash = '#';
 }
 
 // When Home Logo is Clicked
-// Show main screen and hide Browse Section
+// Show main screen and hide Results Section
 var logoEle = document.getElementById('home-logo');
 logoEle.addEventListener('click', showMain, false);
+
+
+
+
+/* 
+Highlight Markers when hover in/out of Pictures
+======================= */
+
+
+// Match the Tile ID with the Icon ID
+// Set Icon back to iconLight
+function hover() {
+  /*console.log('hover ' + this.id)*/
+  for(var i = 0; i < allMarkers.length; i++) {
+    if(this.id === allMarkers[i].id) {
+      allMarkers[i].setIcon(iconLight);
+      break;
+    }
+  }
+}
+
+// Match the Tile ID with the Icon ID
+// Set Icon back to Black
+function out() {
+/*  console.log('out '  + this.id)*/
+  for(var i = 0; i < allMarkers.length; i++) {
+    if(this.id === allMarkers[i].id) {
+      allMarkers[i].setIcon(icon);
+      break;
+    }
+  }
+}
+
+
+//Get Array of All .tile
+var tile = document.getElementById('results').querySelectorAll('.tile');
+//Add Event Listener to All Tiles
+for(var i = 0; i < tile.length; i++) {
+  tile[i].addEventListener('mouseover', hover, false);
+  tile[i].addEventListener('mouseout', out, false);
+}
+
 
 
 

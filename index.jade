@@ -43,7 +43,6 @@ html
           h1 Explore the world via instagram
           h2 Where do you want to explore today?
           h2.text-logo
-            //- img(class="logo" src="img/pin-dark.png" alt="TravelGram Logo")
             | travelGram
           
 
@@ -147,7 +146,7 @@ html
                 p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
         
 
-
+    //- Footer and Technologies Logos
     footer.container-fluid
       .row
         .technologies-container.col-sm-12
@@ -175,8 +174,8 @@ html
             p TravelGram &copy; 2015
 
 
-    //- Photo Listings and Results Section
-    section#listings.hide.container-fluid
+    //- Photo Results Section
+    section#results.hide.container-fluid
       .row
         .col-sm-12.menu-bar
           #home-logo.home-logo
@@ -190,7 +189,7 @@ html
       .row
         .results.col-sm-7
           .row
-            //- Filter Photos
+            //- Filter Section
             .col-sm-12.filters-container
               .row
                 .filter-header.col-sm-12 Filters
@@ -220,7 +219,7 @@ html
                       input(type="checkbox" id="hash-landscape" value="hash-landscape" checked="true")
                       |  #landscape
           .row
-            //- Profile
+            //- Instagram Profile
             .col-md-12.col-lg-6
               div(id="tile1" class="tile")
                 .tile-header
@@ -233,7 +232,7 @@ html
                 .tile-footer
                   .likes 48 likes
                   .description Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore
-            //- Profile
+            //- Instagram Profile
             .col-md-12.col-lg-6
               div(id="tile2" class="tile")
                   .tile-header
@@ -246,7 +245,7 @@ html
                   .tile-footer
                     .likes 23 likes
                     .description Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore
-            //- Profile
+            //- Instagram Profile
             .col-md-12.col-lg-6 
               div(id="tile3" class="tile")
                 .tile-header
@@ -259,7 +258,7 @@ html
                 .tile-footer
                   .likes 13 likes
                   .description Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore
-            //- Profile
+            //- Instagram Profile
             .col-md-12.col-lg-6 
               div(id="tile4" class="tile")
                 .tile-header
@@ -272,7 +271,11 @@ html
                 .tile-footer
                   .likes 53 likes
                   .description Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore
+        
+        //- Google Maps Container
         #map.col-sm-5
+
+
     //- JQUERY
     script(src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js")
     script(src="js/main.js" type="text/javascript")
