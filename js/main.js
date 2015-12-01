@@ -45,6 +45,7 @@ function hideMain() {
 
   // showListings Function Run Here
   showListings();
+  window.location.hash = '#browse';
 }
 
 
@@ -85,6 +86,7 @@ function showMain() {
 
   // hideListings Function Run Here
   hideListings();
+  window.location.hash = '#';
 }
 
 
