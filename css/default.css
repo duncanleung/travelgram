@@ -325,13 +325,13 @@ header .title img {
 
 /* line 334, ../default.scss */
 .about-tile {
-  background-color: white;
+  background-color: rgba(255, 255, 255, 0.9);
   padding-top: 25px;
-  height: 340px;
+  height: 300px;
   margin-bottom: 10px;
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(166, 166, 166, 0.3);
-  color: #82888A;
+  color: #565A5C;
 }
 /* line 343, ../default.scss */
 .about-tile h3 {
@@ -365,14 +365,16 @@ header .title img {
 /* line 372, ../default.scss */
 .about-tile p {
   width: 80%;
-  text-align: justify;
   margin-right: auto;
   margin-left: auto;
+  text-align: center;
+  text-size: 18px;
+  line-height: 1.5em;
 }
 
 /* Footer Section Styles
 ======================== */
-/* line 382, ../default.scss */
+/* line 384, ../default.scss */
 footer {
   background-color: #323433;
   color: white;
@@ -381,7 +383,7 @@ footer {
   text-align: center;
   padding-bottom: 10px;
 }
-/* line 390, ../default.scss */
+/* line 392, ../default.scss */
 footer .technologies-container {
   padding-top: 20px;
   display: flex;
@@ -390,13 +392,13 @@ footer .technologies-container {
   align-items: center;
   justify-content: space-around;
 }
-/* line 398, ../default.scss */
+/* line 400, ../default.scss */
 footer .technologies-container .heading {
   flex: 100%;
   color: #82888A;
   margin-bottom: 30px;
 }
-/* line 405, ../default.scss */
+/* line 407, ../default.scss */
 footer .technologies-container .sass .sass-logo {
   height: 90px;
   width: 100px;
@@ -406,11 +408,11 @@ footer .technologies-container .sass .sass-logo {
   background-size: 100%;
   transition: all 0.2s ease-in-out;
 }
-/* line 414, ../default.scss */
+/* line 416, ../default.scss */
 footer .technologies-container .sass .sass-logo:hover {
   background-image: url("../img/logo/sass.png");
 }
-/* line 421, ../default.scss */
+/* line 423, ../default.scss */
 footer .technologies-container .jade .jade-logo {
   height: 100px;
   width: 200px;
@@ -420,11 +422,11 @@ footer .technologies-container .jade .jade-logo {
   background-size: 100%;
   transition: all 0.2s ease-in-out;
 }
-/* line 430, ../default.scss */
+/* line 432, ../default.scss */
 footer .technologies-container .jade .jade-logo:hover {
   background-image: url("../img/logo/jade.png");
 }
-/* line 437, ../default.scss */
+/* line 439, ../default.scss */
 footer .technologies-container .google-maps .google-maps-logo {
   height: 90px;
   width: 250px;
@@ -434,11 +436,11 @@ footer .technologies-container .google-maps .google-maps-logo {
   background-size: 100%;
   transition: all 0.2s ease-in-out;
 }
-/* line 446, ../default.scss */
+/* line 448, ../default.scss */
 footer .technologies-container .google-maps .google-maps-logo:hover {
   background-image: url("../img/logo/google-maps.png");
 }
-/* line 453, ../default.scss */
+/* line 455, ../default.scss */
 footer .technologies-container .instagram .instagram-logo {
   height: 90px;
   width: 250px;
@@ -448,19 +450,19 @@ footer .technologies-container .instagram .instagram-logo {
   background-size: 100%;
   transition: all 0.2s ease-in-out;
 }
-/* line 462, ../default.scss */
+/* line 464, ../default.scss */
 footer .technologies-container .instagram .instagram-logo:hover {
   background-image: url("../img/logo/instagram.png");
 }
 @media (max-width: 930px) {
-  /* line 469, ../default.scss */
+  /* line 471, ../default.scss */
   footer .technologies-container .sass,
   footer .technologies-container .jade,
   footer .technologies-container .google-maps,
   footer .technologies-container .instagram {
     flex: 50%;
   }
-  /* line 475, ../default.scss */
+  /* line 477, ../default.scss */
   footer .technologies-container .sass a,
   footer .technologies-container .jade a,
   footer .technologies-container .google-maps a,
@@ -469,25 +471,25 @@ footer .technologies-container .instagram .instagram-logo:hover {
   }
 }
 @media (max-width: 590px) {
-  /* line 482, ../default.scss */
+  /* line 484, ../default.scss */
   footer .technologies-container .sass,
   footer .technologies-container .jade,
   footer .technologies-container .google-maps,
   footer .technologies-container .instagram {
     flex: 100%;
   }
-  /* line 489, ../default.scss */
+  /* line 491, ../default.scss */
   footer .technologies-container .heading {
     font-size: 17px;
   }
 }
-/* line 496, ../default.scss */
+/* line 498, ../default.scss */
 footer .baseline-container {
   margin-top: 70px;
   position: relative;
   display: inline-block;
 }
-/* line 501, ../default.scss */
+/* line 503, ../default.scss */
 footer .baseline-container .connect-container {
   position: absolute;
   right: 40px;
@@ -500,7 +502,7 @@ footer .baseline-container .connect-container {
   justify-content: center;
   z-index: 50;
 }
-/* line 514, ../default.scss */
+/* line 516, ../default.scss */
 footer .baseline-container .connect-container p {
   margin-top: 10px;
   margin-right: 20px;
@@ -508,7 +510,7 @@ footer .baseline-container .connect-container p {
   font-weight: 300;
   color: #82888A;
 }
-/* line 522, ../default.scss */
+/* line 524, ../default.scss */
 footer .baseline-container .connect-container .github-logo {
   height: 30px;
   width: 30px;
@@ -519,11 +521,11 @@ footer .baseline-container .connect-container .github-logo {
   background-size: 100%;
   transition: all 0.2s ease-in-out;
 }
-/* line 532, ../default.scss */
+/* line 534, ../default.scss */
 footer .baseline-container .connect-container .github-logo:hover {
   background-image: url("../img/logo/github.png");
 }
-/* line 537, ../default.scss */
+/* line 539, ../default.scss */
 footer .baseline-container .connect-container .linkedin-logo {
   height: 25px;
   width: 25px;
@@ -535,23 +537,23 @@ footer .baseline-container .connect-container .linkedin-logo {
   background-size: 100%;
   transition: all 0.2s ease-in-out;
 }
-/* line 548, ../default.scss */
+/* line 550, ../default.scss */
 footer .baseline-container .connect-container .linkedin-logo:hover {
   background-image: url("../img/logo/linkedin.png");
 }
 @media (max-width: 930px) {
-  /* line 501, ../default.scss */
+  /* line 503, ../default.scss */
   footer .baseline-container .connect-container {
     position: relative;
     right: 0;
     margin-right: 0;
   }
 }
-/* line 562, ../default.scss */
+/* line 564, ../default.scss */
 footer .baseline-container .branding-container {
   margin-top: 30px;
 }
-/* line 565, ../default.scss */
+/* line 567, ../default.scss */
 footer .baseline-container .branding-container p {
   color: #565A5C;
   font-size: 16px;
@@ -559,19 +561,19 @@ footer .baseline-container .branding-container p {
 
 /* Photo Listings and Results Section Styles
 ======================== */
-/* line 578, ../default.scss */
+/* line 580, ../default.scss */
 #listings {
   height: 100vh;
   overflow: hidden;
 }
 
-/* line 583, ../default.scss */
+/* line 585, ../default.scss */
 .results {
   overflow-y: scroll;
   overflow-x: hidden;
   height: 95vh;
 }
-/* line 588, ../default.scss */
+/* line 590, ../default.scss */
 .results .filters-container {
   padding-top: 10px;
   padding-right: 0;
@@ -581,7 +583,7 @@ footer .baseline-container .branding-container p {
   color: #82888A;
   vertical-align: middle;
 }
-/* line 597, ../default.scss */
+/* line 599, ../default.scss */
 .results .filters-container .filter-header {
   padding-top: 20px;
   padding-left: 30px;
@@ -590,43 +592,43 @@ footer .baseline-container .branding-container p {
   font-size: 15px;
   color: #565A5C;
 }
-/* line 606, ../default.scss */
+/* line 608, ../default.scss */
 .results .filters-container .filter-group {
   padding-top: 20px;
   padding-left: 40px;
   height: 80px;
   font-weight: 600;
 }
-/* line 613, ../default.scss */
+/* line 615, ../default.scss */
 .results .filters-container .filter-controls {
   padding-top: 20px;
   padding-left: 20px;
   padding-bottom: 20px;
 }
-/* line 618, ../default.scss */
+/* line 620, ../default.scss */
 .results .filters-container .filter-controls input {
   margin-bottom: 5px;
 }
-/* line 622, ../default.scss */
+/* line 624, ../default.scss */
 .results .filters-container .filter-controls label {
   font-weight: 400;
   margin-right: 15px;
 }
-/* line 627, ../default.scss */
+/* line 629, ../default.scss */
 .results .filters-container .filter-controls .range-control {
   display: flex;
   justify-content: space-between;
 }
-/* line 633, ../default.scss */
+/* line 635, ../default.scss */
 .results .filters-container hr {
   margin: 0 15px;
 }
-/* line 641, ../default.scss */
+/* line 643, ../default.scss */
 .results .highlight {
   box-shadow: 0 0 20px 5px rgba(74, 191, 187, 0.87);
   border-radius: 10px;
 }
-/* line 648, ../default.scss */
+/* line 650, ../default.scss */
 .results .tile .tile-header {
   height: 65px;
   width: 100%;
@@ -640,21 +642,21 @@ footer .baseline-container .branding-container p {
   color: #82888A;
   background-color: white;
 }
-/* line 662, ../default.scss */
+/* line 664, ../default.scss */
 .results .tile .tile-header .profile img {
   display: inline-block;
   border-radius: 50%;
   width: 40px;
 }
-/* line 668, ../default.scss */
+/* line 670, ../default.scss */
 .results .tile .tile-header p {
   display: inline-block;
 }
-/* line 675, ../default.scss */
+/* line 677, ../default.scss */
 .results .tile .tile-photo img {
   width: 100%;
 }
-/* line 680, ../default.scss */
+/* line 682, ../default.scss */
 .results .tile .tile-footer {
   height: 90px;
   width: 100%;
@@ -664,19 +666,19 @@ footer .baseline-container .branding-container p {
   background-color: white;
   padding: 10px;
 }
-/* line 689, ../default.scss */
+/* line 691, ../default.scss */
 .results .tile .tile-footer .likes {
   font-weight: 700;
   color: #565A5C;
   margin-bottom: 2px;
 }
-/* line 695, ../default.scss */
+/* line 697, ../default.scss */
 .results .tile .tile-footer .description {
   color: #565A5C;
   font-size: 13px;
 }
 
-/* line 703, ../default.scss */
+/* line 705, ../default.scss */
 #map {
   height: 95vh;
 }
