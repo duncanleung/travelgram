@@ -318,12 +318,13 @@ header .title img {
   padding-bottom: 50px;
   background-color: white;
   background-image: url("../img/about.png");
+  background-attachment: fixed;
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
 }
 
-/* line 334, ../default.scss */
+/* line 335, ../default.scss */
 .about-tile {
   background-color: rgba(255, 255, 255, 0.9);
   padding-top: 25px;
@@ -333,7 +334,7 @@ header .title img {
   box-shadow: 0 4px 8px rgba(166, 166, 166, 0.3);
   color: #565A5C;
 }
-/* line 343, ../default.scss */
+/* line 344, ../default.scss */
 .about-tile h3 {
   width: 95%;
   margin-right: auto;
@@ -343,7 +344,7 @@ header .title img {
   font-size: 20px;
   font-weight: 400;
 }
-/* line 352, ../default.scss */
+/* line 353, ../default.scss */
 .about-tile h3 .circle {
   width: 75px;
   height: 75px;
@@ -354,7 +355,7 @@ header .title img {
   border: 3px solid rgba(0, 0, 0, 0.13);
   border-radius: 50%;
 }
-/* line 362, ../default.scss */
+/* line 363, ../default.scss */
 .about-tile h3 .circle i {
   text-align: center;
   vertical-align: middle;
@@ -362,7 +363,7 @@ header .title img {
   line-height: 69px;
   color: rgba(0, 0, 0, 0.35);
 }
-/* line 372, ../default.scss */
+/* line 373, ../default.scss */
 .about-tile p {
   width: 80%;
   margin-right: auto;
@@ -374,16 +375,18 @@ header .title img {
 
 /* Footer Section Styles
 ======================== */
-/* line 384, ../default.scss */
+/* line 385, ../default.scss */
 footer {
   background-color: #323433;
+  background-image: url("../img/footer.png");
+  background-size: 80%;
   color: white;
   font-weight: 300;
   font-size: 19px;
   text-align: center;
   padding-bottom: 10px;
 }
-/* line 392, ../default.scss */
+/* line 395, ../default.scss */
 footer .technologies-container {
   padding-top: 20px;
   display: flex;
@@ -392,13 +395,13 @@ footer .technologies-container {
   align-items: center;
   justify-content: space-around;
 }
-/* line 400, ../default.scss */
+/* line 403, ../default.scss */
 footer .technologies-container .heading {
   flex: 100%;
   color: #82888A;
   margin-bottom: 30px;
 }
-/* line 407, ../default.scss */
+/* line 410, ../default.scss */
 footer .technologies-container .sass .sass-logo {
   height: 90px;
   width: 100px;
@@ -408,11 +411,11 @@ footer .technologies-container .sass .sass-logo {
   background-size: 100%;
   transition: all 0.2s ease-in-out;
 }
-/* line 416, ../default.scss */
+/* line 419, ../default.scss */
 footer .technologies-container .sass .sass-logo:hover {
   background-image: url("../img/logo/sass.png");
 }
-/* line 423, ../default.scss */
+/* line 426, ../default.scss */
 footer .technologies-container .jade .jade-logo {
   height: 100px;
   width: 200px;
@@ -422,11 +425,11 @@ footer .technologies-container .jade .jade-logo {
   background-size: 100%;
   transition: all 0.2s ease-in-out;
 }
-/* line 432, ../default.scss */
+/* line 435, ../default.scss */
 footer .technologies-container .jade .jade-logo:hover {
   background-image: url("../img/logo/jade.png");
 }
-/* line 439, ../default.scss */
+/* line 442, ../default.scss */
 footer .technologies-container .google-maps .google-maps-logo {
   height: 90px;
   width: 250px;
@@ -436,11 +439,11 @@ footer .technologies-container .google-maps .google-maps-logo {
   background-size: 100%;
   transition: all 0.2s ease-in-out;
 }
-/* line 448, ../default.scss */
+/* line 451, ../default.scss */
 footer .technologies-container .google-maps .google-maps-logo:hover {
   background-image: url("../img/logo/google-maps.png");
 }
-/* line 455, ../default.scss */
+/* line 458, ../default.scss */
 footer .technologies-container .instagram .instagram-logo {
   height: 90px;
   width: 250px;
@@ -450,19 +453,19 @@ footer .technologies-container .instagram .instagram-logo {
   background-size: 100%;
   transition: all 0.2s ease-in-out;
 }
-/* line 464, ../default.scss */
+/* line 467, ../default.scss */
 footer .technologies-container .instagram .instagram-logo:hover {
   background-image: url("../img/logo/instagram.png");
 }
 @media (max-width: 930px) {
-  /* line 471, ../default.scss */
+  /* line 474, ../default.scss */
   footer .technologies-container .sass,
   footer .technologies-container .jade,
   footer .technologies-container .google-maps,
   footer .technologies-container .instagram {
     flex: 50%;
   }
-  /* line 477, ../default.scss */
+  /* line 480, ../default.scss */
   footer .technologies-container .sass a,
   footer .technologies-container .jade a,
   footer .technologies-container .google-maps a,
@@ -471,25 +474,25 @@ footer .technologies-container .instagram .instagram-logo:hover {
   }
 }
 @media (max-width: 590px) {
-  /* line 484, ../default.scss */
+  /* line 487, ../default.scss */
   footer .technologies-container .sass,
   footer .technologies-container .jade,
   footer .technologies-container .google-maps,
   footer .technologies-container .instagram {
     flex: 100%;
   }
-  /* line 491, ../default.scss */
+  /* line 494, ../default.scss */
   footer .technologies-container .heading {
     font-size: 17px;
   }
 }
-/* line 498, ../default.scss */
+/* line 501, ../default.scss */
 footer .baseline-container {
   margin-top: 70px;
   position: relative;
   display: inline-block;
 }
-/* line 503, ../default.scss */
+/* line 506, ../default.scss */
 footer .baseline-container .connect-container {
   position: absolute;
   right: 40px;
@@ -502,7 +505,7 @@ footer .baseline-container .connect-container {
   justify-content: center;
   z-index: 50;
 }
-/* line 516, ../default.scss */
+/* line 519, ../default.scss */
 footer .baseline-container .connect-container p {
   margin-top: 10px;
   margin-right: 20px;
@@ -510,7 +513,7 @@ footer .baseline-container .connect-container p {
   font-weight: 300;
   color: #82888A;
 }
-/* line 524, ../default.scss */
+/* line 527, ../default.scss */
 footer .baseline-container .connect-container .github-logo {
   height: 30px;
   width: 30px;
@@ -521,11 +524,11 @@ footer .baseline-container .connect-container .github-logo {
   background-size: 100%;
   transition: all 0.2s ease-in-out;
 }
-/* line 534, ../default.scss */
+/* line 537, ../default.scss */
 footer .baseline-container .connect-container .github-logo:hover {
   background-image: url("../img/logo/github.png");
 }
-/* line 539, ../default.scss */
+/* line 542, ../default.scss */
 footer .baseline-container .connect-container .linkedin-logo {
   height: 25px;
   width: 25px;
@@ -537,23 +540,23 @@ footer .baseline-container .connect-container .linkedin-logo {
   background-size: 100%;
   transition: all 0.2s ease-in-out;
 }
-/* line 550, ../default.scss */
+/* line 553, ../default.scss */
 footer .baseline-container .connect-container .linkedin-logo:hover {
   background-image: url("../img/logo/linkedin.png");
 }
 @media (max-width: 930px) {
-  /* line 503, ../default.scss */
+  /* line 506, ../default.scss */
   footer .baseline-container .connect-container {
     position: relative;
     right: 0;
     margin-right: 0;
   }
 }
-/* line 564, ../default.scss */
+/* line 567, ../default.scss */
 footer .baseline-container .branding-container {
   margin-top: 30px;
 }
-/* line 567, ../default.scss */
+/* line 570, ../default.scss */
 footer .baseline-container .branding-container p {
   color: #565A5C;
   font-size: 16px;
@@ -561,19 +564,19 @@ footer .baseline-container .branding-container p {
 
 /* Photo Listings and Results Section Styles
 ======================== */
-/* line 580, ../default.scss */
+/* line 583, ../default.scss */
 #listings {
   height: 100vh;
   overflow: hidden;
 }
 
-/* line 585, ../default.scss */
+/* line 588, ../default.scss */
 .results {
   overflow-y: scroll;
   overflow-x: hidden;
   height: 95vh;
 }
-/* line 590, ../default.scss */
+/* line 593, ../default.scss */
 .results .filters-container {
   padding-top: 10px;
   padding-right: 0;
@@ -583,7 +586,7 @@ footer .baseline-container .branding-container p {
   color: #82888A;
   vertical-align: middle;
 }
-/* line 599, ../default.scss */
+/* line 602, ../default.scss */
 .results .filters-container .filter-header {
   padding-top: 20px;
   padding-left: 30px;
@@ -592,43 +595,43 @@ footer .baseline-container .branding-container p {
   font-size: 15px;
   color: #565A5C;
 }
-/* line 608, ../default.scss */
+/* line 611, ../default.scss */
 .results .filters-container .filter-group {
   padding-top: 20px;
   padding-left: 40px;
   height: 80px;
   font-weight: 600;
 }
-/* line 615, ../default.scss */
+/* line 618, ../default.scss */
 .results .filters-container .filter-controls {
   padding-top: 20px;
   padding-left: 20px;
   padding-bottom: 20px;
 }
-/* line 620, ../default.scss */
+/* line 623, ../default.scss */
 .results .filters-container .filter-controls input {
   margin-bottom: 5px;
 }
-/* line 624, ../default.scss */
+/* line 627, ../default.scss */
 .results .filters-container .filter-controls label {
   font-weight: 400;
   margin-right: 15px;
 }
-/* line 629, ../default.scss */
+/* line 632, ../default.scss */
 .results .filters-container .filter-controls .range-control {
   display: flex;
   justify-content: space-between;
 }
-/* line 635, ../default.scss */
+/* line 638, ../default.scss */
 .results .filters-container hr {
   margin: 0 15px;
 }
-/* line 643, ../default.scss */
+/* line 646, ../default.scss */
 .results .highlight {
   box-shadow: 0 0 20px 5px rgba(74, 191, 187, 0.87);
   border-radius: 10px;
 }
-/* line 650, ../default.scss */
+/* line 653, ../default.scss */
 .results .tile .tile-header {
   height: 65px;
   width: 100%;
@@ -642,21 +645,21 @@ footer .baseline-container .branding-container p {
   color: #82888A;
   background-color: white;
 }
-/* line 664, ../default.scss */
+/* line 667, ../default.scss */
 .results .tile .tile-header .profile img {
   display: inline-block;
   border-radius: 50%;
   width: 40px;
 }
-/* line 670, ../default.scss */
+/* line 673, ../default.scss */
 .results .tile .tile-header p {
   display: inline-block;
 }
-/* line 677, ../default.scss */
+/* line 680, ../default.scss */
 .results .tile .tile-photo img {
   width: 100%;
 }
-/* line 682, ../default.scss */
+/* line 685, ../default.scss */
 .results .tile .tile-footer {
   height: 90px;
   width: 100%;
@@ -666,19 +669,19 @@ footer .baseline-container .branding-container p {
   background-color: white;
   padding: 10px;
 }
-/* line 691, ../default.scss */
+/* line 694, ../default.scss */
 .results .tile .tile-footer .likes {
   font-weight: 700;
   color: #565A5C;
   margin-bottom: 2px;
 }
-/* line 697, ../default.scss */
+/* line 700, ../default.scss */
 .results .tile .tile-footer .description {
   color: #565A5C;
   font-size: 13px;
 }
 
-/* line 705, ../default.scss */
+/* line 708, ../default.scss */
 #map {
   height: 95vh;
 }
