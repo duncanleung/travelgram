@@ -116,7 +116,24 @@ body {
 /* Header and Search Bar Styles
 ======================== */
 /* line 127, ../default.scss */
-#home-nav {
+header {
+  height: 700px;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.8)), url(../img/hero-paris.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: top;
+  position: relative;
+}
+/* line 136, ../default.scss */
+header nav {
+  position: relative;
+  height: 50px;
+  background-color: #4BBFBB;
+  box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.2);
+}
+/* line 142, ../default.scss */
+header nav #home-nav {
   position: absolute;
   top: 0;
   left: 0;
@@ -132,59 +149,53 @@ body {
   text-decoration: none !important;
   z-index: 50;
 }
-
-/* line 144, ../default.scss */
-#explore-nav {
+/* line 159, ../default.scss */
+header nav #explore-nav {
   margin-left: 120px;
 }
-/* line 147, ../default.scss */
-#explore-nav a {
+/* line 162, ../default.scss */
+header nav #explore-nav a {
   display: inline-block;
   width: 100%;
   height: 100%;
 }
-
-/* line 154, ../default.scss */
-#about-nav {
+/* line 169, ../default.scss */
+header nav #about-nav {
   margin-left: 30px;
 }
-/* line 157, ../default.scss */
-#about-nav a {
+/* line 172, ../default.scss */
+header nav #about-nav a {
   display: inline-block;
   width: 100%;
   height: 100%;
 }
-
-/* line 164, ../default.scss */
-header {
-  height: 700px;
-  background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.8)), url(../img/hero-paris.jpg);
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-position: top;
-  position: relative;
-}
-/* line 173, ../default.scss */
-header nav {
-  position: relative;
-  height: 50px;
-  background-color: #4BBFBB;
-  box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.2);
-}
 /* line 179, ../default.scss */
+header nav #contact-nav {
+  position: absolute;
+  top: 0;
+  right: 20px;
+  margin-left: 30px;
+}
+/* line 185, ../default.scss */
+header nav #contact-nav a {
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+}
+/* line 192, ../default.scss */
 header nav ul {
   display: inline-block;
   position: relative;
   list-style: none;
   padding: 0;
+  width: 100%;
 }
-/* line 185, ../default.scss */
+/* line 199, ../default.scss */
 header nav ul li {
   display: inline-block;
   padding-top: 16px;
 }
-/* line 189, ../default.scss */
+/* line 203, ../default.scss */
 header nav ul li a {
   position: relative;
   text-decoration: none !important;
@@ -195,12 +206,12 @@ header nav ul li a {
   font-weight: 400;
   font-size: 16px;
 }
-/* line 199, ../default.scss */
+/* line 213, ../default.scss */
 header nav ul li a:hover, header nav ul li a:active, header nav ul li a:focus {
   color: white;
   outline: none;
 }
-/* line 206, ../default.scss */
+/* line 220, ../default.scss */
 header nav ul li a:after {
   content: "";
   padding-bottom: 8px;
@@ -209,11 +220,11 @@ header nav ul li a:after {
   transform: scaleX(0.00001);
   transition: all 0.25s ease-in-out;
 }
-/* line 215, ../default.scss */
+/* line 229, ../default.scss */
 header nav ul li a:hover:after {
   transform: scaleX(1);
 }
-/* line 223, ../default.scss */
+/* line 237, ../default.scss */
 header .title {
   position: absolute;
   display: flex;
@@ -221,40 +232,40 @@ header .title {
   justify-content: center;
   height: 750px;
 }
-/* line 230, ../default.scss */
+/* line 244, ../default.scss */
 header .title h1,
 header .title h2 {
   color: white;
   text-align: center;
   display: inline-block;
 }
-/* line 237, ../default.scss */
+/* line 251, ../default.scss */
 header .title h1 {
   font-size: 20px;
   font-weight: 300;
   letter-spacing: 1px;
   order: 3;
 }
-/* line 244, ../default.scss */
+/* line 258, ../default.scss */
 header .title h2 {
   font-size: 40px;
   font-weight: 700;
   order: 2;
 }
-/* line 250, ../default.scss */
+/* line 264, ../default.scss */
 header .title .text-logo {
   order: 1;
   font-weight: 600;
   font-size: 30px;
   color: #FE6367;
 }
-/* line 257, ../default.scss */
+/* line 271, ../default.scss */
 header .title img {
   height: 28px;
   margin: 0 5px 10px 0;
 }
 
-/* line 264, ../default.scss */
+/* line 278, ../default.scss */
 #search-container {
   position: relative;
   margin-top: -80px;
@@ -264,7 +275,7 @@ header .title img {
   height: 80px;
   background-color: rgba(0, 0, 0, 0.4);
 }
-/* line 273, ../default.scss */
+/* line 287, ../default.scss */
 #search-container .btn-default {
   background-color: #4BBFBB;
   border-color: #4BBFBB;
@@ -273,7 +284,7 @@ header .title img {
   color: white;
   transition: all 0.2s ease-in-out;
 }
-/* line 282, ../default.scss */
+/* line 296, ../default.scss */
 #search-container .btn-default:hover {
   background-color: #0F948F;
   border-color: #0F948F;
@@ -281,18 +292,18 @@ header .title img {
 
 /* Discovery Section Styles
 ======================== */
-/* line 291, ../default.scss */
+/* line 305, ../default.scss */
 .discovery {
   padding-top: 60px;
   margin-bottom: 40px;
 }
 
-/* line 297, ../default.scss */
+/* line 311, ../default.scss */
 #discovery-tiles a {
   text-decoration: none;
   cursor: pointer;
 }
-/* line 302, ../default.scss */
+/* line 316, ../default.scss */
 #discovery-tiles .discovery-card {
   height: 350px;
   margin-bottom: 30px;
@@ -306,7 +317,7 @@ header .title img {
   align-items: center;
   flex-direction: column;
 }
-/* line 315, ../default.scss */
+/* line 329, ../default.scss */
 #discovery-tiles .discovery-card span {
   display: inline-block;
   margin-bottom: 5px;
@@ -317,14 +328,14 @@ header .title img {
   text-align: center;
   background-color: rgba(0, 0, 0, 0.4);
 }
-/* line 327, ../default.scss */
+/* line 341, ../default.scss */
 #discovery-tiles .discovery-card:hover {
   opacity: 1;
 }
 
 /* About Section Styles
 ======================== */
-/* line 336, ../default.scss */
+/* line 350, ../default.scss */
 .about {
   padding-top: 60px;
   padding-bottom: 50px;
@@ -336,7 +347,7 @@ header .title img {
   background-position: center;
 }
 
-/* line 347, ../default.scss */
+/* line 361, ../default.scss */
 .about-tile {
   background-color: rgba(255, 255, 255, 0.9);
   padding-top: 25px;
@@ -346,7 +357,7 @@ header .title img {
   box-shadow: 0 4px 8px rgba(166, 166, 166, 0.3);
   color: #565A5C;
 }
-/* line 356, ../default.scss */
+/* line 370, ../default.scss */
 .about-tile h3 {
   width: 95%;
   margin-right: auto;
@@ -356,7 +367,7 @@ header .title img {
   font-size: 20px;
   font-weight: 400;
 }
-/* line 365, ../default.scss */
+/* line 379, ../default.scss */
 .about-tile h3 .circle {
   width: 75px;
   height: 75px;
@@ -367,7 +378,7 @@ header .title img {
   border: 3px solid rgba(0, 0, 0, 0.13);
   border-radius: 50%;
 }
-/* line 375, ../default.scss */
+/* line 389, ../default.scss */
 .about-tile h3 .circle i {
   text-align: center;
   vertical-align: middle;
@@ -375,7 +386,7 @@ header .title img {
   line-height: 69px;
   color: rgba(0, 0, 0, 0.35);
 }
-/* line 385, ../default.scss */
+/* line 399, ../default.scss */
 .about-tile p {
   width: 80%;
   margin-right: auto;
@@ -387,7 +398,7 @@ header .title img {
 
 /* Footer Section Styles
 ======================== */
-/* line 397, ../default.scss */
+/* line 411, ../default.scss */
 footer {
   background-color: #323433;
   background-image: url("../img/footer.png");
@@ -398,7 +409,7 @@ footer {
   text-align: center;
   padding-bottom: 10px;
 }
-/* line 407, ../default.scss */
+/* line 421, ../default.scss */
 footer .technologies-container {
   padding-top: 20px;
   display: flex;
@@ -407,13 +418,13 @@ footer .technologies-container {
   align-items: center;
   justify-content: space-around;
 }
-/* line 415, ../default.scss */
+/* line 429, ../default.scss */
 footer .technologies-container .heading {
   flex: 100%;
   color: #82888A;
   margin-bottom: 30px;
 }
-/* line 422, ../default.scss */
+/* line 436, ../default.scss */
 footer .technologies-container .sass .sass-logo {
   height: 90px;
   width: 100px;
@@ -423,11 +434,11 @@ footer .technologies-container .sass .sass-logo {
   background-size: 100%;
   transition: all 0.2s ease-in-out;
 }
-/* line 431, ../default.scss */
+/* line 445, ../default.scss */
 footer .technologies-container .sass .sass-logo:hover {
   background-image: url("../img/logo/sass.png");
 }
-/* line 438, ../default.scss */
+/* line 452, ../default.scss */
 footer .technologies-container .jade .jade-logo {
   height: 100px;
   width: 200px;
@@ -437,11 +448,11 @@ footer .technologies-container .jade .jade-logo {
   background-size: 100%;
   transition: all 0.2s ease-in-out;
 }
-/* line 447, ../default.scss */
+/* line 461, ../default.scss */
 footer .technologies-container .jade .jade-logo:hover {
   background-image: url("../img/logo/jade.png");
 }
-/* line 454, ../default.scss */
+/* line 468, ../default.scss */
 footer .technologies-container .google-maps .google-maps-logo {
   height: 90px;
   width: 250px;
@@ -451,11 +462,11 @@ footer .technologies-container .google-maps .google-maps-logo {
   background-size: 100%;
   transition: all 0.2s ease-in-out;
 }
-/* line 463, ../default.scss */
+/* line 477, ../default.scss */
 footer .technologies-container .google-maps .google-maps-logo:hover {
   background-image: url("../img/logo/google-maps.png");
 }
-/* line 470, ../default.scss */
+/* line 484, ../default.scss */
 footer .technologies-container .instagram .instagram-logo {
   height: 90px;
   width: 250px;
@@ -465,19 +476,19 @@ footer .technologies-container .instagram .instagram-logo {
   background-size: 100%;
   transition: all 0.2s ease-in-out;
 }
-/* line 479, ../default.scss */
+/* line 493, ../default.scss */
 footer .technologies-container .instagram .instagram-logo:hover {
   background-image: url("../img/logo/instagram.png");
 }
 @media (max-width: 930px) {
-  /* line 486, ../default.scss */
+  /* line 500, ../default.scss */
   footer .technologies-container .sass,
   footer .technologies-container .jade,
   footer .technologies-container .google-maps,
   footer .technologies-container .instagram {
     flex: 50%;
   }
-  /* line 492, ../default.scss */
+  /* line 506, ../default.scss */
   footer .technologies-container .sass a,
   footer .technologies-container .jade a,
   footer .technologies-container .google-maps a,
@@ -486,25 +497,25 @@ footer .technologies-container .instagram .instagram-logo:hover {
   }
 }
 @media (max-width: 590px) {
-  /* line 499, ../default.scss */
+  /* line 513, ../default.scss */
   footer .technologies-container .sass,
   footer .technologies-container .jade,
   footer .technologies-container .google-maps,
   footer .technologies-container .instagram {
     flex: 100%;
   }
-  /* line 506, ../default.scss */
+  /* line 520, ../default.scss */
   footer .technologies-container .heading {
     font-size: 17px;
   }
 }
-/* line 513, ../default.scss */
+/* line 527, ../default.scss */
 footer .baseline-container {
   margin-top: 70px;
   position: relative;
   display: inline-block;
 }
-/* line 518, ../default.scss */
+/* line 532, ../default.scss */
 footer .baseline-container .connect-container {
   position: absolute;
   right: 40px;
@@ -517,7 +528,7 @@ footer .baseline-container .connect-container {
   justify-content: center;
   z-index: 50;
 }
-/* line 531, ../default.scss */
+/* line 545, ../default.scss */
 footer .baseline-container .connect-container p {
   margin-top: 10px;
   margin-right: 20px;
@@ -525,7 +536,7 @@ footer .baseline-container .connect-container p {
   font-weight: 300;
   color: #82888A;
 }
-/* line 539, ../default.scss */
+/* line 553, ../default.scss */
 footer .baseline-container .connect-container .github-logo {
   height: 30px;
   width: 30px;
@@ -536,11 +547,11 @@ footer .baseline-container .connect-container .github-logo {
   background-size: 100%;
   transition: all 0.2s ease-in-out;
 }
-/* line 549, ../default.scss */
+/* line 563, ../default.scss */
 footer .baseline-container .connect-container .github-logo:hover {
   background-image: url("../img/logo/github.png");
 }
-/* line 554, ../default.scss */
+/* line 568, ../default.scss */
 footer .baseline-container .connect-container .linkedin-logo {
   height: 25px;
   width: 25px;
@@ -552,23 +563,23 @@ footer .baseline-container .connect-container .linkedin-logo {
   background-size: 100%;
   transition: all 0.2s ease-in-out;
 }
-/* line 565, ../default.scss */
+/* line 579, ../default.scss */
 footer .baseline-container .connect-container .linkedin-logo:hover {
   background-image: url("../img/logo/linkedin.png");
 }
 @media (max-width: 930px) {
-  /* line 518, ../default.scss */
+  /* line 532, ../default.scss */
   footer .baseline-container .connect-container {
     position: relative;
     right: 0;
     margin-right: 0;
   }
 }
-/* line 579, ../default.scss */
+/* line 593, ../default.scss */
 footer .baseline-container .branding-container {
   margin-top: 30px;
 }
-/* line 582, ../default.scss */
+/* line 596, ../default.scss */
 footer .baseline-container .branding-container p {
   color: #565A5C;
   font-size: 16px;
@@ -576,19 +587,19 @@ footer .baseline-container .branding-container p {
 
 /* Photo Listings and Results Section Styles
 ======================== */
-/* line 595, ../default.scss */
+/* line 609, ../default.scss */
 #listings {
   height: 100vh;
   overflow: hidden;
 }
 
-/* line 600, ../default.scss */
+/* line 614, ../default.scss */
 .results {
   overflow-y: scroll;
   overflow-x: hidden;
   height: 95vh;
 }
-/* line 605, ../default.scss */
+/* line 619, ../default.scss */
 .results .filters-container {
   padding-top: 10px;
   padding-right: 0;
@@ -598,7 +609,7 @@ footer .baseline-container .branding-container p {
   color: #82888A;
   vertical-align: middle;
 }
-/* line 614, ../default.scss */
+/* line 628, ../default.scss */
 .results .filters-container .filter-header {
   padding-top: 20px;
   padding-left: 30px;
@@ -607,43 +618,43 @@ footer .baseline-container .branding-container p {
   font-size: 15px;
   color: #565A5C;
 }
-/* line 623, ../default.scss */
+/* line 637, ../default.scss */
 .results .filters-container .filter-group {
   padding-top: 20px;
   padding-left: 40px;
   height: 80px;
   font-weight: 600;
 }
-/* line 630, ../default.scss */
+/* line 644, ../default.scss */
 .results .filters-container .filter-controls {
   padding-top: 20px;
   padding-left: 20px;
   padding-bottom: 20px;
 }
-/* line 635, ../default.scss */
+/* line 649, ../default.scss */
 .results .filters-container .filter-controls input {
   margin-bottom: 5px;
 }
-/* line 639, ../default.scss */
+/* line 653, ../default.scss */
 .results .filters-container .filter-controls label {
   font-weight: 400;
   margin-right: 15px;
 }
-/* line 644, ../default.scss */
+/* line 658, ../default.scss */
 .results .filters-container .filter-controls .range-control {
   display: flex;
   justify-content: space-between;
 }
-/* line 650, ../default.scss */
+/* line 664, ../default.scss */
 .results .filters-container hr {
   margin: 0 15px;
 }
-/* line 658, ../default.scss */
+/* line 672, ../default.scss */
 .results .highlight {
   box-shadow: 0 0 20px 5px rgba(74, 191, 187, 0.87);
   border-radius: 10px;
 }
-/* line 665, ../default.scss */
+/* line 679, ../default.scss */
 .results .tile .tile-header {
   height: 65px;
   width: 100%;
@@ -657,21 +668,21 @@ footer .baseline-container .branding-container p {
   color: #82888A;
   background-color: white;
 }
-/* line 679, ../default.scss */
+/* line 693, ../default.scss */
 .results .tile .tile-header .profile img {
   display: inline-block;
   border-radius: 50%;
   width: 40px;
 }
-/* line 685, ../default.scss */
+/* line 699, ../default.scss */
 .results .tile .tile-header p {
   display: inline-block;
 }
-/* line 692, ../default.scss */
+/* line 706, ../default.scss */
 .results .tile .tile-photo img {
   width: 100%;
 }
-/* line 697, ../default.scss */
+/* line 711, ../default.scss */
 .results .tile .tile-footer {
   height: 90px;
   width: 100%;
@@ -681,21 +692,158 @@ footer .baseline-container .branding-container p {
   background-color: white;
   padding: 10px;
 }
-/* line 706, ../default.scss */
+/* line 720, ../default.scss */
 .results .tile .tile-footer .likes {
   font-weight: 700;
   color: #565A5C;
   margin-bottom: 2px;
 }
-/* line 712, ../default.scss */
+/* line 726, ../default.scss */
 .results .tile .tile-footer .description {
   color: #565A5C;
   font-size: 13px;
 }
 
-/* line 720, ../default.scss */
+/* line 734, ../default.scss */
 #map {
   height: 95vh;
+}
+
+/* Overlay Styles
+======================== */
+/* line 741, ../default.scss */
+.no-scroll {
+  overflow: hidden;
+  position: fixed;
+  height: 100%;
+  width: 100%;
+}
+
+/* line 748, ../default.scss */
+#overlay {
+  position: absolute;
+  height: 100vh;
+  background: rgba(75, 191, 187, 0.99);
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 99999;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: all 300ms ease-in-out;
+  opacity: 0;
+  pointer-events: none;
+}
+/* line 764, ../default.scss */
+#overlay.is-open {
+  display: flex;
+  opacity: 1;
+  pointer-events: auto;
+}
+/* line 770, ../default.scss */
+#overlay.is-open ul li.animate {
+  transform: translate(0px, 0px);
+  opacity: 1;
+}
+/* line 778, ../default.scss */
+#overlay .about-me {
+  display: inline-block;
+  width: 85%;
+  margin-top: 50px;
+  margin-right: 15%;
+  margin-left: 15%;
+  font-weight: 300;
+  font-size: 30px;
+  text-decoration: none;
+  color: white;
+}
+/* line 789, ../default.scss */
+#overlay .about-me .name {
+  font-weight: 400;
+  font-size: 40px;
+  margin-bottom: 40px;
+}
+/* line 795, ../default.scss */
+#overlay .about-me .developer {
+  display: inline;
+  font-weight: 400;
+  font-size: 30px;
+}
+/* line 801, ../default.scss */
+#overlay .about-me span {
+  margin-left: 5px;
+  font-size: 20px;
+  font-style: italic;
+  letter-spacing: 1px;
+}
+/* line 809, ../default.scss */
+#overlay ul {
+  padding: 0;
+  margin-top: 20px;
+  margin-bottom: 70px;
+  height: 90%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+}
+/* line 819, ../default.scss */
+#overlay ul li {
+  list-style: none;
+  position: relative;
+  opacity: 0;
+  transform: translate(-100px, 0px);
+  transition: all 300ms cubic-bezier(0.18, -0.05, 0.4, 1.63);
+}
+/* line 826, ../default.scss */
+#overlay ul li a {
+  padding: 25px 20px 30px;
+  font-weight: 300;
+  font-size: 60px;
+  letter-spacing: 1px;
+  text-decoration: none;
+  color: white;
+  cursor: pointer;
+  transition: color .2s ease-in-out;
+  transform: translateZ(0);
+}
+/* line 837, ../default.scss */
+#overlay ul li a:after {
+  content: "";
+  background-color: white;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  transform: scaleY(0);
+  transform-origin: 0 100%;
+  transition: all .2s ease-in-out;
+  z-index: -1;
+}
+/* line 851, ../default.scss */
+#overlay ul li a:hover {
+  color: #565A5C;
+}
+/* line 855, ../default.scss */
+#overlay ul li a:hover:after {
+  transform: scaleY(1);
+}
+/* line 862, ../default.scss */
+#overlay #close-btn {
+  position: absolute;
+  top: 40px;
+  right: 50px;
+  font-size: 30px;
+  line-height: 30px;
+  transition: all 100ms ease-in-out;
+}
+/* line 871, ../default.scss */
+#overlay #close-btn:hover {
+  cursor: pointer;
+  transform: scale(1.2);
 }
 
 /*# sourceMappingURL=default.css.map */

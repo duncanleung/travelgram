@@ -38,6 +38,8 @@ html
               a(href="#explore") Explore
             li#about-nav
               a(href="#about") About
+            li#contact-nav
+              a(href="#connect") Contact
       .row
         .title.col-sm-12
           h1 Explore the world via instagram
@@ -274,6 +276,26 @@ html
         
         //- Google Maps Container
         #map.col-sm-5
+    
+    //- About Me Overlay
+    #overlay
+      .about-me
+        | Hi my name is 
+        .name Duncan Leung
+        | I'm a 
+        .developer full-stack Javascript Developer
+        span  (in the making!)
+      ul
+        li
+          a(href="http://github.com/duncanleung" target="_blank") Github
+        li
+          a(href="http://www.linkedin.com/in/duncanleung" target="_blank") LinkedIn
+        li
+          a(href="http://www.duncanleung.com/blog" target="_blank") Blog
+        li
+          a(href="mailto:leungd@gmail.com?subject=Connect%20with%20Duncan") Email
+      #close-btn
+        i(class="glyphicon glyphicon-remove")
 
 
     //- JQUERY

@@ -37,6 +37,61 @@ Show Fixed Nav Bar on Scroll
 
 
 /*
+Show / Hide - Connect with Author Modal
+========================== */
+// Animate List with Delay
+function listAnimationLoop(eleList, length, count) {
+  
+  eleList[count].classList.add('animate');
+
+  setTimeout(function() {
+    console.log(eleList[count]);
+    if(++count < length) {
+      listAnimationLoop(eleList, length, count);
+    }
+  }, 50);
+};
+
+function showOverlay() {
+  var bodyEle = document.getElementsByTagName('body');
+  var overlayEle = document.getElementById('overlay');
+  var liList = overlayEle.getElementsByTagName('li');
+  
+  bodyEle[0].classList.add('no-scroll');
+  overlayEle.classList.add('is-open');
+
+  // Run List Animation with Delay
+  listAnimationLoop(liList, liList.length, 0);
+}
+
+function closeOverlay() {
+  var bodyEle = document.getElementsByTagName('body');
+  var overlayEle = document.getElementById('overlay');
+  var liList = overlayEle.getElementsByTagName('li');
+
+  bodyEle[0].classList.remove('no-scroll');
+  overlayEle.classList.remove('is-open');
+  
+  for(var i = 0; i< liList.length; i++) {
+    liList[i].classList.remove('animate');
+  }
+}
+
+
+//Run showOverlay on contact-nav button
+var contactEle = document.getElementById('contact-nav');
+contactEle.addEventListener('click', showOverlay, false);
+
+//Run closeOverlay on close button
+var closeEle = document.getElementById('close-btn');
+closeEle.addEventListener('click', closeOverlay, false);
+
+
+
+
+
+
+/*
 Show / Hide - Results Section and Main Section
 ========================== */
 
