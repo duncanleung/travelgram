@@ -762,7 +762,7 @@ footer .baseline-container .branding-container p {
 /* line 789, ../default.scss */
 #overlay .about-me .name {
   font-weight: 400;
-  font-size: 40px;
+  font-size: 50px;
   margin-bottom: 40px;
 }
 /* line 795, ../default.scss */
@@ -834,8 +834,8 @@ footer .baseline-container .branding-container p {
 /* line 862, ../default.scss */
 #overlay #close-btn {
   position: absolute;
-  top: 40px;
-  right: 50px;
+  top: 20px;
+  right: 70px;
   font-size: 30px;
   line-height: 30px;
   transition: all 100ms ease-in-out;
