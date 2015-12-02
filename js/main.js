@@ -118,6 +118,18 @@ logoEle.addEventListener('click', showMain, false);
 
 
 
+/*
+Top Nav Bar Search Field
+========================== */
+var inputEle = document.getElementById('header-search');
+
+inputEle.addEventListener('click', editSearch,false);
+
+function editSearch() {
+  inputEle.focus();
+  inputEle.setSelectionRange(0, inputEle.value.length);
+}
+
 
 /* 
 Highlight Markers when hover in/out of Pictures
