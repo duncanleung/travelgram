@@ -63,43 +63,67 @@ Instagram.init({
   access_token: '18470568.b3001e3.47348909df8444f4a09778e6221cbbeb'
 });
 
+
 (function() {
 
-  Instagram.mediaSelf(function(response) {
-    var $instagram  = $('#instagram');
+//Append everything to container instagramDiv
+var instagramDiv  = document.getElementById('instagram');
 
-    for(var i = 0; i < response.data.length; i++) {
-      
-      //Append Image
-      var imageUrl = response.data[i].images.low_resolution.url;
-      $instagram.append('<img src="' + imageUrl + '">');
-      
-    }
-  });
+//Create wrapper divColumn to set BootStrap Columns
+function createColumnDiv(response, loopCount) {
+  var divColumn = document.createElement('div');
+  divColumn.className = "col-md-12 col-lg-6";
+  instagramDiv.appendChild(divColumn);
+
+  createTileDiv(response, loopCount, divColumn);
+}
+
+//Create wrapper divTile to set Tile Wrapper
+function createTileDiv(response, loopCount, parent) {
+  var divTile = document.createElement('div');
+  divTile.id = "tile" + (loopCount+1);
+  divTile.className = "tile";
+  parent.appendChild(divTile);
+
+  //Append Images to divTile
+  var newImgEle = document.createElement('img');
+  var imageUrl = response.data[loopCount].images.low_resolution.url;
   
-})();
+  newImgEle.setAttribute('src', imageUrl);
+  divTile.appendChild(newImgEle);
 
+  console.log("creating Tile Div for Pic "+ loopCount);
+  console.log(newImgEle);
+}
 
+  //loop to create response.data.length # of div with class="col"
+    
+    //create div with id=tile# class=tile<<<<
 
-
-
-
-
-/*$(document).ready(function() {
+      //create div with class="tile-header"
+        //create div with class=profile
+          //create img with src=profile
+            //create p with class=username: text:username
+        //create div with class=time : text:timestamp?
+      //create div with class=tile-photo
+        //create img with src="photooo"
+      //create div with class=tile-footer
+        //create div with class=likes text: #likes likes
+        //create div with class=description text: description
 
   Instagram.mediaSelf(function(response) {
-    var $instagram  = $('#instagram');
-
+    
     for(var i = 0; i < response.data.length; i++) {
       
-      //Append Image
-      var imageUrl = response.data[i].images.low_resolution.url;
-      $instagram.append('<img src="' + imageUrl + '">');
+      //Append everything inside container instagramDiv
+      //Create divColumn
+      //Append Images to divColumn
+      createColumnDiv(response, i);
       
     }
   });
 
-});*/
+})();
 
 
 /*
@@ -123,6 +147,27 @@ Instagram.init({
 
 
 
+
+
+/*(function() {
+
+  Instagram.mediaSelf(function(response) {
+    var instagramDiv  = document.getElementById('instagram');
+
+    
+
+    for(var i = 0; i < response.data.length; i++) {
+      
+      //Append Images to instagramDiv
+      var newImgEle = document.createElement('img');
+      var imageUrl = response.data[i].images.low_resolution.url;
+      
+      newImgEle.setAttribute('src', imageUrl);
+      instagramDiv.appendChild(newImgEle);
+    }
+  });
+
+})();*/
 
 
 
