@@ -23,6 +23,7 @@ function initMap() {
   //Add Google Maps Event Listener
   google.maps.event.addDomListener(window, 'load', function () {
     
+
     // Add Marker 1
     var marker1 = new google.maps.Marker({
       animation: google.maps.Animation.DROP,
@@ -43,6 +44,7 @@ function initMap() {
       console.log("marker1 mouseout");
       $('#tile1').toggleClass('highlight');
     });
+
 
     // Add Marker 2
     var marker2 = new google.maps.Marker({
@@ -65,6 +67,7 @@ function initMap() {
       $('#tile2').toggleClass('highlight');
     });
 
+
     // Add Marker 3
     var marker3 = new google.maps.Marker({
       animation: google.maps.Animation.DROP,
@@ -85,6 +88,7 @@ function initMap() {
       console.log("marker3 mouseout");
       $('#tile3').toggleClass('highlight');
     });
+
 
     // Add Marker 4
     var marker4 = new google.maps.Marker({

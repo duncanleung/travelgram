@@ -588,7 +588,7 @@ footer .baseline-container .branding-container p {
 /* Photo Listings and Results Section Styles
 ======================== */
 /* line 609, ../default.scss */
-#listings {
+#results {
   height: 100vh;
   overflow: hidden;
 }

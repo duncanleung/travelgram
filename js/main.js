@@ -10,8 +10,8 @@ $(function() {
         $('html,body').animate({
           scrollTop: target.offset().top
         }, 1000);
-        window.location.hash = this.hash;
         return false;
+        window.location.hash = this.hash;
       }
     }
   });
@@ -45,7 +45,6 @@ function listAnimationLoop(eleList, length, count) {
   eleList[count].classList.add('animate');
 
   setTimeout(function() {
-    console.log(eleList[count]);
     if(++count < length) {
       listAnimationLoop(eleList, length, count);
     }
@@ -101,6 +100,7 @@ function showResults() {
   resultsEle.classList.remove('hide');
 
   //Fix Google Maps Show/Hide bug
+  
   var center = map.getCenter();
   google.maps.event.trigger(map, 'resize');
   map.setCenter(center);
