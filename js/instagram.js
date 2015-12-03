@@ -1,8 +1,4 @@
-/*CLIENT ID: b3001e3cef15421db569c0dbd8024147 */
-/*ACCESS TOKEN: 18470568.b3001e3.47348909df8444f4a09778e6221cbbeb*/
-/*http://127.0.0.1*/
 
-/*ALLOW SCOPE: https://api.instagram.com/oauth/authorize/?client_id=b3001e3cef15421db569c0dbd8024147&redirect_uri=http://127.0.0.1&response_type=code&scope=public_content*/
 
 window.Instagram = {
 
@@ -33,7 +29,7 @@ window.Instagram = {
   //Get list of photos in location Lat Lang
     /*Later can take lat and lang, pass as params*/
   mediaLocation: function(callback) {
-    var endpoint = this.BASE_URL + '/media/search?distance=1000&lat=31.222346&lng=121.446249&access_token=' + this.config.access_token;
+    var endpoint = this.BASE_URL + '/media/search?distance=5000&lat=22.282919&lng=114.152768&access_token=' + this.config.access_token;
     this.getJSON(endpoint, callback);
   },
 
@@ -67,17 +63,86 @@ Instagram.init({
   access_token: '18470568.b3001e3.47348909df8444f4a09778e6221cbbeb'
 });
 
+(function() {
 
-/*Instagram.location(function(response)) {
-  var $instagram  = $('#instagram');
+  Instagram.mediaSelf(function(response) {
+    var $instagram  = $('#instagram');
 
-  for(var i = 0; i < response.data.length; i++) {
-    imageUrl = response.data[i].images.low_resolution.url;
-    $instagram.append('<img src=' + )
-  }
-};
+    for(var i = 0; i < response.data.length; i++) {
+      
+      //Append Image
+      var imageUrl = response.data[i].images.low_resolution.url;
+      $instagram.append('<img src="' + imageUrl + '">');
+      
+    }
+  });
+  
+})();
+
+
+
+
+
+
+
+/*$(document).ready(function() {
+
+  Instagram.mediaSelf(function(response) {
+    var $instagram  = $('#instagram');
+
+    for(var i = 0; i < response.data.length; i++) {
+      
+      //Append Image
+      var imageUrl = response.data[i].images.low_resolution.url;
+      $instagram.append('<img src="' + imageUrl + '">');
+      
+    }
+  });
+
+});*/
+
+
+/*
+<div class="col-md-12 col-lg-6">
+  <div id="tile1" class="tile">
+    <div class="tile-header">
+      <div class="profile"><img src="img/profile/graceful.jpg" alt="">
+        <p class="username">gracefuls</p>
+      </div>
+      <div class="time">38m ago</div>
+    </div>
+    <div class="tile-photo"><img src="img/results/london.jpg" alt=""></div>
+    <div class="tile-footer">
+      <div class="likes">48 likes</div>
+      <div class="description">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore</div>
+    </div>
+  </div>
+</div>
 
 */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
