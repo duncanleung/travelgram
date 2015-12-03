@@ -66,61 +66,72 @@ Instagram.init({
 
 (function() {
 
-//Append everything to container instagramDiv
-var instagramDiv  = document.getElementById('instagram');
+  //Append everything to container instagramDiv
+  var instagramDiv  = document.getElementById('instagram');
 
-//Create wrapper divColumn to set BootStrap Columns
-function createColumnDiv(response, loopCount) {
-  var divColumn = document.createElement('div');
-  divColumn.className = "col-md-12 col-lg-6";
-  instagramDiv.appendChild(divColumn);
+  //Create wrapper divColumn to set BootStrap Columns
+  function createColumn(response, loopCount) {
+    var divColumn = document.createElement('div');
+    divColumn.className = "col-md-12 col-lg-6";
+    instagramDiv.appendChild(divColumn);
 
-  createTileDiv(response, loopCount, divColumn);
-}
+    createTile(response, loopCount, divColumn);
+  }
 
-//Create wrapper divTile to set Tile Wrapper
-function createTileDiv(response, loopCount, parent) {
-  var divTile = document.createElement('div');
-  divTile.id = "tile" + (loopCount+1);
-  divTile.className = "tile";
-  parent.appendChild(divTile);
+  //Create Tile Wrapper to contain: Header, Photo, Footer
+  function createTile(response, loopCount, parent) {
+    var divTile = document.createElement('div');
+    divTile.id = 'tile' + (loopCount+1);
+    divTile.className = 'tile';
+    parent.appendChild(divTile);
 
-  //Append Images to divTile
-  var newImgEle = document.createElement('img');
-  var imageUrl = response.data[loopCount].images.low_resolution.url;
-  
-  newImgEle.setAttribute('src', imageUrl);
-  divTile.appendChild(newImgEle);
+    createTileHeader(response, loopCount, divTile);
+    createTilePhoto(response, loopCount, divTile);
+    createTileFooter(response, loopCount, divTile);
+  }
 
-  console.log("creating Tile Div for Pic "+ loopCount);
-  console.log(newImgEle);
-}
+  //Create Tile Header to contain profile info
+  function createTileHeader(response, loopCount, parent) {
+    var divTileHeader = document.createElement('div');
+    divTileHeader.className = 'tile-header';
+    parent.appendChild(divTileHeader);
+  }
 
+  //Create Tile to contain Instagram Photo
+  function createTilePhoto(response, loopCount, parent) {
+    var divTilePhoto = document.createElement('div');
+    divTilePhoto.className = "tile-photo";
+    parent.appendChild(divTilePhoto);
 
-
-  //loop to create response.data.length # of div with class="col"
-    //create div with id=tile# class=tile
-
-      //create div with class="tile-header"<<<<
-        //create div with class=profile
-          //create img with src=profile
-            //create p with class=username: text:username
-        //create div with class=time : text:timestamp?
-      //create div with class=tile-photo
-        //create img with src="photooo"
-      //create div with class=tile-footer
-        //create div with class=likes text: #likes likes
-        //create div with class=description text: description
-
-  Instagram.mediaSelf(function(response) {
+    //Append Instagram Image to divTilePhoto
+    var newImgEle = document.createElement('img');
+    var imageUrl = response.data[loopCount].images.standard_resolution.url;
     
+    newImgEle.setAttribute('src', imageUrl);
+    divTilePhoto.appendChild(newImgEle);
+  }
+
+  //Create Tile Footer to contain Instagram description info
+  function createTileFooter(response, loopCount, parent) {
+    var divTileFooter = document.createElement('div');
+    divTileFooter.className = 'tile-footer';
+    parent.appendChild(divTileFooter);
+  }
+        //THIS STUFF IS IN THE HEADER
+          //create div with class=profile
+            //create img with src=profile
+              //create p with class=username: text:username
+          //create div with class=time : text:timestamp?
+
+        //THIS STUFF IS IN THE FOOTER
+          //create div with class=likes text: #likes likes
+          //create div with class=description text: description
+
+
+  //Issue Instagram API Call
+  Instagram.mediaSelf(function(response) {
     for(var i = 0; i < response.data.length; i++) {
-      
-      //Append everything inside container instagramDiv
-      //Create divColumn
-      //Append Images to divColumn
-      createColumnDiv(response, i);
-      
+      createColumn(response, i);
     }
   });
 
@@ -145,33 +156,6 @@ function createTileDiv(response, loopCount, parent) {
 </div>
 
 */
-
-
-
-
-
-/*(function() {
-
-  Instagram.mediaSelf(function(response) {
-    var instagramDiv  = document.getElementById('instagram');
-
-    
-
-    for(var i = 0; i < response.data.length; i++) {
-      
-      //Append Images to instagramDiv
-      var newImgEle = document.createElement('img');
-      var imageUrl = response.data[i].images.low_resolution.url;
-      
-      newImgEle.setAttribute('src', imageUrl);
-      instagramDiv.appendChild(newImgEle);
-    }
-  });
-
-})();*/
-
-
-
 
 
 
