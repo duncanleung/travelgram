@@ -60,7 +60,7 @@ window.Instagram = {
 
 
 Instagram.init({
-  access_token: '18470568.b3001e3.47348909df8444f4a09778e6221cbbeb'
+  access_token: ''
 });
 
 
@@ -96,11 +96,12 @@ function createTileDiv(response, loopCount, parent) {
   console.log(newImgEle);
 }
 
-  //loop to create response.data.length # of div with class="col"
-    
-    //create div with id=tile# class=tile<<<<
 
-      //create div with class="tile-header"
+
+  //loop to create response.data.length # of div with class="col"
+    //create div with id=tile# class=tile
+
+      //create div with class="tile-header"<<<<
         //create div with class=profile
           //create img with src=profile
             //create p with class=username: text:username
