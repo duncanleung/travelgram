@@ -15,11 +15,6 @@ window.Instagram = {
     this.config.access_token = opt.access_token;
   },
 
-/*  popular: function(callback) {
-    var endpoint = this.BASE_URL + '/media/popular?access_token=' + this.config.access_token;
-    this.getJSON(endpoint, callback);
-  },*/
-
   mediaSelf: function(callback) {
     var endpoint = this.BASE_URL + '/users/self/media/recent/?access_token=' + this.config.access_token;
     this.getJSON(endpoint, callback);
@@ -33,11 +28,6 @@ window.Instagram = {
     this.getJSON(endpoint, callback);
   },
 
-/*  locationMedia: function(locationId, callback) {
-    var endpoint = this.BASE_URL + '/locations/' + locationId + '/media/recent?access_token=' + this.config.access_token;
-    this.getJSON(endpoint, callback);
-  },*/
-
   //Get list of recently tagged photos
   tagsByName: function(name, callback) {
     var endpoint = this.BASE_URL + '/tags/' + name + '/media/recent?access_token=' + this.config.access_token;
@@ -49,6 +39,9 @@ window.Instagram = {
       type: 'GET',
       url: url,
       dataType: 'jsonp',
+      /*success: function(response) {
+        if(typeof callback === 'function') callback(response);
+      }*/
       success: function(response) {
         if(typeof callback === 'function') callback(response);
       }
@@ -60,11 +53,15 @@ window.Instagram = {
 
 
 Instagram.init({
-  access_token: ''
+  access_token: '18470568.b3001e3.47348909df8444f4a09778e6221cbbeb'
 });
 
 
-(function() {
+/*
+//Make an API call to Instagram
+//Pull photos and wrap them with TileHeader and TileFooter
+//Append them into the Results Section of the page
+========================== */
 
   //Append everything to container instagramDiv
   var instagramDiv  = document.getElementById('instagram');
@@ -117,27 +114,31 @@ Instagram.init({
     divTileFooter.className = 'tile-footer';
     parent.appendChild(divTileFooter);
   }
-        //THIS STUFF IS IN THE HEADER
-          //create div with class=profile
-            //create img with src=profile
-              //create p with class=username: text:username
-          //create div with class=time : text:timestamp?
-
-        //THIS STUFF IS IN THE FOOTER
-          //create div with class=likes text: #likes likes
-          //create div with class=description text: description
 
 
-  //Issue Instagram API Call
+  //****Issue Instagram API Call****
   Instagram.mediaSelf(function(response) {
     for(var i = 0; i < response.data.length; i++) {
       createColumn(response, i);
     }
   });
 
-})();
 
 
+
+
+
+
+//STUFF IN HEADER TO FINISH CODING
+  //create div with class=profile
+    //create img with src=profile
+      //create p with class=username: text:username
+  //create div with class=time : text:timestamp?
+
+//STUFF IN FOOTER TO FINISH CODING
+  //create div with class=likes text: #likes likes
+  //create div with class=description text: description
+          
 /*
 <div class="col-md-12 col-lg-6">
   <div id="tile1" class="tile">
@@ -156,9 +157,6 @@ Instagram.init({
 </div>
 
 */
-
-
-
 
 
 

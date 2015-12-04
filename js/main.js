@@ -22,70 +22,20 @@ $(function() {
 Show Fixed Nav Bar on Scroll
 ========================== */
   
-  function scrollNav() {
-    //Show Fixed Nav when scroll below 635px
-    if(window.pageYOffset>635) {
-      document.getElementById('fixed-nav').classList.remove('hide');
-    } 
+function scrollNav() {
+  //Show Fixed Nav when scroll below 635px
+  if(window.pageYOffset>635) {
+    document.getElementById('fixed-nav').classList.remove('hide');
+  } 
 
-    //Hide Fixed Nav when scroll above 635px
-    else {
-      document.getElementById('fixed-nav').classList.add('hide');
-    };
-  }
-  window.onscroll = scrollNav;
-
-
-/*
-Show / Hide - Connect with Author Modal
-========================== */
-// Animate List with Delay
-function listAnimationLoop(eleList, length, count) {
-  
-  eleList[count].classList.add('animate');
-
-  setTimeout(function() {
-    if(++count < length) {
-      listAnimationLoop(eleList, length, count);
-    }
-  }, 50);
-};
-
-function showOverlay() {
-  var bodyEle = document.getElementsByTagName('body');
-  var overlayEle = document.getElementById('overlay');
-  var liList = overlayEle.getElementsByTagName('li');
-  
-  bodyEle[0].classList.add('no-scroll');
-  overlayEle.classList.add('is-open');
-
-  // Run List Animation with Delay
-  listAnimationLoop(liList, liList.length, 0);
+  //Hide Fixed Nav when scroll above 635px
+  else {
+    document.getElementById('fixed-nav').classList.add('hide');
+  };
 }
 
-function closeOverlay() {
-  var bodyEle = document.getElementsByTagName('body');
-  var overlayEle = document.getElementById('overlay');
-  var liList = overlayEle.getElementsByTagName('li');
-
-  bodyEle[0].classList.remove('no-scroll');
-  overlayEle.classList.remove('is-open');
-  
-  for(var i = 0; i< liList.length; i++) {
-    liList[i].classList.remove('animate');
-  }
-}
-
-
-//Run showOverlay on contact-nav button
-var contactEle = document.getElementById('contact-nav');
-contactEle.addEventListener('click', showOverlay, false);
-
-//Run closeOverlay on close button
-var closeEle = document.getElementById('close-btn');
-closeEle.addEventListener('click', closeOverlay, false);
-
-
+//Listen to Scroll and run scrollNav
+window.onscroll = scrollNav;
 
 
 
@@ -136,11 +86,12 @@ var tileEle = document.getElementById('discovery-tiles').querySelectorAll('a');
 
 
 
+
 /*
-Results Section Nav Bar
+Results Section Nav Bar - Show/Hide Behavior
 ========================== */
 
-// Hide Section Map and Instagram Photos 
+// Hide Map and Instagram Photos 
 function hideResults() {
   var resultsEle = document.getElementById('results');
 
@@ -174,7 +125,8 @@ logoEle.addEventListener('click', showMain, false);
 
 
 /*
-Top Nav Bar Search Field
+Search Field in Navigation Bar
+- Select all text when clicked
 ========================== */
 var inputEle = document.getElementById('header-search');
 
@@ -186,43 +138,72 @@ function editSearch() {
 }
 
 
-/* 
-Highlight Markers when hover in/out of Pictures
-======================= */
 
 
-// Match the Tile ID with the Icon ID
-// Set Icon back to iconLight
-function hover() {
-  /*console.log('hover ' + this.id)*/
-  for(var i = 0; i < allMarkers.length; i++) {
-    if(this.id === allMarkers[i].id) {
-      allMarkers[i].setIcon(iconLight);
-      break;
+
+
+/*
+Show / Hide - Author Modal
+========================== */
+// Animate List with Delay
+function listAnimationLoop(eleList, length, count) {
+  
+  eleList[count].classList.add('animate');
+
+  setTimeout(function() {
+    if(++count < length) {
+      listAnimationLoop(eleList, length, count);
     }
+  }, 50);
+};
+
+function showOverlay() {
+  var bodyEle = document.getElementsByTagName('body');
+  var overlayEle = document.getElementById('overlay');
+  var liList = overlayEle.getElementsByTagName('li');
+  
+  bodyEle[0].classList.add('no-scroll');
+  overlayEle.classList.add('is-open');
+
+  // Run List Animation with Delay
+  listAnimationLoop(liList, liList.length, 0);
+}
+
+function closeOverlay() {
+  var bodyEle = document.getElementsByTagName('body');
+  var overlayEle = document.getElementById('overlay');
+  var liList = overlayEle.getElementsByTagName('li');
+
+  bodyEle[0].classList.remove('no-scroll');
+  overlayEle.classList.remove('is-open');
+  
+  for(var i = 0; i< liList.length; i++) {
+    liList[i].classList.remove('animate');
   }
 }
 
-// Match the Tile ID with the Icon ID
-// Set Icon back to Black
-function out() {
-/*  console.log('out '  + this.id)*/
-  for(var i = 0; i < allMarkers.length; i++) {
-    if(this.id === allMarkers[i].id) {
-      allMarkers[i].setIcon(icon);
-      break;
-    }
-  }
-}
+
+//Run showOverlay on contact-nav button click
+var contactEle = document.getElementById('contact-nav');
+contactEle.addEventListener('click', showOverlay, false);
+
+//Run closeOverlay on close button click
+var closeEle = document.getElementById('close-btn');
+closeEle.addEventListener('click', closeOverlay, false);
 
 
-//Get Array of All .tile
-var tile = document.getElementById('results').querySelectorAll('.tile');
-//Add Event Listener to All Tiles
-for(var i = 0; i < tile.length; i++) {
-  tile[i].addEventListener('mouseover', hover, false);
-  tile[i].addEventListener('mouseout', out, false);
-}
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

@@ -116,3 +116,55 @@ function initMap() {
 }/*END Google Maps*/
 
 
+
+/* 
+Highlight Markers - Hover in/out of Photos
+======================= */
+
+// Hover Over Photo - Match Photo Tiles Map Markers Icon
+// Highlight the Icon if it matches the photo
+function hover() {
+  console.log('hover ' + this.id)
+  for(var i = 0; i < allMarkers.length; i++) {
+    if(this.id === allMarkers[i].id) {
+      allMarkers[i].setIcon(iconLight);
+      break;
+    }
+  }
+}
+
+// Hover Out Of Photo - Match Photo Tiles Map Markers Icon
+// Set the Icon back
+function out() {
+  /*console.log('out '  + this.id)*/
+  for(var i = 0; i < allMarkers.length; i++) {
+    if(this.id === allMarkers[i].id) {
+      allMarkers[i].setIcon(icon);
+      break;
+    }
+  }
+}
+
+
+//Get Array of all Photo Tiles
+//Add Event Listener to all Photo Tiles
+var tile = document.getElementById('instagram').getElementsByClassName('tile');
+
+console.log("tile length is " + tile.length);
+console.log("tile array " + tile);
+console.log(tile);
+
+for(var i = 0; i < tile.length; i++) {
+  tile[i].addEventListener('mouseover', hover, false);
+  tile[i].addEventListener('mouseout', out, false);
+  console.log("Add listener"+tile[i]);
+}
+
+
+
+
+
+
+
+
+
