@@ -21,10 +21,11 @@ window.Instagram = {
   },
 
 
+  /*SHANGHAI LATLANG: 31.221992, 121.444988*/
   //Get list of photos in location Lat Lang
     /*Later can take lat and lang, pass as params*/
   mediaLocation: function(callback) {
-    var endpoint = this.BASE_URL + '/media/search?distance=5000&lat=22.282919&lng=114.152768&access_token=' + this.config.access_token;
+    var endpoint = this.BASE_URL + '/media/search?distance=5000&lat=31.221992&lng=121.444988&access_token=' + this.config.access_token;
     this.getJSON(endpoint, callback);
   },
 
@@ -64,7 +65,7 @@ Instagram.init({
 ========================== */
 
   //Append everything to container instagramDiv
-  var instagramDiv  = document.getElementById('instagram');
+  var instagramDiv = document.getElementById('instagram');
 
   //Create wrapper divColumn to set BootStrap Columns
   function createColumn(response, loopCount) {
@@ -85,6 +86,7 @@ Instagram.init({
     createTileHeader(response, loopCount, divTile);
     createTilePhoto(response, loopCount, divTile);
     createTileFooter(response, loopCount, divTile);
+    addTileListener();
   }
 
   //Create Tile Header to contain profile info
@@ -116,12 +118,12 @@ Instagram.init({
   }
 
 
-  //****Issue Instagram API Call****
+/*  //****Issue Instagram API Call****
   Instagram.mediaSelf(function(response) {
     for(var i = 0; i < response.data.length; i++) {
       createColumn(response, i);
     }
-  });
+  });*/
 
 
 
@@ -138,7 +140,7 @@ Instagram.init({
 //STUFF IN FOOTER TO FINISH CODING
   //create div with class=likes text: #likes likes
   //create div with class=description text: description
-          
+
 /*
 <div class="col-md-12 col-lg-6">
   <div id="tile1" class="tile">

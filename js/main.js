@@ -26,12 +26,12 @@ function scrollNav() {
   //Show Fixed Nav when scroll below 635px
   if(window.pageYOffset>635) {
     document.getElementById('fixed-nav').classList.remove('hide');
-  } 
+  }
 
   //Hide Fixed Nav when scroll above 635px
   else {
     document.getElementById('fixed-nav').classList.add('hide');
-  };
+  }
 }
 
 //Listen to Scroll and run scrollNav
@@ -155,7 +155,7 @@ function listAnimationLoop(eleList, length, count) {
       listAnimationLoop(eleList, length, count);
     }
   }, 50);
-};
+}
 
 function showOverlay() {
   var bodyEle = document.getElementsByTagName('body');

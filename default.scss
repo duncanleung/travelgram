@@ -688,6 +688,7 @@ footer {
       justify-content: space-between;
       color: $secondary-gray;
       background-color: white;
+      pointer-events: none;
 
 
       .profile img {
@@ -702,6 +703,7 @@ footer {
     }
 
     .tile-photo {
+      pointer-events: none;
 
       img {
         width: 100%;
@@ -716,6 +718,7 @@ footer {
       margin-bottom: 40px;
       background-color: white;
       padding: 10px;
+      pointer-events: none;
 
       .likes {
         font-weight: 700;
