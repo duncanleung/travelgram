@@ -7,8 +7,9 @@ Instagram.mediaLocation(function(response) {
   for(var i = 0; i < response.data.length; i++) {
     createColumn(response, i);
     addMarkerListener(response, i);
-
   }
+
+  console.log("finished API call");
 });
 
 
@@ -61,43 +62,53 @@ function addMarkerListener(response, loopCount) {
 
   //Draw Marker into Map
   allMarkers[loopCount].setMap(map);
-      /*================*/
-      console.log("adding marker " + loopCount);
-      /*================*/
+    /*console.log("adding marker " + loopCount);*/
 
   
   //Marker is attached with Event Listeners
-  var tileId = '#tile' + (loopCount + 1);
-      /*================*/
-      console.log("#tile ID is " + tileId);
-      /*================*/
+  var tileId = '#tile' + (loopCount);
+    /*console.log("#tile ID is " + tileId);*/
+
+
   allMarkers[loopCount].addListener('mouseover', function() {
-        /*================*/
-        console.log("marker " + loopCount + " mouseover");
-        /*================*/
+    /*console.log("marker " + loopCount + " mouseover");*/
     $(tileId).toggleClass('highlight');
   });
 
+
   allMarkers[loopCount].addListener('mouseout', function() {
-        /*================*/
-        console.log("marker " + loopCount + " mouseout");
-        /*================*/
+    /*console.log("marker " + loopCount + " mouseout");*/
     $(tileId).toggleClass('highlight');
   });
 }
 
 
-/* 
-Highlight Markers - Hover in/out of Photos
-======================= */
 
-// Match Photo Tiles Map Markers Icon
-// Highlight the Icon if it matches the photo
+//All Tiles are attached with Event Listeners
+function addTileListener() {
+  var tileArray = document.getElementById('instagram').getElementsByClassName('tile');
+  /*console.log("tileArray length is " + tileArray.length);
+    console.log(tileArray);*/
+
+
+  for(var i = 0; i < tileArray.length; i++) {
+    tileArray[i].addEventListener('mouseover', tileHover, false);
+    tileArray[i].addEventListener('mouseout', tileOut, false);
+    /*console.log(tileArray[i]);
+      console.log("Add listener"+tileArray[i]);*/
+  }
+}
+
+
+
+
+
+// Highlight the Marker if it matches the Tile
 function tileHover() {
-      /*================*/
-      console.log('hover ' + this.id);
-      /*================*/
+
   for(var i = 0; i < allMarkers.length; i++) {
+    /*console.log("cheking marker " + allMarkers[i].id);
+      console.log("tile ID is " + this.id);*/
     if(this.id === allMarkers[i].id) {
       allMarkers[i].setIcon(iconLight);
       break;
@@ -105,12 +116,10 @@ function tileHover() {
   }
 }
 
-// Match Photo Tiles Map Markers Icon
-// Set the Icon back to default on tileOut
+
+// Set the Marker back to default on tileOut
 function tileOut() {
-      /*================*/
-      console.log('out '  + this.id);
-      /*================*/
+  /*console.log('out '  + this.id);*/
   for(var i = 0; i < allMarkers.length; i++) {
     if(this.id === allMarkers[i].id) {
       allMarkers[i].setIcon(icon);
@@ -119,26 +128,6 @@ function tileOut() {
   }
 }
 
-
-
-//Get Array of all Photo Tiles
-//Add Event Listener to all Photo Tiles
-function addTileListener() {
-  var tile = document.getElementById('instagram').getElementsByClassName('tile');
-      /*================*/
-      console.log("tile length is " + tile.length);
-      console.log("tile array " + tile);
-      /*================*/
-
-  for(var i = 0; i < tile.length; i++) {
-    tile[i].addEventListener('mouseover', tileHover, false);
-    tile[i].addEventListener('mouseout', tileOut, false);
-    /*================*/
-    console.log(tile[i]);
-    console.log("Add listener"+tile[i]);
-    /*================*/
-  }
-}
 
 
 

@@ -667,27 +667,23 @@ footer .baseline-container .branding-container p {
   justify-content: space-between;
   color: #82888A;
   background-color: white;
-  pointer-events: none;
 }
-/* line 694, ../default.scss */
+/* line 693, ../default.scss */
 .results .tile .tile-header .profile img {
   display: inline-block;
   border-radius: 50%;
   width: 40px;
 }
-/* line 700, ../default.scss */
+/* line 699, ../default.scss */
 .results .tile .tile-header p {
   display: inline-block;
+  margin-left: 5px;
 }
-/* line 705, ../default.scss */
-.results .tile .tile-photo {
-  pointer-events: none;
-}
-/* line 708, ../default.scss */
+/* line 707, ../default.scss */
 .results .tile .tile-photo img {
   width: 100%;
 }
-/* line 713, ../default.scss */
+/* line 712, ../default.scss */
 .results .tile .tile-footer {
   height: 90px;
   width: 100%;
@@ -696,28 +692,27 @@ footer .baseline-container .branding-container p {
   margin-bottom: 40px;
   background-color: white;
   padding: 10px;
-  pointer-events: none;
 }
-/* line 723, ../default.scss */
+/* line 721, ../default.scss */
 .results .tile .tile-footer .likes {
   font-weight: 700;
   color: #565A5C;
   margin-bottom: 2px;
 }
-/* line 729, ../default.scss */
+/* line 727, ../default.scss */
 .results .tile .tile-footer .description {
   color: #565A5C;
   font-size: 13px;
 }
 
-/* line 737, ../default.scss */
+/* line 735, ../default.scss */
 #map {
   height: 95vh;
 }
 
 /* Overlay Styles
 ======================== */
-/* line 744, ../default.scss */
+/* line 742, ../default.scss */
 .no-scroll {
   overflow: hidden;
   position: fixed;
@@ -725,7 +720,7 @@ footer .baseline-container .branding-container p {
   width: 100%;
 }
 
-/* line 751, ../default.scss */
+/* line 749, ../default.scss */
 #overlay {
   position: absolute;
   height: 100vh;
@@ -742,18 +737,18 @@ footer .baseline-container .branding-container p {
   opacity: 0;
   pointer-events: none;
 }
-/* line 767, ../default.scss */
+/* line 765, ../default.scss */
 #overlay.is-open {
   display: flex;
   opacity: 1;
   pointer-events: auto;
 }
-/* line 773, ../default.scss */
+/* line 771, ../default.scss */
 #overlay.is-open ul li.animate {
   transform: translate(0px, 0px);
   opacity: 1;
 }
-/* line 781, ../default.scss */
+/* line 779, ../default.scss */
 #overlay .about-me {
   display: inline-block;
   width: 85%;
@@ -765,26 +760,26 @@ footer .baseline-container .branding-container p {
   text-decoration: none;
   color: white;
 }
-/* line 792, ../default.scss */
+/* line 790, ../default.scss */
 #overlay .about-me .name {
   font-weight: 400;
   font-size: 50px;
   margin-bottom: 40px;
 }
-/* line 798, ../default.scss */
+/* line 796, ../default.scss */
 #overlay .about-me .developer {
   display: inline;
   font-weight: 400;
   font-size: 30px;
 }
-/* line 804, ../default.scss */
+/* line 802, ../default.scss */
 #overlay .about-me span {
   margin-left: 5px;
   font-size: 20px;
   font-style: italic;
   letter-spacing: 1px;
 }
-/* line 812, ../default.scss */
+/* line 810, ../default.scss */
 #overlay ul {
   padding: 0;
   margin-top: 20px;
@@ -795,7 +790,7 @@ footer .baseline-container .branding-container p {
   align-items: center;
   justify-content: space-around;
 }
-/* line 822, ../default.scss */
+/* line 820, ../default.scss */
 #overlay ul li {
   list-style: none;
   position: relative;
@@ -803,7 +798,7 @@ footer .baseline-container .branding-container p {
   transform: translate(-100px, 0px);
   transition: all 300ms cubic-bezier(0.18, -0.05, 0.4, 1.63);
 }
-/* line 829, ../default.scss */
+/* line 827, ../default.scss */
 #overlay ul li a {
   padding: 25px 20px 30px;
   font-weight: 300;
@@ -815,7 +810,7 @@ footer .baseline-container .branding-container p {
   transition: color .2s ease-in-out;
   transform: translateZ(0);
 }
-/* line 840, ../default.scss */
+/* line 838, ../default.scss */
 #overlay ul li a:after {
   content: "";
   background-color: white;
@@ -829,15 +824,15 @@ footer .baseline-container .branding-container p {
   transition: all .2s ease-in-out;
   z-index: -1;
 }
-/* line 854, ../default.scss */
+/* line 852, ../default.scss */
 #overlay ul li a:hover {
   color: #565A5C;
 }
-/* line 858, ../default.scss */
+/* line 856, ../default.scss */
 #overlay ul li a:hover:after {
   transform: scaleY(1);
 }
-/* line 865, ../default.scss */
+/* line 863, ../default.scss */
 #overlay #close-btn {
   position: absolute;
   top: 20px;
@@ -846,7 +841,7 @@ footer .baseline-container .branding-container p {
   line-height: 30px;
   transition: all 100ms ease-in-out;
 }
-/* line 874, ../default.scss */
+/* line 872, ../default.scss */
 #overlay #close-btn:hover {
   cursor: pointer;
   transform: scale(1.2);

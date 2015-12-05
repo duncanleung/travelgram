@@ -20,8 +20,6 @@ window.Instagram = {
     this.getJSON(endpoint, callback);
   },
 
-
-  /*SHANGHAI LATLANG: 31.221992, 121.444988*/
   //Get list of photos in location Lat Lang
     /*Later can take lat and lang, pass as params*/
   mediaLocation: function(callback) {
@@ -40,9 +38,6 @@ window.Instagram = {
       type: 'GET',
       url: url,
       dataType: 'jsonp',
-      /*success: function(response) {
-        if(typeof callback === 'function') callback(response);
-      }*/
       success: function(response) {
         if(typeof callback === 'function') callback(response);
       }
@@ -54,7 +49,7 @@ window.Instagram = {
 
 
 Instagram.init({
-  access_token: '18470568.b3001e3.47348909df8444f4a09778e6221cbbeb'
+  access_token: ''
 });
 
 
@@ -79,7 +74,7 @@ Instagram.init({
   //Create Tile Wrapper to contain: Header, Photo, Footer
   function createTile(response, loopCount, parent) {
     var divTile = document.createElement('div');
-    divTile.id = 'tile' + (loopCount+1);
+    divTile.id = 'tile' + (loopCount);
     divTile.className = 'tile';
     parent.appendChild(divTile);
 
@@ -94,6 +89,29 @@ Instagram.init({
     var divTileHeader = document.createElement('div');
     divTileHeader.className = 'tile-header';
     parent.appendChild(divTileHeader);
+
+    createProfile(response, loopCount, divTileHeader);
+  }
+
+  function createProfile(response, loopCount, parent) {
+    var divProfile = document.createElement('div');
+    divProfile.className = 'profile';
+    parent.appendChild(divProfile);
+
+    //Append Instagram Profile Photo
+    var newImgEle = document.createElement('img');
+    var profileUrl = response.data[loopCount].user.profile_picture;
+
+    newImgEle.setAttribute('src', profileUrl);
+    divProfile.appendChild(newImgEle);
+
+
+    var newPEle = document.createElement('p');
+    var username = response.data[loopCount].user.username;
+
+    newPEle.className = 'username';
+    newPEle.textContent = username;
+    divProfile.appendChild(newPEle);
   }
 
   //Create Tile to contain Instagram Photo
@@ -126,38 +144,29 @@ Instagram.init({
   });*/
 
 
-
-
-
-
-
 //STUFF IN HEADER TO FINISH CODING
   //create div with class=profile
     //create img with src=profile
       //create p with class=username: text:username
   //create div with class=time : text:timestamp?
 
+
 //STUFF IN FOOTER TO FINISH CODING
   //create div with class=likes text: #likes likes
   //create div with class=description text: description
 
 /*
-<div class="col-md-12 col-lg-6">
-  <div id="tile1" class="tile">
     <div class="tile-header">
       <div class="profile"><img src="img/profile/graceful.jpg" alt="">
         <p class="username">gracefuls</p>
       </div>
       <div class="time">38m ago</div>
     </div>
-    <div class="tile-photo"><img src="img/results/london.jpg" alt=""></div>
+
     <div class="tile-footer">
       <div class="likes">48 likes</div>
       <div class="description">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore</div>
     </div>
-  </div>
-</div>
-
 */
 
 
