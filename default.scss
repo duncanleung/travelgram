@@ -690,15 +690,29 @@ footer {
       background-color: white;
 
 
-      .profile img {
-        display: inline-block;
-        border-radius: 50%;
-        width: 40px;
-      }
+      .profile {
+        padding-top: 10px;
+        display: flex;
+        line-height: 100%;
+        img {
+          border-radius: 50%;
+          width: 40px;
+          height: 40px;
+        }
 
-      p {
-        display: inline-block;
-        margin-left: 5px;
+        .profile-text {
+          margin-left: 10px;
+          padding-top: 5px;
+
+          p.username {
+            margin-bottom: 5px;
+          }
+
+          p.location {
+            color: $primary-gray;
+            font-weight: 600;
+          }
+        }
       }
     }
 
@@ -724,7 +738,7 @@ footer {
         margin-bottom: 2px;
       }
 
-      .description {
+      p.caption {
         color: $primary-gray;
         font-size: 13px;
       }

@@ -15,6 +15,7 @@ window.Instagram = {
     this.config.access_token = opt.access_token;
   },
 
+  //Get list of photos from own account
   mediaSelf: function(callback) {
     var endpoint = this.BASE_URL + '/users/self/media/recent/?access_token=' + this.config.access_token;
     this.getJSON(endpoint, callback);
@@ -27,11 +28,19 @@ window.Instagram = {
     this.getJSON(endpoint, callback);
   },
 
+/*  //https://api.instagram.com/v1/locations/{location-id}?access_token=ACCESS-TOKEN
+
+  locationName: function(callback, locationId) {
+    var endpoint = this.BASE_URL + '/locations/' + locationId + '?access_token=' + this.config.access_token;
+    this.getJSON(endpoint, callback);
+  },*/
+
+
   //Get list of recently tagged photos
-  tagsByName: function(name, callback) {
+/*  tagsByName: function(name, callback) {
     var endpoint = this.BASE_URL + '/tags/' + name + '/media/recent?access_token=' + this.config.access_token;
     this.getJSON(endpoint, callback);
-  },
+  },*/
 
   getJSON: function(url, callback) {
     $.ajax({
@@ -98,20 +107,47 @@ Instagram.init({
     divProfile.className = 'profile';
     parent.appendChild(divProfile);
 
-    //Append Instagram Profile Photo
+    //Pull Instagram Profile Photo
+    printProfilePic(response, loopCount, divProfile);
+
+
+    var divText = document.createElement('div');
+    divText.className = 'profile-text';
+    divProfile.appendChild(divText);
+
+    //Print Username
+    printUsername(response, loopCount, divText);
+    //Print Location Where Photo was Taken
+    printLocation(response, loopCount, divText);
+  }
+
+  //Pull Profile Picture
+  function printProfilePic(response, loopCount, parent) {
     var newImgEle = document.createElement('img');
     var profileUrl = response.data[loopCount].user.profile_picture;
 
     newImgEle.setAttribute('src', profileUrl);
-    divProfile.appendChild(newImgEle);
+    parent.appendChild(newImgEle);
+  }
 
-
+  //Pull Username
+  function printUsername(response, loopCount, parent) {
     var newPEle = document.createElement('p');
     var username = response.data[loopCount].user.username;
 
     newPEle.className = 'username';
     newPEle.textContent = username;
-    divProfile.appendChild(newPEle);
+    parent.appendChild(newPEle);
+  }
+
+  //Pull Location where Photo was Taken
+  function printLocation(response, loopCount, parent) {
+    var locationName = response.data[loopCount].location.name;
+    var newPEle = document.createElement('p');
+
+    newPEle.className = 'location';
+    newPEle.textContent = 'Location: ' + locationName;
+    parent.appendChild(newPEle);
   }
 
   //Create Tile to contain Instagram Photo
@@ -133,15 +169,25 @@ Instagram.init({
     var divTileFooter = document.createElement('div');
     divTileFooter.className = 'tile-footer';
     parent.appendChild(divTileFooter);
+
+    //Print Photo Caption
+    printCaption(response, loopCount, divTileFooter);
+  }
+  
+  //Pull Caption
+  function printCaption(response, loopCount, parent) {
+    var caption = response.data[loopCount].caption.text;
+    var newPEle = document.createElement('p');
+
+    // console.log(caption)
+    newPEle.className = 'caption';
+    newPEle.textContent = caption;
+    parent.appendChild(newPEle);
   }
 
-
-/*  //****Issue Instagram API Call****
-  Instagram.mediaSelf(function(response) {
-    for(var i = 0; i < response.data.length; i++) {
-      createColumn(response, i);
-    }
-  });*/
+  //STUFF IN FOOTER TO FINISH CODING
+  //create div with class=likes text: #likes likes
+  //create div with class=description text: description
 
 
 //STUFF IN HEADER TO FINISH CODING
@@ -149,11 +195,6 @@ Instagram.init({
     //create img with src=profile
       //create p with class=username: text:username
   //create div with class=time : text:timestamp?
-
-
-//STUFF IN FOOTER TO FINISH CODING
-  //create div with class=likes text: #likes likes
-  //create div with class=description text: description
 
 /*
     <div class="tile-header">
