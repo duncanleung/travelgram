@@ -2,6 +2,7 @@
 
 //****Issue Instagram API Call****
 Instagram.mediaLocation(function(response) {
+  /*Instagram.mediaSelf(function(response) {*/
   displayMap();
 
   for(var i = 0; i < response.data.length; i++) {

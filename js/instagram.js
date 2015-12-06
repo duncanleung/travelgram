@@ -99,9 +99,54 @@ Instagram.init({
     divTileHeader.className = 'tile-header';
     parent.appendChild(divTileHeader);
 
+    //Create Profile Section
     createProfile(response, loopCount, divTileHeader);
+
+    //Create Timestamp
+    createTimestamp(response, loopCount, divTileHeader);
   }
 
+  function createTimestamp(response, loopCount, parent) {
+    var divTimestamp = document.createElement('div');
+    var timestamp = response.data[loopCount].created_time;
+    
+    divTimestamp.className = 'time';
+    divTimestamp.textContent = formatTime(timestamp);
+    parent.appendChild(divTimestamp);
+  }
+
+  function formatTime(timestamp) {
+    var today = new Date();
+    var photoTaken = new Date(timestamp * 1000);
+
+    var difference = Math.abs(today - photoTaken);
+    var days = Math.ceil(difference / (1000 * 3600 * 24));
+
+    if (days > 1095.75) {
+      return '3 years ago';
+    }
+    else if(days > 730.5) {
+      return '2 years ago';
+    }
+    else if(days > 365.25) {
+      return '1 year ago';
+    }
+    else if(days > 21) {
+      return Math.ceil(days/21) + ' weeks ago';
+    } 
+    else if(days > 14) {
+      return Math.ceil(days/14) + ' weeks ago';
+    } 
+    else if(days > 7) {
+      return Math.ceil(days/7) + ' weeks ago';
+    }
+    else {
+      return days +  'ago';
+    }
+  }
+
+  //Create Profile Section
+  //Contains: Username, Location
   function createProfile(response, loopCount, parent) {
     var divProfile = document.createElement('div');
     divProfile.className = 'profile';
@@ -146,7 +191,7 @@ Instagram.init({
     var newPEle = document.createElement('p');
 
     newPEle.className = 'location';
-    newPEle.textContent = 'Location: ' + locationName;
+    newPEle.textContent = locationName;
     parent.appendChild(newPEle);
   }
 
@@ -170,45 +215,31 @@ Instagram.init({
     divTileFooter.className = 'tile-footer';
     parent.appendChild(divTileFooter);
 
+    //Print Likes Count
+    printLikes(response, loopCount, divTileFooter);
+
     //Print Photo Caption
     printCaption(response, loopCount, divTileFooter);
   }
-  
+
+  function printLikes(response, loopCount, parent) {
+    var likes = response.data[loopCount].likes.count;
+    var newPEle = document.createElement('p');
+
+    newPEle.className = 'likes';
+    newPEle.textContent = likes + ' Likes';
+    parent.appendChild(newPEle);
+  }
+
   //Pull Caption
   function printCaption(response, loopCount, parent) {
     var caption = response.data[loopCount].caption.text;
     var newPEle = document.createElement('p');
 
-    // console.log(caption)
     newPEle.className = 'caption';
     newPEle.textContent = caption;
     parent.appendChild(newPEle);
   }
-
-  //STUFF IN FOOTER TO FINISH CODING
-  //create div with class=likes text: #likes likes
-  //create div with class=description text: description
-
-
-//STUFF IN HEADER TO FINISH CODING
-  //create div with class=profile
-    //create img with src=profile
-      //create p with class=username: text:username
-  //create div with class=time : text:timestamp?
-
-/*
-    <div class="tile-header">
-      <div class="profile"><img src="img/profile/graceful.jpg" alt="">
-        <p class="username">gracefuls</p>
-      </div>
-      <div class="time">38m ago</div>
-    </div>
-
-    <div class="tile-footer">
-      <div class="likes">48 likes</div>
-      <div class="description">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore</div>
-    </div>
-*/
 
 
 
