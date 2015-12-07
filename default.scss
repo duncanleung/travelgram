@@ -248,6 +248,12 @@ header {
       display: inline-block;
     }
 
+    @media(max-width: 440px) {
+      h2 {
+        font-size: 35px !important;
+      }
+    }
+
     h1 {
       font-size: 20px;
       font-weight: 300;
@@ -804,7 +810,7 @@ footer {
     .name {
       font-weight: 400;
       font-size: 50px;
-      margin-bottom: 40px;
+      margin-bottom: 20px;
     }
 
     .developer {
@@ -823,7 +829,7 @@ footer {
 
   ul {
     padding: 0;
-    margin-top: 20px;
+    margin-top: 30px;
     margin-bottom: 70px;
     height: 90%;
     display: flex;

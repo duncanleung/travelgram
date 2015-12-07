@@ -80,8 +80,8 @@ function hideMain() {
 // Add hideMain to all tiles
 var tileEle = document.getElementById('discovery-tiles').querySelectorAll('a');
 
-[].forEach.call(tileEle, function(e) {
-  e.addEventListener('click', hideMain, false);
+[].forEach.call(tileEle, function(tile) {
+  tile.addEventListener('click', hideMain, false);
 });
 
 

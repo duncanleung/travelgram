@@ -239,33 +239,39 @@ header .title h2 {
   text-align: center;
   display: inline-block;
 }
-/* line 251, ../default.scss */
+@media (max-width: 440px) {
+  /* line 252, ../default.scss */
+  header .title h2 {
+    font-size: 35px !important;
+  }
+}
+/* line 257, ../default.scss */
 header .title h1 {
   font-size: 20px;
   font-weight: 300;
   letter-spacing: 1px;
   order: 3;
 }
-/* line 258, ../default.scss */
+/* line 264, ../default.scss */
 header .title h2 {
   font-size: 40px;
   font-weight: 700;
   order: 2;
 }
-/* line 264, ../default.scss */
+/* line 270, ../default.scss */
 header .title .text-logo {
   order: 1;
   font-weight: 600;
   font-size: 30px;
   color: #FE6367;
 }
-/* line 271, ../default.scss */
+/* line 277, ../default.scss */
 header .title img {
   height: 28px;
   margin: 0 5px 10px 0;
 }
 
-/* line 278, ../default.scss */
+/* line 284, ../default.scss */
 #search-container {
   position: relative;
   margin-top: -80px;
@@ -275,7 +281,7 @@ header .title img {
   height: 80px;
   background-color: rgba(0, 0, 0, 0.4);
 }
-/* line 287, ../default.scss */
+/* line 293, ../default.scss */
 #search-container .btn-default {
   background-color: #4BBFBB;
   border-color: #4BBFBB;
@@ -284,7 +290,7 @@ header .title img {
   color: white;
   transition: all 0.2s ease-in-out;
 }
-/* line 296, ../default.scss */
+/* line 302, ../default.scss */
 #search-container .btn-default:hover {
   background-color: #0F948F;
   border-color: #0F948F;
@@ -292,18 +298,18 @@ header .title img {
 
 /* Discovery Section Styles
 ======================== */
-/* line 305, ../default.scss */
+/* line 311, ../default.scss */
 .discovery {
   padding-top: 60px;
   margin-bottom: 40px;
 }
 
-/* line 311, ../default.scss */
+/* line 317, ../default.scss */
 #discovery-tiles a {
   text-decoration: none;
   cursor: pointer;
 }
-/* line 316, ../default.scss */
+/* line 322, ../default.scss */
 #discovery-tiles .discovery-card {
   height: 350px;
   margin-bottom: 30px;
@@ -317,7 +323,7 @@ header .title img {
   align-items: center;
   flex-direction: column;
 }
-/* line 329, ../default.scss */
+/* line 335, ../default.scss */
 #discovery-tiles .discovery-card span {
   display: inline-block;
   margin-bottom: 5px;
@@ -328,14 +334,14 @@ header .title img {
   text-align: center;
   background-color: rgba(0, 0, 0, 0.4);
 }
-/* line 341, ../default.scss */
+/* line 347, ../default.scss */
 #discovery-tiles .discovery-card:hover {
   opacity: 1;
 }
 
 /* About Section Styles
 ======================== */
-/* line 350, ../default.scss */
+/* line 356, ../default.scss */
 .about {
   padding-top: 60px;
   padding-bottom: 50px;
@@ -347,7 +353,7 @@ header .title img {
   background-position: center;
 }
 
-/* line 361, ../default.scss */
+/* line 367, ../default.scss */
 .about-tile {
   background-color: rgba(255, 255, 255, 0.9);
   padding-top: 25px;
@@ -357,7 +363,7 @@ header .title img {
   box-shadow: 0 4px 8px rgba(166, 166, 166, 0.3);
   color: #565A5C;
 }
-/* line 370, ../default.scss */
+/* line 376, ../default.scss */
 .about-tile h3 {
   width: 95%;
   margin-right: auto;
@@ -367,7 +373,7 @@ header .title img {
   font-size: 20px;
   font-weight: 400;
 }
-/* line 379, ../default.scss */
+/* line 385, ../default.scss */
 .about-tile h3 .circle {
   width: 75px;
   height: 75px;
@@ -378,7 +384,7 @@ header .title img {
   border: 3px solid rgba(0, 0, 0, 0.13);
   border-radius: 50%;
 }
-/* line 389, ../default.scss */
+/* line 395, ../default.scss */
 .about-tile h3 .circle i {
   text-align: center;
   vertical-align: middle;
@@ -386,7 +392,7 @@ header .title img {
   line-height: 69px;
   color: rgba(0, 0, 0, 0.35);
 }
-/* line 399, ../default.scss */
+/* line 405, ../default.scss */
 .about-tile p {
   width: 80%;
   margin-right: auto;
@@ -398,7 +404,7 @@ header .title img {
 
 /* Footer Section Styles
 ======================== */
-/* line 411, ../default.scss */
+/* line 417, ../default.scss */
 footer {
   background-color: #323433;
   background-image: url("../img/footer.png");
@@ -409,7 +415,7 @@ footer {
   text-align: center;
   padding-bottom: 10px;
 }
-/* line 421, ../default.scss */
+/* line 427, ../default.scss */
 footer .technologies-container {
   padding-top: 20px;
   display: flex;
@@ -418,13 +424,13 @@ footer .technologies-container {
   align-items: center;
   justify-content: space-around;
 }
-/* line 429, ../default.scss */
+/* line 435, ../default.scss */
 footer .technologies-container .heading {
   flex: 100%;
   color: #82888A;
   margin-bottom: 30px;
 }
-/* line 436, ../default.scss */
+/* line 442, ../default.scss */
 footer .technologies-container .sass .sass-logo {
   height: 90px;
   width: 100px;
@@ -434,11 +440,11 @@ footer .technologies-container .sass .sass-logo {
   background-size: 100%;
   transition: all 0.2s ease-in-out;
 }
-/* line 445, ../default.scss */
+/* line 451, ../default.scss */
 footer .technologies-container .sass .sass-logo:hover {
   background-image: url("../img/logo/sass.png");
 }
-/* line 452, ../default.scss */
+/* line 458, ../default.scss */
 footer .technologies-container .jade .jade-logo {
   height: 100px;
   width: 200px;
@@ -448,11 +454,11 @@ footer .technologies-container .jade .jade-logo {
   background-size: 100%;
   transition: all 0.2s ease-in-out;
 }
-/* line 461, ../default.scss */
+/* line 467, ../default.scss */
 footer .technologies-container .jade .jade-logo:hover {
   background-image: url("../img/logo/jade.png");
 }
-/* line 468, ../default.scss */
+/* line 474, ../default.scss */
 footer .technologies-container .google-maps .google-maps-logo {
   height: 90px;
   width: 250px;
@@ -462,11 +468,11 @@ footer .technologies-container .google-maps .google-maps-logo {
   background-size: 100%;
   transition: all 0.2s ease-in-out;
 }
-/* line 477, ../default.scss */
+/* line 483, ../default.scss */
 footer .technologies-container .google-maps .google-maps-logo:hover {
   background-image: url("../img/logo/google-maps.png");
 }
-/* line 484, ../default.scss */
+/* line 490, ../default.scss */
 footer .technologies-container .instagram .instagram-logo {
   height: 90px;
   width: 250px;
@@ -476,19 +482,19 @@ footer .technologies-container .instagram .instagram-logo {
   background-size: 100%;
   transition: all 0.2s ease-in-out;
 }
-/* line 493, ../default.scss */
+/* line 499, ../default.scss */
 footer .technologies-container .instagram .instagram-logo:hover {
   background-image: url("../img/logo/instagram.png");
 }
 @media (max-width: 930px) {
-  /* line 500, ../default.scss */
+  /* line 506, ../default.scss */
   footer .technologies-container .sass,
   footer .technologies-container .jade,
   footer .technologies-container .google-maps,
   footer .technologies-container .instagram {
     flex: 50%;
   }
-  /* line 506, ../default.scss */
+  /* line 512, ../default.scss */
   footer .technologies-container .sass a,
   footer .technologies-container .jade a,
   footer .technologies-container .google-maps a,
@@ -497,25 +503,25 @@ footer .technologies-container .instagram .instagram-logo:hover {
   }
 }
 @media (max-width: 590px) {
-  /* line 513, ../default.scss */
+  /* line 519, ../default.scss */
   footer .technologies-container .sass,
   footer .technologies-container .jade,
   footer .technologies-container .google-maps,
   footer .technologies-container .instagram {
     flex: 100%;
   }
-  /* line 520, ../default.scss */
+  /* line 526, ../default.scss */
   footer .technologies-container .heading {
     font-size: 17px;
   }
 }
-/* line 527, ../default.scss */
+/* line 533, ../default.scss */
 footer .baseline-container {
   margin-top: 70px;
   position: relative;
   display: inline-block;
 }
-/* line 532, ../default.scss */
+/* line 538, ../default.scss */
 footer .baseline-container .connect-container {
   position: absolute;
   right: 40px;
@@ -528,7 +534,7 @@ footer .baseline-container .connect-container {
   justify-content: center;
   z-index: 50;
 }
-/* line 545, ../default.scss */
+/* line 551, ../default.scss */
 footer .baseline-container .connect-container p {
   margin-top: 10px;
   margin-right: 20px;
@@ -536,7 +542,7 @@ footer .baseline-container .connect-container p {
   font-weight: 300;
   color: #82888A;
 }
-/* line 553, ../default.scss */
+/* line 559, ../default.scss */
 footer .baseline-container .connect-container .github-logo {
   height: 30px;
   width: 30px;
@@ -547,11 +553,11 @@ footer .baseline-container .connect-container .github-logo {
   background-size: 100%;
   transition: all 0.2s ease-in-out;
 }
-/* line 563, ../default.scss */
+/* line 569, ../default.scss */
 footer .baseline-container .connect-container .github-logo:hover {
   background-image: url("../img/logo/github.png");
 }
-/* line 568, ../default.scss */
+/* line 574, ../default.scss */
 footer .baseline-container .connect-container .linkedin-logo {
   height: 25px;
   width: 25px;
@@ -563,23 +569,23 @@ footer .baseline-container .connect-container .linkedin-logo {
   background-size: 100%;
   transition: all 0.2s ease-in-out;
 }
-/* line 579, ../default.scss */
+/* line 585, ../default.scss */
 footer .baseline-container .connect-container .linkedin-logo:hover {
   background-image: url("../img/logo/linkedin.png");
 }
 @media (max-width: 930px) {
-  /* line 532, ../default.scss */
+  /* line 538, ../default.scss */
   footer .baseline-container .connect-container {
     position: relative;
     right: 0;
     margin-right: 0;
   }
 }
-/* line 593, ../default.scss */
+/* line 599, ../default.scss */
 footer .baseline-container .branding-container {
   margin-top: 30px;
 }
-/* line 596, ../default.scss */
+/* line 602, ../default.scss */
 footer .baseline-container .branding-container p {
   color: #565A5C;
   font-size: 16px;
@@ -587,19 +593,19 @@ footer .baseline-container .branding-container p {
 
 /* Photo Listings and Results Section Styles
 ======================== */
-/* line 609, ../default.scss */
+/* line 615, ../default.scss */
 #results {
   height: 100vh;
   overflow: hidden;
 }
 
-/* line 614, ../default.scss */
+/* line 620, ../default.scss */
 .results {
   overflow-y: scroll;
   overflow-x: hidden;
   height: 95vh;
 }
-/* line 619, ../default.scss */
+/* line 625, ../default.scss */
 .results .filters-container {
   padding-top: 10px;
   padding-right: 0;
@@ -609,7 +615,7 @@ footer .baseline-container .branding-container p {
   color: #82888A;
   vertical-align: middle;
 }
-/* line 628, ../default.scss */
+/* line 634, ../default.scss */
 .results .filters-container .filter-header {
   padding-top: 20px;
   padding-left: 30px;
@@ -618,43 +624,43 @@ footer .baseline-container .branding-container p {
   font-size: 15px;
   color: #565A5C;
 }
-/* line 637, ../default.scss */
+/* line 643, ../default.scss */
 .results .filters-container .filter-group {
   padding-top: 20px;
   padding-left: 40px;
   height: 80px;
   font-weight: 600;
 }
-/* line 644, ../default.scss */
+/* line 650, ../default.scss */
 .results .filters-container .filter-controls {
   padding-top: 20px;
   padding-left: 20px;
   padding-bottom: 20px;
 }
-/* line 649, ../default.scss */
+/* line 655, ../default.scss */
 .results .filters-container .filter-controls input {
   margin-bottom: 5px;
 }
-/* line 653, ../default.scss */
+/* line 659, ../default.scss */
 .results .filters-container .filter-controls label {
   font-weight: 400;
   margin-right: 15px;
 }
-/* line 658, ../default.scss */
+/* line 664, ../default.scss */
 .results .filters-container .filter-controls .range-control {
   display: flex;
   justify-content: space-between;
 }
-/* line 664, ../default.scss */
+/* line 670, ../default.scss */
 .results .filters-container hr {
   margin: 0 15px;
 }
-/* line 672, ../default.scss */
+/* line 678, ../default.scss */
 .results .highlight {
   box-shadow: 0 0 20px 5px rgba(74, 191, 187, 0.87);
   border-radius: 10px;
 }
-/* line 679, ../default.scss */
+/* line 685, ../default.scss */
 .results .tile .tile-header {
   height: 65px;
   width: 100%;
@@ -668,37 +674,37 @@ footer .baseline-container .branding-container p {
   color: #82888A;
   background-color: white;
 }
-/* line 693, ../default.scss */
+/* line 699, ../default.scss */
 .results .tile .tile-header .profile {
   padding-top: 10px;
   display: flex;
   line-height: 100%;
 }
-/* line 697, ../default.scss */
+/* line 703, ../default.scss */
 .results .tile .tile-header .profile img {
   border-radius: 50%;
   width: 40px;
   height: 40px;
 }
-/* line 703, ../default.scss */
+/* line 709, ../default.scss */
 .results .tile .tile-header .profile .profile-text {
   margin-left: 10px;
   padding-top: 5px;
 }
-/* line 707, ../default.scss */
+/* line 713, ../default.scss */
 .results .tile .tile-header .profile .profile-text p.username {
   margin-bottom: 5px;
 }
-/* line 711, ../default.scss */
+/* line 717, ../default.scss */
 .results .tile .tile-header .profile .profile-text p.location {
   color: #565A5C;
   font-weight: 600;
 }
-/* line 721, ../default.scss */
+/* line 727, ../default.scss */
 .results .tile .tile-photo img {
   width: 100%;
 }
-/* line 726, ../default.scss */
+/* line 732, ../default.scss */
 .results .tile .tile-footer {
   height: 120px;
   width: 100%;
@@ -708,26 +714,26 @@ footer .baseline-container .branding-container p {
   background-color: white;
   padding: 10px;
 }
-/* line 735, ../default.scss */
+/* line 741, ../default.scss */
 .results .tile .tile-footer .likes {
   font-weight: 700;
   color: #565A5C;
   margin-bottom: 2px;
 }
-/* line 741, ../default.scss */
+/* line 747, ../default.scss */
 .results .tile .tile-footer p.caption {
   color: #565A5C;
   font-size: 13px;
 }
 
-/* line 749, ../default.scss */
+/* line 755, ../default.scss */
 #map {
   height: 95vh;
 }
 
 /* Overlay Styles
 ======================== */
-/* line 756, ../default.scss */
+/* line 762, ../default.scss */
 .no-scroll {
   overflow: hidden;
   position: fixed;
@@ -735,7 +741,7 @@ footer .baseline-container .branding-container p {
   width: 100%;
 }
 
-/* line 763, ../default.scss */
+/* line 769, ../default.scss */
 #overlay {
   position: absolute;
   height: 100vh;
@@ -752,18 +758,18 @@ footer .baseline-container .branding-container p {
   opacity: 0;
   pointer-events: none;
 }
-/* line 779, ../default.scss */
+/* line 785, ../default.scss */
 #overlay.is-open {
   display: flex;
   opacity: 1;
   pointer-events: auto;
 }
-/* line 785, ../default.scss */
+/* line 791, ../default.scss */
 #overlay.is-open ul li.animate {
   transform: translate(0px, 0px);
   opacity: 1;
 }
-/* line 793, ../default.scss */
+/* line 799, ../default.scss */
 #overlay .about-me {
   display: inline-block;
   width: 85%;
@@ -775,29 +781,29 @@ footer .baseline-container .branding-container p {
   text-decoration: none;
   color: white;
 }
-/* line 804, ../default.scss */
+/* line 810, ../default.scss */
 #overlay .about-me .name {
   font-weight: 400;
   font-size: 50px;
-  margin-bottom: 40px;
+  margin-bottom: 20px;
 }
-/* line 810, ../default.scss */
+/* line 816, ../default.scss */
 #overlay .about-me .developer {
   display: inline;
   font-weight: 400;
   font-size: 30px;
 }
-/* line 816, ../default.scss */
+/* line 822, ../default.scss */
 #overlay .about-me span {
   margin-left: 5px;
   font-size: 20px;
   font-style: italic;
   letter-spacing: 1px;
 }
-/* line 824, ../default.scss */
+/* line 830, ../default.scss */
 #overlay ul {
   padding: 0;
-  margin-top: 20px;
+  margin-top: 30px;
   margin-bottom: 70px;
   height: 90%;
   display: flex;
@@ -805,7 +811,7 @@ footer .baseline-container .branding-container p {
   align-items: center;
   justify-content: space-around;
 }
-/* line 834, ../default.scss */
+/* line 840, ../default.scss */
 #overlay ul li {
   list-style: none;
   position: relative;
@@ -813,7 +819,7 @@ footer .baseline-container .branding-container p {
   transform: translate(-100px, 0px);
   transition: all 300ms cubic-bezier(0.18, -0.05, 0.4, 1.63);
 }
-/* line 841, ../default.scss */
+/* line 847, ../default.scss */
 #overlay ul li a {
   padding: 25px 20px 30px;
   font-weight: 300;
@@ -825,7 +831,7 @@ footer .baseline-container .branding-container p {
   transition: color .2s ease-in-out;
   transform: translateZ(0);
 }
-/* line 852, ../default.scss */
+/* line 858, ../default.scss */
 #overlay ul li a:after {
   content: "";
   background-color: white;
@@ -839,15 +845,15 @@ footer .baseline-container .branding-container p {
   transition: all .2s ease-in-out;
   z-index: -1;
 }
-/* line 866, ../default.scss */
+/* line 872, ../default.scss */
 #overlay ul li a:hover {
   color: #565A5C;
 }
-/* line 870, ../default.scss */
+/* line 876, ../default.scss */
 #overlay ul li a:hover:after {
   transform: scaleY(1);
 }
-/* line 877, ../default.scss */
+/* line 883, ../default.scss */
 #overlay #close-btn {
   position: absolute;
   top: 20px;
@@ -856,7 +862,7 @@ footer .baseline-container .branding-container p {
   line-height: 30px;
   transition: all 100ms ease-in-out;
 }
-/* line 886, ../default.scss */
+/* line 892, ../default.scss */
 #overlay #close-btn:hover {
   cursor: pointer;
   transform: scale(1.2);
