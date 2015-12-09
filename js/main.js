@@ -1,3 +1,18 @@
+
+//****Issue Instagram API Call****
+Instagram.mediaLocation(function(response) {
+  /*Instagram.mediaSelf(function(response) {*/
+  displayMap();
+
+  for(var i = 0; i < response.data.length; i++) {
+    createColumn(response, i);
+    addMarkerListener(response, i);
+  }
+
+  console.log("finished API call");
+});
+
+
 /*
 Smooth Scroll from Nav Links
 ========================== */
@@ -50,7 +65,6 @@ function showResults() {
   resultsEle.classList.remove('hide');
 
   //Fix Google Maps Show/Hide bug
-  
   var center = map.getCenter();
   google.maps.event.trigger(map, 'resize');
   map.setCenter(center);
@@ -143,7 +157,7 @@ function editSearch() {
 
 
 /*
-Show / Hide - Author Modal
+Show / Hide - Author Overlay Modal
 ========================== */
 // Animate List with Delay
 function listAnimationLoop(eleList, length, count) {
@@ -190,22 +204,5 @@ contactEle.addEventListener('click', showOverlay, false);
 //Run closeOverlay on close button click
 var closeEle = document.getElementById('close-btn');
 closeEle.addEventListener('click', closeOverlay, false);
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 

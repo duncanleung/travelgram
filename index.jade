@@ -3,6 +3,8 @@ html
   head
     meta(charset="UTF-8")
     meta(name="viewport" content="width=device-width, initial-scale=1")
+    //- JQUERY
+    script(src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js")
     //- BOOTSTRAP CSS CDN
     link(rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" integrity="sha512-dTfge/zgoMYpP7QbHy4gWMEGsbsdZeCXz7irItjcC3sPUFtf0kuFbDz/ixG7ArTxmDjLXDmezHubeNikyKGVyQ==" crossorigin="anonymous")
     //- OPEN SANS FONT GOOGLE CDN
@@ -54,7 +56,7 @@ html
         .col-centered
           .col-xs-10.col-sm-5.col-lg-4
             .input-group
-              input(type="search" class="form-control" placeholder="Istanbul, Turkey" autofocus="autofocus")
+              input(type="search" id="hero-search" class="form-control" placeholder="Istanbul, Turkey" autofocus="autofocus")
               span.input-group-btn
                 button(class="btn btn-default" type="button") Search
 
@@ -305,15 +307,14 @@ html
           a(href="mailto:leungd@gmail.com?subject=Connect%20with%20Duncan") Email
       #close-btn
         i(class="glyphicon glyphicon-remove")
-
-
-    //- JQUERY
-    script(src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js")
+    
+    script(src="js/instagram.js")
+    script(src="js/results.js")
     //- GOOGLE MAPS API
-    script(async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAErIbE5HGwX-I3j8QnZAnVAdDJb7qcHUc&callback=initMap")
-    script(src="js/instagram.js" type="text/javascript")
-    script(src="js/map.js" type="text/javascript")
-    script(src="js/main.js" type="text/javascript")
+    script(src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAErIbE5HGwX-I3j8QnZAnVAdDJb7qcHUc&signed_in=true&libraries=places")
+    script(src="js/map.js")
+    script(src="js/main.js")
+    script(src="js/places.js")
     
 
 

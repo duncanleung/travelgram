@@ -1,31 +1,6 @@
-
-
-//****Issue Instagram API Call****
-Instagram.mediaLocation(function(response) {
-  /*Instagram.mediaSelf(function(response) {*/
-  displayMap();
-
-  for(var i = 0; i < response.data.length; i++) {
-    createColumn(response, i);
-    addMarkerListener(response, i);
-  }
-
-  console.log("finished API call");
-});
-
-
-
-
 /* 
 Create Google Map
 ======================= */
-
-//Bug Fix to ReDraw Map on Show/Hide
-function displayMap() {
-  document.getElementById('map').style.display="block";
-  initMap();
-}
-
 
 //Init new Google Maps
 var map;
@@ -40,6 +15,11 @@ function initMap() {
   map = new google.maps.Map(document.getElementById('map'), mapOptions);
 }
 
+//Bug Fix to ReDraw Map on Show/Hide
+function displayMap() {
+  document.getElementById('map').style.display="block";
+  initMap();
+}
 
 //Create a Marker for Each Instagram Picture
 //Marker is attached with Event Listeners
@@ -128,10 +108,6 @@ function tileOut() {
     }
   }
 }
-
-
-
-
 
 
 
