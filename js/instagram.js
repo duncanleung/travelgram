@@ -14,7 +14,7 @@ window.Instagram = {
     this.config.access_token = opt.access_token;
   },
 
-  //Get list of photos from own account
+  //Get Photos from Own Account **For Testing**
   mediaSelf: function(callback) {
     var endpoint = this.BASE_URL + '/users/self/media/recent/?access_token=' + this.config.access_token;
     this.getJSON(endpoint, callback);
@@ -22,24 +22,11 @@ window.Instagram = {
 
   //Get list of photos in location Lat Lang
     /*Later can take lat and lang, pass as params*/
-  mediaLocation: function(callback) {
-    var endpoint = this.BASE_URL + '/media/search?distance=5000&lat=31.221992&lng=121.444988&access_token=' + this.config.access_token;
+  mediaLocation: function(callback, lat, lng) {
+    var endpoint = this.BASE_URL + '/media/search?distance=5000&lat=' + lat + '&lng=' + lng + '&access_token=' + this.config.access_token;
+    /*var endpoint = this.BASE_URL + '/media/search?distance=5000&lat=31.221992&lng=121.444988&access_token=' + this.config.access_token;*/
     this.getJSON(endpoint, callback);
   },
-
-/*  //https://api.instagram.com/v1/locations/{location-id}?access_token=ACCESS-TOKEN
-
-  locationName: function(callback, locationId) {
-    var endpoint = this.BASE_URL + '/locations/' + locationId + '?access_token=' + this.config.access_token;
-    this.getJSON(endpoint, callback);
-  },*/
-
-
-  //Get list of recently tagged photos
-/*  tagsByName: function(name, callback) {
-    var endpoint = this.BASE_URL + '/tags/' + name + '/media/recent?access_token=' + this.config.access_token;
-    this.getJSON(endpoint, callback);
-  },*/
 
   getJSON: function(url, callback) {
     $.ajax({
@@ -57,6 +44,6 @@ window.Instagram = {
 
 
 Instagram.init({
-  access_token: ''
+  access_token: '18470568.b3001e3.47348909df8444f4a09778e6221cbbeb'
 });
 

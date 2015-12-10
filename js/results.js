@@ -6,7 +6,7 @@ Build Out Results Section with Instagram Photos
   //Append everything to container instagramDiv
   var instagramDiv = document.getElementById('instagram');
 
-  //Create wrapper divColumn to set BootStrap Columns
+  //Set BootStrap Columns
   function createColumn(response, loopCount) {
     var divColumn = document.createElement('div');
     divColumn.className = "col-md-12 col-lg-6";
@@ -15,7 +15,7 @@ Build Out Results Section with Instagram Photos
     createTile(response, loopCount, divColumn);
   }
 
-  //Create Tile Wrapper to contain: Header, Photo, Footer
+  //Main Tile Wrapper
   function createTile(response, loopCount, parent) {
     var divTile = document.createElement('div');
     divTile.id = 'tile' + (loopCount);
@@ -28,20 +28,82 @@ Build Out Results Section with Instagram Photos
     addTileListener();
   }
 
-  //Create Tile Header to contain profile info
+  //Contains Profile Info
   function createTileHeader(response, loopCount, parent) {
     var divTileHeader = document.createElement('div');
     divTileHeader.className = 'tile-header';
     parent.appendChild(divTileHeader);
 
-    //Create Profile Section
     createProfile(response, loopCount, divTileHeader);
-
-    //Create Timestamp
-    createTimestamp(response, loopCount, divTileHeader);
+    printTimestamp(response, loopCount, divTileHeader);
   }
 
-  function createTimestamp(response, loopCount, parent) {
+  //Contains Username, Location
+  function createProfile(response, loopCount, parent) {
+    var divProfile = document.createElement('div');
+    divProfile.className = 'profile';
+    parent.appendChild(divProfile);
+
+    printProfilePic(response, loopCount, divProfile);
+
+    var divText = document.createElement('div');
+    divText.className = 'profile-text';
+    divProfile.appendChild(divText);
+
+    printUsername(response, loopCount, divText);
+    printLocation(response, loopCount, divText);
+  }
+
+  //Contains Instagram Photo
+  function createTilePhoto(response, loopCount, parent) {
+    var divTilePhoto = document.createElement('div');
+    divTilePhoto.className = "tile-photo";
+    parent.appendChild(divTilePhoto);
+
+    printPhoto(response, loopCount, divTilePhoto);
+  }
+
+  //Contains Instagram description info
+  function createTileFooter(response, loopCount, parent) {
+    var divTileFooter = document.createElement('div');
+    divTileFooter.className = 'tile-footer';
+    parent.appendChild(divTileFooter);
+
+    printLikes(response, loopCount, divTileFooter);
+    printCaption(response, loopCount, divTileFooter);
+  }
+
+
+/*
+Pull Specific Data from Instagram API
+========================== */
+
+  function printPhoto(response, loopCount, parent) {
+    var newImgEle = document.createElement('img');
+    var imageUrl = response.data[loopCount].images.standard_resolution.url;
+    
+    newImgEle.setAttribute('src', imageUrl);
+    parent.appendChild(newImgEle);
+  }
+
+  function printProfilePic(response, loopCount, parent) {
+    var newImgEle = document.createElement('img');
+    var profileUrl = response.data[loopCount].user.profile_picture;
+
+    newImgEle.setAttribute('src', profileUrl);
+    parent.appendChild(newImgEle);
+  }
+
+  function printUsername(response, loopCount, parent) {
+    var newPEle = document.createElement('p');
+    var username = response.data[loopCount].user.username;
+
+    newPEle.className = 'username';
+    newPEle.textContent = username;
+    parent.appendChild(newPEle);
+  }
+
+  function printTimestamp(response, loopCount, parent) {
     var divTimestamp = document.createElement('div');
     var timestamp = response.data[loopCount].created_time;
     
@@ -76,51 +138,10 @@ Build Out Results Section with Instagram Photos
       return Math.ceil(days/7) + ' weeks ago';
     }
     else {
-      return days +  'ago';
+      return days +  ' days ago';
     }
   }
 
-  //Create Profile Section
-  //Contains: Username, Location
-  function createProfile(response, loopCount, parent) {
-    var divProfile = document.createElement('div');
-    divProfile.className = 'profile';
-    parent.appendChild(divProfile);
-
-    //Pull Instagram Profile Photo
-    printProfilePic(response, loopCount, divProfile);
-
-
-    var divText = document.createElement('div');
-    divText.className = 'profile-text';
-    divProfile.appendChild(divText);
-
-    //Print Username
-    printUsername(response, loopCount, divText);
-    //Print Location Where Photo was Taken
-    printLocation(response, loopCount, divText);
-  }
-
-  //Pull Profile Picture
-  function printProfilePic(response, loopCount, parent) {
-    var newImgEle = document.createElement('img');
-    var profileUrl = response.data[loopCount].user.profile_picture;
-
-    newImgEle.setAttribute('src', profileUrl);
-    parent.appendChild(newImgEle);
-  }
-
-  //Pull Username
-  function printUsername(response, loopCount, parent) {
-    var newPEle = document.createElement('p');
-    var username = response.data[loopCount].user.username;
-
-    newPEle.className = 'username';
-    newPEle.textContent = username;
-    parent.appendChild(newPEle);
-  }
-
-  //Pull Location where Photo was Taken
   function printLocation(response, loopCount, parent) {
     var locationName = response.data[loopCount].location.name;
     var newPEle = document.createElement('p');
@@ -128,33 +149,6 @@ Build Out Results Section with Instagram Photos
     newPEle.className = 'location';
     newPEle.textContent = locationName;
     parent.appendChild(newPEle);
-  }
-
-  //Create Tile to contain Instagram Photo
-  function createTilePhoto(response, loopCount, parent) {
-    var divTilePhoto = document.createElement('div');
-    divTilePhoto.className = "tile-photo";
-    parent.appendChild(divTilePhoto);
-
-    //Append Instagram Image to divTilePhoto
-    var newImgEle = document.createElement('img');
-    var imageUrl = response.data[loopCount].images.standard_resolution.url;
-    
-    newImgEle.setAttribute('src', imageUrl);
-    divTilePhoto.appendChild(newImgEle);
-  }
-
-  //Create Tile Footer to contain Instagram description info
-  function createTileFooter(response, loopCount, parent) {
-    var divTileFooter = document.createElement('div');
-    divTileFooter.className = 'tile-footer';
-    parent.appendChild(divTileFooter);
-
-    //Print Likes Count
-    printLikes(response, loopCount, divTileFooter);
-
-    //Print Photo Caption
-    printCaption(response, loopCount, divTileFooter);
   }
 
   function printLikes(response, loopCount, parent) {
@@ -166,7 +160,6 @@ Build Out Results Section with Instagram Photos
     parent.appendChild(newPEle);
   }
 
-  //Pull Caption
   function printCaption(response, loopCount, parent) {
     var caption = response.data[loopCount].caption.text;
     var newPEle = document.createElement('p');

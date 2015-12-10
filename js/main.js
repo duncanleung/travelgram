@@ -1,20 +1,23 @@
 
+/*
 //****Issue Instagram API Call****
-Instagram.mediaLocation(function(response) {
-  /*Instagram.mediaSelf(function(response) {*/
-  displayMap();
+========================== */
+function callInstagram(lat, lng) {
+  Instagram.mediaLocation(function(response) {
+    displayMap(lat, lng);
 
-  for(var i = 0; i < response.data.length; i++) {
-    createColumn(response, i);
-    addMarkerListener(response, i);
-  }
+    for(var i = 0; i < response.data.length; i++) {
+      createColumn(response, i);
+      addMarkerListener(response, i);
+    }
+    console.log("finished API call");
+  }, lat, lng);
+}
 
-  console.log("finished API call");
-});
 
 
 /*
-Smooth Scroll from Nav Links
+Smooth Scroll Functionality
 ========================== */
 $(function() {
   $('a[href*=#]:not([href=#])').click(function() {
@@ -25,8 +28,12 @@ $(function() {
         $('html,body').animate({
           scrollTop: target.offset().top
         }, 1000);
+        
         return false;
-        window.location.hash = this.hash;
+        
+        //Set URL Hash
+        /*window.location.hash = this.hash;*/
+        
       }
     }
   });
@@ -34,15 +41,12 @@ $(function() {
 
 
 /*
-Show Fixed Nav Bar on Scroll
+Show Fixed Nav when scroll below 635px
 ========================== */
-  
 function scrollNav() {
-  //Show Fixed Nav when scroll below 635px
   if(window.pageYOffset>635) {
     document.getElementById('fixed-nav').classList.remove('hide');
   }
-
   //Hide Fixed Nav when scroll above 635px
   else {
     document.getElementById('fixed-nav').classList.add('hide');
@@ -58,17 +62,6 @@ window.onscroll = scrollNav;
 /*
 Show / Hide - Results Section and Main Section
 ========================== */
-
-// Show the Photos and Map Section
-function showResults() {
-  var resultsEle = document.getElementById('results');
-  resultsEle.classList.remove('hide');
-
-  //Fix Google Maps Show/Hide bug
-  var center = map.getCenter();
-  google.maps.event.trigger(map, 'resize');
-  map.setCenter(center);
-}
 
 // Hide all Main Content Sections
 function hideMain() {
@@ -89,6 +82,16 @@ function hideMain() {
   window.location.hash = '#results';
 }
 
+// Show the Photos and Map Section
+function showResults() {
+  var resultsEle = document.getElementById('results');
+  resultsEle.classList.remove('hide');
+
+  //Fix Google Maps Show/Hide bug
+  /*var center = map.getCenter();
+  google.maps.event.trigger(map, 'resize');
+  map.setCenter(center);*/
+}
 
 // When Location Tile is Clicked
 // Add hideMain to all tiles
@@ -159,17 +162,6 @@ function editSearch() {
 /*
 Show / Hide - Author Overlay Modal
 ========================== */
-// Animate List with Delay
-function listAnimationLoop(eleList, length, count) {
-  
-  eleList[count].classList.add('animate');
-
-  setTimeout(function() {
-    if(++count < length) {
-      listAnimationLoop(eleList, length, count);
-    }
-  }, 50);
-}
 
 function showOverlay() {
   var bodyEle = document.getElementsByTagName('body');
@@ -181,6 +173,18 @@ function showOverlay() {
 
   // Run List Animation with Delay
   listAnimationLoop(liList, liList.length, 0);
+}
+
+// Animate List with Delay
+function listAnimationLoop(eleList, length, count) {
+  
+  eleList[count].classList.add('animate');
+
+  setTimeout(function() {
+    if(++count < length) {
+      listAnimationLoop(eleList, length, count);
+    }
+  }, 50);
 }
 
 function closeOverlay() {
@@ -195,7 +199,6 @@ function closeOverlay() {
     liList[i].classList.remove('animate');
   }
 }
-
 
 //Run showOverlay on contact-nav button click
 var contactEle = document.getElementById('contact-nav');

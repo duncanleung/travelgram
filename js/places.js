@@ -6,32 +6,31 @@ var heroSearchEle = document.getElementById('hero-search');
 var placeSearch, autocomplete;
 
 //Init Autocomplete via Google API
-function initialize() {
-  //Create autocomplete object
-  //restrict search to geographical location types
+function initAutoComplete() {
 
   autocomplete = new google.maps.places.Autocomplete(heroSearchEle, {
     types: ['geocode']
   });
 
-  //when user selects address from dropdown
-  //grab the lat lng
+  //Get Lat, Lng: When user selects from dropdown
   google.maps.event.addListener(autocomplete, 'place_changed', function() {
     getLatLng();
   });
 }
 
+//Get Google Place Details
 function getLatLng() {
-  //get place details from autocomplete object
 
   var place = autocomplete.getPlace();
 
   var lat = place.geometry.location.lat();
   var lng = place.geometry.location.lng();
 
-  console.log(place);
-  console.log(lat);
-  console.log(lng);
+  //Show Results and hide Main
+  hideMain();
+
+  //Issue Instagram API Call with new Lat, Lng
+  callInstagram(lat, lng);
 }
 
-initialize();
+initAutoComplete();
