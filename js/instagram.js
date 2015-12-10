@@ -21,10 +21,8 @@ window.Instagram = {
   },
 
   //Get list of photos in location Lat Lang
-    /*Later can take lat and lang, pass as params*/
   mediaLocation: function(callback, lat, lng) {
     var endpoint = this.BASE_URL + '/media/search?distance=5000&lat=' + lat + '&lng=' + lng + '&access_token=' + this.config.access_token;
-    /*var endpoint = this.BASE_URL + '/media/search?distance=5000&lat=31.221992&lng=121.444988&access_token=' + this.config.access_token;*/
     this.getJSON(endpoint, callback);
   },
 
@@ -44,6 +42,6 @@ window.Instagram = {
 
 
 Instagram.init({
-  access_token: '18470568.b3001e3.47348909df8444f4a09778e6221cbbeb'
+  access_token: ''
 });
 

@@ -596,7 +596,7 @@ footer .baseline-container .branding-container p {
 /* line 615, ../default.scss */
 #results {
   height: 100vh;
-  overflow: hidden !important;
+  /* overflow: hidden !important; */
 }
 
 /* line 620, ../default.scss */

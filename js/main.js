@@ -1,6 +1,6 @@
 
 /*
-//****Issue Instagram API Call****
+Issue Instagram API Call
 ========================== */
 function callInstagram(lat, lng) {
   Instagram.mediaLocation(function(response) {
@@ -70,7 +70,9 @@ function hideMain() {
   var discoveryEle = document.getElementById('explore');
   var aboutEle  = document.getElementById('about');
   var footerEle = document.querySelector('footer');
+  var bodyEle = document.getElementsByTagName('body');
 
+  bodyEle[0].classList.add('no-scroll');
   headerEle.classList.add('hide');
   searchBarEle.classList.add('hide');
   discoveryEle.classList.add('hide');
@@ -102,8 +104,6 @@ var tileEle = document.getElementById('discovery-tiles').querySelectorAll('a');
 });
 
 
-
-
 /*
 Results Section Nav Bar - Show/Hide Behavior
 ========================== */
@@ -122,7 +122,9 @@ function showMain() {
   var discoveryEle = document.getElementById('explore');
   var aboutEle  = document.getElementById('about');
   var footerEle = document.querySelector('footer');
+  var bodyEle = document.getElementsByTagName('body');
 
+  bodyEle[0].classList.remove('no-scroll');
   headerEle.classList.remove('hide');
   searchBarEle.classList.remove('hide');
   discoveryEle.classList.remove('hide');
@@ -156,13 +158,9 @@ function editSearch() {
 
 
 
-
-
-
 /*
 Show / Hide - Author Overlay Modal
 ========================== */
-
 function showOverlay() {
   var bodyEle = document.getElementsByTagName('body');
   var overlayEle = document.getElementById('overlay');
