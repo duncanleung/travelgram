@@ -1,5 +1,5 @@
 # travelgram
-An Instagram photo browsing website for travelers who want to explore a location before going there
+An Instagram geolocation photo discovery web app
 
 Built Upon:
 - HTML5, CSS3, Bootstrap 3
