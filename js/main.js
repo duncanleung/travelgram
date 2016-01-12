@@ -1,4 +1,3 @@
-
 /*
 Issue Instagram API Call
 ========================== */
@@ -13,8 +12,6 @@ function callInstagram(lat, lng) {
     console.log("finished API call");
   }, lat, lng);
 }
-
-
 
 /*
 Smooth Scroll Functionality
@@ -32,7 +29,7 @@ $(function() {
         return false;
         
         //Set URL Hash
-        /*window.location.hash = this.hash;*/
+        window.location.hash = this.hash;
         
       }
     }
@@ -55,8 +52,6 @@ function scrollNav() {
 
 //Listen to Scroll and run scrollNav
 window.onscroll = scrollNav;
-
-
 
 
 /*
@@ -88,11 +83,6 @@ function hideMain() {
 function showResults() {
   var resultsEle = document.getElementById('results');
   resultsEle.classList.remove('hide');
-
-  //Fix Google Maps Show/Hide bug
-  /*var center = map.getCenter();
-  google.maps.event.trigger(map, 'resize');
-  map.setCenter(center);*/
 }
 
 // When Location Tile is Clicked
@@ -145,7 +135,7 @@ logoEle.addEventListener('click', showMain, false);
 
 /*
 Search Field in Navigation Bar
-- Select all text when clicked
+//Select all text when clicked
 ========================== */
 var inputEle = document.getElementById('header-search');
 
@@ -205,5 +195,3 @@ contactEle.addEventListener('click', showOverlay, false);
 //Run closeOverlay on close button click
 var closeEle = document.getElementById('close-btn');
 closeEle.addEventListener('click', closeOverlay, false);
-
-

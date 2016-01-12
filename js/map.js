@@ -1,7 +1,6 @@
 /* 
 Create Google Map
 ======================= */
-
 //Init new Google Maps
 var map;
 
@@ -54,8 +53,6 @@ function addMarkerListener(response, loopCount) {
   });
 }
 
-
-
 //All Tiles Attached with Two Event Listeners
 function addTileListener() {
   var tileArray = document.getElementById('instagram').getElementsByClassName('tile');
@@ -86,6 +83,3 @@ function tileOut() {
     }
   }
 }
-
-
-
