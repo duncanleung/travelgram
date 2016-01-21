@@ -3,11 +3,11 @@
 
 TravelGram takes the latitude/longitude of a location in the world, and pulls in geolocated photos from Instagram on a gallery. Google Maps markers are also dropped on a map according to the latitude/longitude of where each individual photo was taken.
 
-• Javascript Event Listeners to Highlight Map Location Markers on Photo Hover (vice versa)
-• Dynamic DOM Manipulation with Javascript
-• Dynamic Responsive Positioning with Flexbox
-• Dynamic Responsive Positioning Bootstrap 3
-• Responsive Design with Media Queries
+- Javascript Event Listeners to Highlight Map Location Markers on Photo Hover (vice versa)
+- Dynamic DOM Manipulation with Javascript
+- Dynamic Responsive Positioning with Flexbox
+- Dynamic Responsive Positioning Bootstrap 3
+- Responsive Design with Media Queries
 
 
 **Built Upon the following technologies:**
