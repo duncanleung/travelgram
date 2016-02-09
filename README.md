@@ -1,12 +1,16 @@
 # travelgram
 ####Summary
-Travelgram is an Instagram geolocation photo discovery app.
+Travelgram is a photo discovery app that allows users to search for a location in the world and view geolocated Instagram photos that were taken at the searched location.
 
-TravelGram takes the latitude/longitude of a location in the world, and pulls in geolocated photos from Instagram. Google Maps markers are also dropped on a map according to the latitude/longitude of where each individual photo was taken. Hovering over each photo will highlight the corresponding marker to show you where the photo was taken (and vice versa).
+The Google Places API is used to retrieve the latitude/longitude of the searched location and a request is made to Instagram to retrieve geolocated photos within that latitude/longitude.
+
+The returned Instagram photo data is used to dynamically render DOM elements into a gallery. At the same time, markers are plotted into Google Maps according to the specific latitude/longitude of where each individual photo was taken.
+
+Hovering over each photo will highlight the corresponding marker to show you where the photo was taken (and vice versa), which is achieved by tracking each Goole Maps marker and corresponding photo with an array.
 
 Discover the world through instagram.
 
-####About
+####Key Achievements
 Travelgram was my first project for [Orange County Code School](https://www.orangecountycodeschool.com) and my key achievements for this project are:
 
 - Learned and implemented API calls, Sass, CSS flexbox, and Javascript event-based map-marker highlighting through self-study
@@ -16,7 +20,7 @@ Travelgram was my first project for [Orange County Code School](https://www.oran
 - Dynamic grid layout as screen size decreases, with Bootstrap 3 column classes
 - Generated DOM elements from returned JSON data, from AJAX calls to Instagram API and Google Maps API
 
-####Travelgram is built Upon the following technologies:
+####Built With the Following Technologies:
 - HTML5, CSS3, Bootstrap 3
 - Sass and Jade
 - AJAX
