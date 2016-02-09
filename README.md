@@ -7,15 +7,14 @@ TravelGram takes the latitude/longitude of a location in the world, and pulls in
 Discover the world through instagram.
 
 ####About
-Travelgram was my first project for [Orange County Code School](https://www.orangecountycodeschool.com) and demonstrates:
+Travelgram was my first project for [Orange County Code School](https://www.orangecountycodeschool.com) and my key achievements for this project are:
 
-- Javascript Event Listeners to Highlight Map Location Markers on Photo Hover (vice versa)
-- Dynamic DOM Manipulation with Javascript
-- Dynamic Responsive Positioning with Flexbox
-- Dynamic Responsive Positioning Bootstrap 3
-- Responsive Design with Media Queries
-- CSS3 Transitions for Interactivity
-
+- Learned and implemented API calls, Sass, CSS flexbox, and Javascript event-based map-marker highlighting through self-study
+- Dynamic DOM generation with Javascript to populate Instagram gallery and map markers depending on user search
+- Javascript event-listeners highlight map-markers on hovering over a Photo (and vice versa)
+- Responsive design and positioning with CSS3 flexbox and media-queries
+- Dynamic grid layout as screen size decreases, with Bootstrap 3 column classes
+- Generated DOM elements from returned JSON data, from AJAX calls to Instagram API and Google Maps API
 
 ####Travelgram is built Upon the following technologies:
 - HTML5, CSS3, Bootstrap 3
