@@ -1,0 +1,27 @@
+{
+  "name": "travelgram",
+  "version": "1.0.0",
+  "description": "Travelgram is a photo discovery app that allows users to search for a location in the world and view geolocated Instagram photos that were taken at the searched location.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/duncanleung/travelgram.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/duncanleung/travelgram/issues"
+  },
+  "homepage": "https://github.com/duncanleung/travelgram#readme",
+  "dependencies": {
+    "express": "^4.13.4"
+  },
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^3.1.0",
+    "gulp-sass": "^2.2.0"
+  }
+}
