@@ -1,0 +1,324 @@
+doctype html
+html
+  head
+    meta(charset="UTF-8")
+    meta(name="viewport" content="width=device-width, initial-scale=1")
+    //- BOOTSTRAP CSS CDN
+    link(rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" integrity="sha512-dTfge/zgoMYpP7QbHy4gWMEGsbsdZeCXz7irItjcC3sPUFtf0kuFbDz/ixG7ArTxmDjLXDmezHubeNikyKGVyQ==" crossorigin="anonymous")
+    //- OPEN SANS FONT GOOGLE CDN
+    link(href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,600,300" rel="stylesheet" type="text/css")
+    //- FONTAWESOME CDN
+    link(rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css")
+    //- FAVICON
+    link(rel="shortcut icon" href="img/favicon.ico" type="image/x-icon")
+    link(rel="stylesheet" href="css/default.css")
+    title travelGram
+  body
+    section#fixed-nav.container-fluid.hide
+      .row
+        .col-sm-12.menu-bar
+          .home-logo
+            a(href="#home")
+              img(src="img/pin-green.png" alt="travelGram Home Button")
+          .fixed-search
+            form
+              i(class="fa fa-search")
+              label(class="sr-only" for="header-search") Where do you want to go?
+              input(type="search" id="header-search" name="location" value="London, United Kingdom" placeholder="Where do you want to go?" autocomplete="off")
+
+    //- Hero Section
+    header#home.container-fluid
+      
+      //- Navigation/Menu Bar
+      .row
+        nav.col-sm-12
+          a(href="#home" id="home-nav") travelGram
+          ul
+            li#explore-nav
+              a(href="#explore") Explore
+            li#about-nav
+              a(href="#about") About
+            li#contact-nav
+              a(href="#connect") Contact
+      .row
+        .title.col-sm-12
+          h1 Explore the world via instagram
+          h2 Where do you want to explore today?
+          h2.text-logo
+            | travelGram
+          
+
+    //- Search Bar Section
+    section#search-container.container-fluid
+      .row
+        .col-centered
+          .col-xs-10.col-sm-5.col-lg-4
+            .input-group
+              input(type="search" class="form-control" placeholder="Istanbul, Turkey" autofocus="autofocus")
+              span.input-group-btn
+                button(class="btn btn-default" type="button") Search
+
+    //- Discovery Section
+    section#explore.discovery.container
+      .row
+        .col-sm-12
+          .intro-text
+            h2 Explore The World
+            p See what's happening on Instagram, anywhere in the world
+          #discovery-tiles
+            .col-sm-12.col-lg-8
+              a()
+                .discovery-card(style="background-image:url(img/discovery/spain.jpg)")
+                  span Costa Brava
+                  span Spain
+            .col-sm-6.col-lg-4
+              a(id="paris-tile")
+                .discovery-card(style="background-image:url(img/discovery/paris.jpg)")
+                  span Paris
+                  span France
+            .col-sm-6.col-lg-4
+              a()
+                .discovery-card(style="background-image:url(img/discovery/deli.jpg)")
+                  span New Deli
+                  span India
+            .col-sm-6.col-lg-4
+              a()
+                .discovery-card(style="background-image:url(img/discovery/canada.jpg)")
+                  span Aspen Colorado
+                  span USA
+            .col-sm-6.col-lg-4
+              a()
+                .discovery-card(style="background-image:url(img/discovery/hong-kong.jpg)")
+                  span Hong Kong
+                  span China
+            .col-sm-12.col-lg-4
+              a()
+                .discovery-card(style="background-image:url(img/discovery/san-francisco.jpg)")
+                  span San Francisco
+                  span USA
+            .col-sm-6.col-lg-8
+              a()
+                .discovery-card(style="background-image:url(img/discovery/australia.jpg)")
+                  span Perth
+                  span Australia
+            .col-sm-6.col-lg-4
+              a()
+                .discovery-card(style="background-image:url(img/discovery/london.jpg)")
+                  span London
+                  span United Kingdom
+            .col-sm-6.col-lg-4
+              a()
+                .discovery-card(style="background-image:url(img/discovery/tokyo.jpg)")
+                  span Tokyo
+                  span Japan
+            .col-sm-6.col-lg-4
+              a()
+                .discovery-card(style="background-image:url(img/discovery/bali.jpg)")
+                  span Bali
+                  span Indonesia
+
+    //- About Section
+    section#about.about
+      .container
+        .row
+          .col-sm-12
+            .intro-text
+              h2 What is TravelGram?
+              p TravelGram lets you explore a location before you travel there
+            .col-md-4
+              .about-tile
+                h3
+                  .circle
+                    i.fa.fa-search.fa-2x
+                  | Choose a Location
+                p Discover new places and see what's popular in a city abroad. Type in a city and check out what's happening!
+            .col-md-4
+              .about-tile
+                h3
+                  .circle
+                    i.fa.fa-globe.fa-2x
+                  | Browse GeoLocated Photos
+                p We'll grab pictures real-time from Instagram. Find out what is happening right now in another city!
+            .col-md-4
+              .about-tile
+                h3
+                  .circle
+                    i.fa.fa-sliders.fa-2x
+                  | Filter Your Searches
+                p Narrow your search and find the most popular photos, and get ideas for your next #vacation
+        
+
+    //- Footer and Technologies Logos
+    footer.container-fluid
+      .row
+        .technologies-container.col-sm-12
+          p.heading travelGram was built with these technologies:
+          .sass
+            a(href="sass-lang.com")
+              .sass-logo
+          .jade
+            a(href="jade-lang.com")
+              .jade-logo
+          .google-maps
+            a(href="https://developers.google.com/maps/documentation/javascript/tutorial")
+              .google-maps-logo
+          .instagram
+            a(href="https://instagram.com/developer/")
+              .instagram-logo
+        .baseline-container.col-sm-12
+          .connect-container
+            p Connect with the author:
+            a(href="http://github.com/duncanleung")
+              .github-logo
+            a(href="https://www.linkedin.com/in/duncanleung")
+              .linkedin-logo
+          .branding-container.col-sm-12
+            p TravelGram &copy; 2015
+
+
+    //- Photo Results Section
+    section#results.hide.container-fluid
+      .row
+        .col-sm-12.menu-bar
+          #home-logo.home-logo
+            a(href="#")
+              img(src="img/pin-green.png" alt="travelGram Home Button")
+          .fixed-search
+            form
+              i(class="fa fa-search")
+              label(class="sr-only" for="header-search") Where do you want to go?
+              input(type="search" id="header-search" name="location" value="London, United Kingdom" placeholder="Where do you want to go?" autocomplete="off")
+      .row
+        .results.col-sm-7
+          .row
+            //- Filter Section
+            .col-sm-12.filters-container
+              .row
+                .filter-header.col-sm-12 Filters
+              .row
+                .filter-group.col-xs-12.col-sm-12.col-md-3
+                  i(class="fa fa-heart")
+                  |  Avg Likes
+                .filter-controls.col-xs-10.col-sm-10.col-md-8
+                  form
+                    input(id="slider" type="range" min="0" max="20" step="10")
+                    .range-control
+                      .low 0 Likes
+                      .mid 10 Likes
+                      .max 20 Likes
+              hr
+              .row
+                .filter-group.col-xs-12.col-sm-12.col-md-3 # Hashtags
+                .filter-controls.col-xs-10.col-sm-10.col-md-8
+                  form
+                    label
+                      input(type="checkbox" id="hash-selfie" value="hash-selfie" checked="true")
+                      |  #selfie
+                    label
+                      input(type="checkbox" id="hash-vacation" value="hash-vacation" checked="true")
+                      |  #vacation
+                    label
+                      input(type="checkbox" id="hash-landscape" value="hash-landscape" checked="true")
+                      |  #landscape
+          .row
+            //- Instagram Profile
+            .col-md-12.col-lg-6
+              div(id="tile1" class="tile")
+                .tile-header
+                  .profile
+                    img(src="img/profile/graceful.jpg" alt="")
+                    p.username gracefuls
+                  .time 38m ago
+                .tile-photo
+                  img(src="img/results/london.jpg" alt="")
+                .tile-footer
+                  .likes 48 likes
+                  .description Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore
+            //- Instagram Profile
+            .col-md-12.col-lg-6
+              div(id="tile2" class="tile")
+                  .tile-header
+                    .profile
+                      img(src="img/profile/vintagedaughter.jpg" alt="")
+                      p.username vintagedaughter
+                    .time 59m ago
+                  .tile-photo
+                    img(src="img/results/london-2.jpg" alt="")
+                  .tile-footer
+                    .likes 23 likes
+                    .description Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore
+            //- Instagram Profile
+            .col-md-12.col-lg-6 
+              div(id="tile3" class="tile")
+                .tile-header
+                  .profile
+                    img(src="img/profile/beijingdou.jpg" alt="")
+                    p.username beijingdou
+                  .time 1hr 30min ago
+                .tile-photo
+                  img(src="img/results/london-3.jpg" alt="")
+                .tile-footer
+                  .likes 13 likes
+                  .description Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore
+            //- Instagram Profile
+            .col-md-12.col-lg-6 
+              div(id="tile4" class="tile")
+                .tile-header
+                  .profile
+                    img(src="img/profile/nomorekaren.jpg" alt="")
+                    p.username nomorekaren
+                  .time 2hrs ago
+                .tile-photo
+                  img(src="img/results/london-4.jpg" alt="")
+                .tile-footer
+                  .likes 53 likes
+                  .description Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore
+        
+        //- Google Maps Container
+        #map.col-sm-5
+    
+    //- About Me Overlay
+    #overlay
+      .about-me
+        | Hi my name is 
+        .name Duncan Leung
+        | I'm a 
+        .developer full-stack Javascript Developer
+        span  (in the making!)
+      ul
+        li
+          a(href="http://github.com/duncanleung" target="_blank") Github
+        li
+          a(href="http://www.linkedin.com/in/duncanleung" target="_blank") LinkedIn
+        li
+          a(href="http://www.duncanleung.com/blog" target="_blank") Blog
+        li
+          a(href="mailto:leungd@gmail.com?subject=Connect%20with%20Duncan") Email
+      #close-btn
+        i(class="glyphicon glyphicon-remove")
+
+
+    //- JQUERY
+    script(src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js")
+    script(src="js/main.js" type="text/javascript")
+    //- GOOGLE MAPS API
+    script(async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAErIbE5HGwX-I3j8QnZAnVAdDJb7qcHUc&callback=initMap")
+    script(src="js/map.js" type="text/javascript")
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
