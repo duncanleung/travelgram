@@ -19,8 +19,8 @@ function displayMap(lat, lng) {
 }
 
 //Create a Marker for Each Instagram Picture
-var icon = 'img/logo-40.png';
-var iconLight = 'img/pin-green-40.png';
+var icon = 'resources/img/logo-40.png';
+var iconLight = 'resources/img/pin-green-40.png';
 var allMarkers = [];
 var markers = [];
 
