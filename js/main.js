@@ -1,5 +1,20 @@
 /*
-Smooth Scroll from Nav Links
+Issue Instagram API Call
+========================== */
+function callInstagram(lat, lng) {
+  Instagram.mediaLocation(function(response) {
+    displayMap(lat, lng);
+
+    for(var i = 0; i < response.data.length; i++) {
+      createColumn(response, i);
+      addMarkerListener(response, i);
+    }
+    console.log("finished API call");
+  }, lat, lng);
+}
+
+/*
+Smooth Scroll Functionality
 ========================== */
 $(function() {
   $('a[href*=#]:not([href=#])').click(function() {
@@ -10,8 +25,12 @@ $(function() {
         $('html,body').animate({
           scrollTop: target.offset().top
         }, 1000);
-        window.location.hash = this.hash;
+        
         return false;
+        
+        //Set URL Hash
+        window.location.hash = this.hash;
+        
       }
     }
   });
@@ -19,92 +38,25 @@ $(function() {
 
 
 /*
-Show Fixed Nav Bar on Scroll
+Show Fixed Nav when scroll below 635px
 ========================== */
-  
-  function scrollNav() {
-    //Show Fixed Nav when scroll below 635px
-    if(window.pageYOffset>635) {
-      document.getElementById('fixed-nav').classList.remove('hide');
-    } 
-
-    //Hide Fixed Nav when scroll above 635px
-    else {
-      document.getElementById('fixed-nav').classList.add('hide');
-    };
+function scrollNav() {
+  if(window.pageYOffset>635) {
+    document.getElementById('fixed-nav').classList.remove('hide');
   }
-  window.onscroll = scrollNav;
-
-
-/*
-Show / Hide - Connect with Author Modal
-========================== */
-// Animate List with Delay
-function listAnimationLoop(eleList, length, count) {
-  
-  eleList[count].classList.add('animate');
-
-  setTimeout(function() {
-    console.log(eleList[count]);
-    if(++count < length) {
-      listAnimationLoop(eleList, length, count);
-    }
-  }, 50);
-};
-
-function showOverlay() {
-  var bodyEle = document.getElementsByTagName('body');
-  var overlayEle = document.getElementById('overlay');
-  var liList = overlayEle.getElementsByTagName('li');
-  
-  bodyEle[0].classList.add('no-scroll');
-  overlayEle.classList.add('is-open');
-
-  // Run List Animation with Delay
-  listAnimationLoop(liList, liList.length, 0);
-}
-
-function closeOverlay() {
-  var bodyEle = document.getElementsByTagName('body');
-  var overlayEle = document.getElementById('overlay');
-  var liList = overlayEle.getElementsByTagName('li');
-
-  bodyEle[0].classList.remove('no-scroll');
-  overlayEle.classList.remove('is-open');
-  
-  for(var i = 0; i< liList.length; i++) {
-    liList[i].classList.remove('animate');
+  //Hide Fixed Nav when scroll above 635px
+  else {
+    document.getElementById('fixed-nav').classList.add('hide');
   }
 }
 
-
-//Run showOverlay on contact-nav button
-var contactEle = document.getElementById('contact-nav');
-contactEle.addEventListener('click', showOverlay, false);
-
-//Run closeOverlay on close button
-var closeEle = document.getElementById('close-btn');
-closeEle.addEventListener('click', closeOverlay, false);
-
-
-
-
+//Listen to Scroll and run scrollNav
+window.onscroll = scrollNav;
 
 
 /*
 Show / Hide - Results Section and Main Section
 ========================== */
-
-// Show the Photos and Map Section
-function showResults() {
-  var resultsEle = document.getElementById('results');
-  resultsEle.classList.remove('hide');
-
-  //Fix Google Maps Show/Hide bug
-  var center = map.getCenter();
-  google.maps.event.trigger(map, 'resize');
-  map.setCenter(center);
-}
 
 // Hide all Main Content Sections
 function hideMain() {
@@ -113,7 +65,9 @@ function hideMain() {
   var discoveryEle = document.getElementById('explore');
   var aboutEle  = document.getElementById('about');
   var footerEle = document.querySelector('footer');
+  var bodyEle = document.getElementsByTagName('body');
 
+  bodyEle[0].classList.add('no-scroll');
   headerEle.classList.add('hide');
   searchBarEle.classList.add('hide');
   discoveryEle.classList.add('hide');
@@ -125,22 +79,26 @@ function hideMain() {
   window.location.hash = '#results';
 }
 
+// Show the Photos and Map Section
+function showResults() {
+  var resultsEle = document.getElementById('results');
+  resultsEle.classList.remove('hide');
+}
 
 // When Location Tile is Clicked
 // Add hideMain to all tiles
 var tileEle = document.getElementById('discovery-tiles').querySelectorAll('a');
 
-[].forEach.call(tileEle, function(e) {
-  e.addEventListener('click', hideMain, false);
+[].forEach.call(tileEle, function(tile) {
+  tile.addEventListener('click', hideMain, false);
 });
 
 
-
 /*
-Results Section Nav Bar
+Results Section Nav Bar - Show/Hide Behavior
 ========================== */
 
-// Hide Section Map and Instagram Photos 
+// Hide Map and Instagram Photos 
 function hideResults() {
   var resultsEle = document.getElementById('results');
 
@@ -154,7 +112,9 @@ function showMain() {
   var discoveryEle = document.getElementById('explore');
   var aboutEle  = document.getElementById('about');
   var footerEle = document.querySelector('footer');
+  var bodyEle = document.getElementsByTagName('body');
 
+  bodyEle[0].classList.remove('no-scroll');
   headerEle.classList.remove('hide');
   searchBarEle.classList.remove('hide');
   discoveryEle.classList.remove('hide');
@@ -174,7 +134,8 @@ logoEle.addEventListener('click', showMain, false);
 
 
 /*
-Top Nav Bar Search Field
+Search Field in Navigation Bar
+//Select all text when clicked
 ========================== */
 var inputEle = document.getElementById('header-search');
 
@@ -186,45 +147,51 @@ function editSearch() {
 }
 
 
-/* 
-Highlight Markers when hover in/out of Pictures
-======================= */
 
+/*
+Show / Hide - Author Overlay Modal
+========================== */
+function showOverlay() {
+  var bodyEle = document.getElementsByTagName('body');
+  var overlayEle = document.getElementById('overlay');
+  var liList = overlayEle.getElementsByTagName('li');
+  
+  bodyEle[0].classList.add('no-scroll');
+  overlayEle.classList.add('is-open');
 
-// Match the Tile ID with the Icon ID
-// Set Icon back to iconLight
-function hover() {
-  /*console.log('hover ' + this.id)*/
-  for(var i = 0; i < allMarkers.length; i++) {
-    if(this.id === allMarkers[i].id) {
-      allMarkers[i].setIcon(iconLight);
-      break;
+  // Run List Animation with Delay
+  listAnimationLoop(liList, liList.length, 0);
+}
+
+// Animate List with Delay
+function listAnimationLoop(eleList, length, count) {
+  
+  eleList[count].classList.add('animate');
+
+  setTimeout(function() {
+    if(++count < length) {
+      listAnimationLoop(eleList, length, count);
     }
+  }, 50);
+}
+
+function closeOverlay() {
+  var bodyEle = document.getElementsByTagName('body');
+  var overlayEle = document.getElementById('overlay');
+  var liList = overlayEle.getElementsByTagName('li');
+
+  bodyEle[0].classList.remove('no-scroll');
+  overlayEle.classList.remove('is-open');
+  
+  for(var i = 0; i< liList.length; i++) {
+    liList[i].classList.remove('animate');
   }
 }
 
-// Match the Tile ID with the Icon ID
-// Set Icon back to Black
-function out() {
-/*  console.log('out '  + this.id)*/
-  for(var i = 0; i < allMarkers.length; i++) {
-    if(this.id === allMarkers[i].id) {
-      allMarkers[i].setIcon(icon);
-      break;
-    }
-  }
-}
+//Run showOverlay on contact-nav button click
+var contactEle = document.getElementById('contact-nav');
+contactEle.addEventListener('click', showOverlay, false);
 
-
-//Get Array of All .tile
-var tile = document.getElementById('results').querySelectorAll('.tile');
-//Add Event Listener to All Tiles
-for(var i = 0; i < tile.length; i++) {
-  tile[i].addEventListener('mouseover', hover, false);
-  tile[i].addEventListener('mouseout', out, false);
-}
-
-
-
-
-
+//Run closeOverlay on close button click
+var closeEle = document.getElementById('close-btn');
+closeEle.addEventListener('click', closeOverlay, false);

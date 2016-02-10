@@ -3,6 +3,8 @@ html
   head
     meta(charset="UTF-8")
     meta(name="viewport" content="width=device-width, initial-scale=1")
+    //- JQUERY
+    script(src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js")
     //- BOOTSTRAP CSS CDN
     link(rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" integrity="sha512-dTfge/zgoMYpP7QbHy4gWMEGsbsdZeCXz7irItjcC3sPUFtf0kuFbDz/ixG7ArTxmDjLXDmezHubeNikyKGVyQ==" crossorigin="anonymous")
     //- OPEN SANS FONT GOOGLE CDN
@@ -11,7 +13,7 @@ html
     link(rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css")
     //- FAVICON
     link(rel="shortcut icon" href="img/favicon.ico" type="image/x-icon")
-    link(rel="stylesheet" href="css/default.css")
+    link(rel="stylesheet" href="css/default.css")    
     title travelGram
   body
     section#fixed-nav.container-fluid.hide
@@ -24,7 +26,7 @@ html
             form
               i(class="fa fa-search")
               label(class="sr-only" for="header-search") Where do you want to go?
-              input(type="search" id="header-search" name="location" value="London, United Kingdom" placeholder="Where do you want to go?" autocomplete="off")
+              input(type="search" id="header-search" name="location" value="" placeholder="Where do you want to go?" autocomplete="off")
 
     //- Hero Section
     header#home.container-fluid
@@ -54,7 +56,7 @@ html
         .col-centered
           .col-xs-10.col-sm-5.col-lg-4
             .input-group
-              input(type="search" class="form-control" placeholder="Istanbul, Turkey" autofocus="autofocus")
+              input(type="search" id="hero-search" class="form-control" placeholder="Paris, France" autofocus="autofocus")
               span.input-group-btn
                 button(class="btn btn-default" type="button") Search
 
@@ -187,7 +189,7 @@ html
             form
               i(class="fa fa-search")
               label(class="sr-only" for="header-search") Where do you want to go?
-              input(type="search" id="header-search" name="location" value="London, United Kingdom" placeholder="Where do you want to go?" autocomplete="off")
+              input(type="search" id="header-search" name="location" value="" placeholder="Where do you want to go?" autocomplete="off")
       .row
         .results.col-sm-7
           .row
@@ -220,59 +222,8 @@ html
                     label
                       input(type="checkbox" id="hash-landscape" value="hash-landscape" checked="true")
                       |  #landscape
-          .row
-            //- Instagram Profile
-            .col-md-12.col-lg-6
-              div(id="tile1" class="tile")
-                .tile-header
-                  .profile
-                    img(src="img/profile/graceful.jpg" alt="")
-                    p.username gracefuls
-                  .time 38m ago
-                .tile-photo
-                  img(src="img/results/london.jpg" alt="")
-                .tile-footer
-                  .likes 48 likes
-                  .description Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore
-            //- Instagram Profile
-            .col-md-12.col-lg-6
-              div(id="tile2" class="tile")
-                  .tile-header
-                    .profile
-                      img(src="img/profile/vintagedaughter.jpg" alt="")
-                      p.username vintagedaughter
-                    .time 59m ago
-                  .tile-photo
-                    img(src="img/results/london-2.jpg" alt="")
-                  .tile-footer
-                    .likes 23 likes
-                    .description Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore
-            //- Instagram Profile
-            .col-md-12.col-lg-6 
-              div(id="tile3" class="tile")
-                .tile-header
-                  .profile
-                    img(src="img/profile/beijingdou.jpg" alt="")
-                    p.username beijingdou
-                  .time 1hr 30min ago
-                .tile-photo
-                  img(src="img/results/london-3.jpg" alt="")
-                .tile-footer
-                  .likes 13 likes
-                  .description Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore
-            //- Instagram Profile
-            .col-md-12.col-lg-6 
-              div(id="tile4" class="tile")
-                .tile-header
-                  .profile
-                    img(src="img/profile/nomorekaren.jpg" alt="")
-                    p.username nomorekaren
-                  .time 2hrs ago
-                .tile-photo
-                  img(src="img/results/london-4.jpg" alt="")
-                .tile-footer
-                  .likes 53 likes
-                  .description Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore
+          //- Instagram Pictures Results
+          .row#instagram
         
         //- Google Maps Container
         #map.col-sm-5
@@ -296,29 +247,12 @@ html
           a(href="mailto:leungd@gmail.com?subject=Connect%20with%20Duncan") Email
       #close-btn
         i(class="glyphicon glyphicon-remove")
-
-
-    //- JQUERY
-    script(src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js")
-    script(src="js/main.js" type="text/javascript")
+    
+    script(src="js/instagram.js")
+    script(src="js/results.js")
     //- GOOGLE MAPS API
-    script(async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAErIbE5HGwX-I3j8QnZAnVAdDJb7qcHUc&callback=initMap")
-    script(src="js/map.js" type="text/javascript")
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+    script(src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAErIbE5HGwX-I3j8QnZAnVAdDJb7qcHUc&signed_in=true&libraries=places")
+    script(src="js/map.js")
+    script(src="js/main.js")
+    script(src="js/places.js")
+  
