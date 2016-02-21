@@ -1,17 +1,13 @@
-/*
-Create AJAX Request to Instagram's API
-=================== */
+
+// Create AJAX Request to Instagram's API
+// ===================
 window.Instagram = {
 
-  config: {},
+  config: {
+    access_token: ''
+  },
 
   BASE_URL: 'https://api.instagram.com/v1',
-
-  init: function(opt) {
-    opt = opt || {};
-
-    this.config.access_token = opt.access_token;
-  },
 
   //Get list of photos in location Lat Lang
   mediaLocation: function(callback, lat, lng) {
@@ -20,19 +16,17 @@ window.Instagram = {
   },
 
   getJSON: function(url, callback) {
+    
+    // jQuery JSONP used to circumvent cross-domain request
     $.ajax({
       type: 'GET',
       url: url,
       dataType: 'jsonp',
       success: function(response) {
-        if(typeof callback === 'function') callback(response);
+        callback(response);
       }
 
     });
   }
 
 };
-
-Instagram.init({
-  access_token: ''
-});

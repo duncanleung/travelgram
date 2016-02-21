@@ -1,6 +1,6 @@
-/*
-Build Out Results Section with Instagram Photos
-========================== */
+
+// Build Out Results Section with Instagram Photos
+// =======================
 
 //Append everything to container instagramDiv
 var instagramDiv = document.getElementById('instagram');
@@ -73,9 +73,9 @@ function createTileFooter(response, loopCount, parent) {
 }
 
 
-/*
-Pull Specific Data from Instagram API
-========================== */
+
+// Pull Specific Data from Instagram API
+// =======================
 function printPhoto(response, loopCount, parent) {
   var newImgEle = document.createElement('img');
   var imageUrl = response.data[loopCount].images.standard_resolution.url;

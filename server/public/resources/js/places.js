@@ -1,9 +1,11 @@
-/* 
-Places AutoComplete for Search Fields
-======================= */
+
+// Places AutoComplete for Search Fields
+// =======================
 
 var heroSearchEle = document.getElementById('hero-search');
-var placeSearch, autocomplete;
+
+var placeSearch;
+var autocomplete;
 
 //Init Autocomplete via Google API
 function initAutoComplete() {

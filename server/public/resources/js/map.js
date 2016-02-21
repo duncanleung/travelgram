@@ -1,6 +1,6 @@
-/* 
-Create Google Map
-======================= */
+
+// Create Google Map
+// =======================
 //Init new Google Maps
 var map;
 

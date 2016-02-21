@@ -1,6 +1,6 @@
-/*
-Issue Instagram API Call
-========================== */
+
+// Issue Instagram API Call
+// =======================
 function callInstagram(lat, lng) {
   Instagram.mediaLocation(function(response) {
     displayMap(lat, lng);
@@ -9,13 +9,15 @@ function callInstagram(lat, lng) {
       createColumn(response, i);
       addMarkerListener(response, i);
     }
+
     console.log("finished API call");
+    
   }, lat, lng);
 }
 
-/*
-Smooth Scroll Functionality
-========================== */
+
+// Smooth Scroll Functionality
+// =======================
 $(function() {
   $('a[href*=#]:not([href=#])').click(function() {
     if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
@@ -37,9 +39,9 @@ $(function() {
 });
 
 
-/*
-Show Fixed Nav when scroll below 635px
-========================== */
+
+// Show Fixed Nav when scroll below 635px
+// =======================
 function scrollNav() {
   if(window.pageYOffset>635) {
     document.getElementById('fixed-nav').classList.remove('hide');
@@ -54,9 +56,8 @@ function scrollNav() {
 window.onscroll = scrollNav;
 
 
-/*
-Show / Hide - Results Section and Main Section
-========================== */
+// Show / Hide - Results Section and Main Section
+// =======================
 
 // Hide all Main Content Sections
 function hideMain() {
@@ -94,9 +95,9 @@ var tileEle = document.getElementById('discovery-tiles').querySelectorAll('a');
 });
 
 
-/*
-Results Section Nav Bar - Show/Hide Behavior
-========================== */
+
+// Results Section Nav Bar - Show/Hide Behavior
+// =======================
 
 // Hide Map and Instagram Photos 
 function hideResults() {
@@ -133,10 +134,10 @@ logoEle.addEventListener('click', showMain, false);
 
 
 
-/*
-Search Field in Navigation Bar
-//Select all text when clicked
-========================== */
+
+// Search Field in Navigation Bar
+// Select all text when clicked
+// =======================
 var inputEle = document.getElementById('header-search');
 
 inputEle.addEventListener('click', editSearch,false);
@@ -148,9 +149,9 @@ function editSearch() {
 
 
 
-/*
-Show / Hide - Author Overlay Modal
-========================== */
+
+// Show / Hide - Author Overlay Modal
+// =======================
 function showOverlay() {
   var bodyEle = document.getElementsByTagName('body');
   var overlayEle = document.getElementById('overlay');
